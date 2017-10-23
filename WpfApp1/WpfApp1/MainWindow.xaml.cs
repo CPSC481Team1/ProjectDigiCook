@@ -32,6 +32,24 @@ namespace WpfApp1
             // Turn off resizing
             this.ResizeMode = ResizeMode.NoResize;
 
+            // Code for a message box
+            // MessageBoxResult result = MessageBox.Show(SkillLevel.skillLevel.ToString(), "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+        }
+
+        // Code to handle button clicks
+        private void Beginner_Button_Click(object sender, RoutedEventArgs e)
+        {
+            SkillLevel.skillLevel = 1;
+        }
+        private void Intermediate_Button_Click(object sender, RoutedEventArgs e)
+        {
+            SkillLevel.skillLevel = 2;
+        }
+
+        private void Expert_Button_Click(object sender, RoutedEventArgs e)
+        {
+            SkillLevel.skillLevel = 3;
         }
     }
 }
