@@ -118,5 +118,8 @@
     <Resource Include="Images\Skill_Level\Beginner.jpg" />
     <Resource Include="Images\Skill_Level\Intermediate.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

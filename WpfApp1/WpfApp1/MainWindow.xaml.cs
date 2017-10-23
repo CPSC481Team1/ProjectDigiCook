@@ -23,6 +23,15 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Title = "DigiCook";
+
+            // Set window to center of the computer screen at startup
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            // Turn off resizing
+            this.ResizeMode = ResizeMode.NoResize;
+
         }
     }
 }
