@@ -51,5 +51,13 @@ namespace WpfApp1
         {
             SkillLevel.skillLevel = 3;
         }
+
+        private void Skip_Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void SkipButton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+        }
     }
 }

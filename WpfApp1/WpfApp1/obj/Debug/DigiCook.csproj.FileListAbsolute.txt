@@ -16,3 +16,4 @@ C:\Users\Konnie\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\obj\Debug\DigiCook.
 C:\Users\Konnie\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\Konnie\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\Konnie\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\obj\Debug\DigiCook.csprojResolveAssemblyReference.cache
+C:\Users\Konnie\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\obj\Debug\App.baml

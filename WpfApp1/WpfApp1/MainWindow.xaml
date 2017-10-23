@@ -80,7 +80,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="89.653" Margin="10,25.86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="636.023"><Run FontSize="60" FontFamily="Segoe UI Black" Text="Choose your skill level:"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="105.653" Margin="474,10,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook"/></TextBlock>
         <Button  HorizontalAlignment="Left" Height="320" Margin="638.666,321.532,0,0" VerticalAlignment="Top" Width="320" Click="Intermediate_Button_Click">
             <Image Source=".\Images\Skill_Level\Intermediate.jpg" Stretch="Fill"/>
         </Button>
@@ -93,6 +93,8 @@
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="86.653" Margin="638.666,646.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="329.333"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Intermediate"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="91.653" Margin="208.69,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="228.667"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Beginner"/></TextBlock>
+        <Button Name="SkipButton" Content="Skip" FontSize="55" Foreground="White" HorizontalAlignment="Left" Height="82" Margin="1426,778,0,0" VerticalAlignment="Top" Width="156" Background="#00d57f" MouseEnter="Skip_Button_MouseEnter"  Style="{StaticResource MyButton}"/>
+        <TextBlock HorizontalAlignment="Left" Height="89.653" Margin="160.357,140,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="1277.643"><Run FontSize="60" FontFamily="Segoe UI Black" Text="Please choose your culinary skill level..."/></TextBlock>
 
     </Grid>
 </Window>
