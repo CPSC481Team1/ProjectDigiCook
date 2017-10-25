@@ -129,5 +129,8 @@
     <Resource Include="Images\Skill_Level\GreyOverlay2.jpg" />
     <Resource Include="Images\Skill_Level\GreyOverlay3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
