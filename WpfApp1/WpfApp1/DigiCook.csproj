@@ -57,9 +57,15 @@
     <Compile Include="Checklist.xaml.cs">
       <DependentUpon>Checklist.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrontPage.xaml.cs">
+      <DependentUpon>FrontPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SkillLevel.cs" />
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ingredients.xaml.cs">
+      <DependentUpon>ingredients.xaml</DependentUpon>
     </Compile>
     <Page Include="BeginnerButton.xaml">
       <SubType>Designer</SubType>
@@ -68,6 +74,10 @@
     <Page Include="Checklist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +95,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ingredients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
