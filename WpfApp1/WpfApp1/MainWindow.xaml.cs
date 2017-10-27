@@ -104,6 +104,11 @@ namespace WpfApp1
             beginnerImgGray.Visibility = Visibility.Hidden;
             beginnerFlavour.Visibility = Visibility.Hidden;
         }
+
+        private void SkipButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 #endregion
 }
