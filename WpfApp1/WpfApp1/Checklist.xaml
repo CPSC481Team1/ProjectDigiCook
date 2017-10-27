@@ -5,16 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Checklist" Height="900" Width="1600" Background="White">
-    <Grid Background="#FFDFDFDF">
-        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Height="105.653" Margin="478.8,10,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023" FontFamily="Segoe Script"><Run FontSize="75" Text="Checklist" Foreground="Maroon" /></TextBlock>
-        <ListView x:Name="listView" Margin="0,164.8,784,134.4">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        Title="Checklist" Height="900" Width="1600">
+    <Grid>
+        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Height="105.653" Margin="474,10,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="Checklist" Foreground="Teal" /></TextBlock>
+        <Grid HorizontalAlignment="Left" Height="643" Margin="66,175,0,0" VerticalAlignment="Top" Width="1479"/>
 
     </Grid>
 </Window>
