@@ -8,7 +8,7 @@
         Title="Checklist" Height="900" Width="1600">
     <Grid>
         <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Height="105.653" Margin="474,10,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="Checklist" Foreground="Teal" /></TextBlock>
-        <Grid HorizontalAlignment="Left" Height="643" Margin="66,175,0,0" VerticalAlignment="Top" Width="1479"/>
+        <DataGrid x:Name="dataGrid" Margin="0,149.6,0,10" HorizontalGridLinesBrush="Black"/>
 
     </Grid>
 </Window>
