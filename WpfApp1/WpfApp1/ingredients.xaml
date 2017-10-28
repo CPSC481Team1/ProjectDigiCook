@@ -6,21 +6,33 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Checklist" Height="900" Width="1600">
-    <Grid>
+    <Grid Margin="0,2,0,-2">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
             <ColumnDefinition Width="1360*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Back" Content="&#x2794;" HorizontalAlignment="Left" Margin="32,32,0,0" VerticalAlignment="Top" Width="64" Height="64
-                "/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="256" Margin="0,32,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="256" Margin="322,32,0,0" TextWrapping="Wrap" Text="SPAGEERTTYEE" VerticalAlignment="Top" Width="863" Grid.Column="1"/>
-        <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="90" Margin="1229,46,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <TextBlock x:Name="Utensils"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="Utensils" Width="502" Margin="32,288,0,517" FontSize="60" TextAlignment="Center" Foreground="Black" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="Skills" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skills" VerticalAlignment="Top" Height="64" Width="501" Margin="419,288,0,0" FontSize="48" TextAlignment="Center" Grid.Column="1"/>
-        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="64" Width="506" Margin="925,288,0,0" FontSize="48" TextAlignment="Center" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+        <Grid Grid.Column="1" Background="#dae1e7" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="1353" Grid.ColumnSpan="2">
+            <Border BorderThickness="1" BorderBrush="Black">
+                <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="256" VerticalAlignment="Top" Width="256"  Margin="10,10,10,10" />
+            </Border>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="187" Margin="271,74,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="888" FontSize="24" Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. Pasta is simply the Italian word for paste….and refers to shaped dough made from semolina flour and water, that is then cooked in a pot of boiling water. Spaghetti, then, is pasta that is shaped into long, thin, round strands---that look kind of like little twines."/>
+            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,10,0,10" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="1072" FontSize="48" TextAlignment="Center"/>
+            <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="90" Margin="1164,161,0,0" VerticalAlignment="Top" Width="179" RenderTransformOrigin="0.482,-0.033" FontSize="64"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="256"/>
+        </Grid>
+        <TextBlock x:Name="Utensils"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="Utensils" Width="448" Margin="0,340,0,465" FontSize="48" TextAlignment="Center" Foreground="Black" Grid.Column="1"/>
+        <TextBlock x:Name="Skills" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skills" VerticalAlignment="Top" Height="64" Width="448" Margin="453,340,0,0" FontSize="48" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="64" Width="447" Margin="906,340,0,0" FontSize="48" TextAlignment="Center" Grid.Column="1"/>
+
+        <Label x:Name="label"  Background="AliceBlue" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" Height="431" FontSize="24" Margin="10,409,895,9" Grid.Column="1"/>
+
+        <ListBox x:Name="Skills_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="448" SelectionChanged="listBox_SelectionChanged" Grid.Column="1"/>
+        <ListBox x:Name="Ingredients_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="431" Margin="906,409,0,0" VerticalAlignment="Top" Width="448" SelectionChanged="listBox_SelectionChanged" Grid.Column="1" RenderTransformOrigin="0.56,0.503" Grid.ColumnSpan="2"/>
+        <Button x:Name="View_Checklist" Grid.ColumnSpan="2" Content="View Checklist" Grid.Column="1" HorizontalAlignment="Left" Height="67" Margin="1183,-3,0,0" VerticalAlignment="Top" Width="289" FontSize="24"/>
+        <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="10,409,0,0" VerticalAlignment="Top" Width="438"/>
 
 
     </Grid>
