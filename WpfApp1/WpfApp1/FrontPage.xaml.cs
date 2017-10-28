@@ -42,5 +42,10 @@ namespace WpfApp1
         {
             this.button.Content = "Left";
         }
+
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
              Title="FrontPage" Height="900" Width="1600">
+    
     <Grid>
+        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="240*"/>
             <RowDefinition Height="330*"/>
@@ -17,11 +20,89 @@
             <ColumnDefinition Width="1360*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="AliceBlue"/>
         <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
-        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Center" Height="67" Margin="0,40,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Center" Width="844"/>
-        
-        <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="254,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150"/>
-        <Button x:Name="button2" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="605,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150"/>
-        <Button x:Name="button3" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="952,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150"/>
+        <TextBox x:Name="textBox" Grid.Column="1" Height="67" Margin="218.481,102.367,221.519,62.366" TextWrapping="Wrap" FontSize="48" TextAlignment="Left" Text="Search for your item..." VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2"/>
+
+        <Button x:Name="button" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="254,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" Background="#FFDDDDDD" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="cat1" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill"/>
+                <TextBlock Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Breakfast" Foreground="Teal"/>
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                    </TextBlock.Effect>
+
+                </TextBlock>
+            </Grid>
+
+        </Button>
+
+
+
+        <Button x:Name="button2" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="605,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="cat2" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\Sandwich.jpg" Stretch="Fill"/>
+                <TextBlock Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Lunch" Foreground="Teal" />
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Button>
+
+        <Button x:Name="button3" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="952,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="cat3" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\Steak.jpg" Stretch="Fill"/>
+                <TextBlock Name="category3" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Dinner" Foreground="Teal" />
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Button>
+
+        <Button x:Name="button4" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="254,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="cat4" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\Cake.jpg" Stretch="Fill"/>
+                <TextBlock Name="category4" HorizontalAlignment="Center" VerticalAlignment="Bottom" ><Run FontSize="30" FontFamily="Impact" Text="Dessert" Foreground="Teal" />
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Button>
+        <Button x:Name="button5" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="605,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="cat5" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\Veg.jpg" Stretch="Fill"/>
+                <TextBlock Name="category5" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegetarian" Foreground="Teal" />
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Button>
+
+        <Button x:Name="button6" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="952,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="cat6" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\veganMeal.jpg" Stretch="Fill"/>
+                <TextBlock Name="category6" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegan" Foreground="Teal" />
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Button>
+        <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67">
+            <Grid x:Name="searchable" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Misc\search.png" Stretch="Fill"/>
+
+
+            </Grid>
+        </Button>
+        <Button x:Name="backbutton"  HorizontalAlignment="Center"  Width="64" VerticalAlignment ="Center" Height="64" d:LayoutOverrides="Height" VerticalContentAlignment="Center">
+            <Grid x:Name="backarrow" Height="Auto" Width="Auto">
+                <TextBlock Name ="arrow" FontSize = "60" HorizontalAlignment ="Center"  TextWrapping="Wrap" FontWeight="Bold"  Text ="&#x2190;" Height="auto" Margin="0,-19.804,0,0" d:LayoutOverrides="Height" RenderTransformOrigin="0.678,-0.205"/>
+            </Grid>
+        </Button>
     </Grid>
 </Window>
