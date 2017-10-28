@@ -35,5 +35,11 @@ namespace WpfApp1
             // Turn off resizing
             this.ResizeMode = ResizeMode.NoResize;
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            listBox.Items.RemoveAt
+                (listBox.Items.IndexOf(listBox.SelectedItem));
+        }
     }
 }

@@ -7,19 +7,20 @@
         mc:Ignorable="d"
         Title="Checklist" Height="900" Width="1600">
     <Grid>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1549*"/>
-            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="1360*"/>
+            <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="453" Margin="36,293,0,0" VerticalAlignment="Top" Width="1513">
-
-
-        </Grid>
         <Button x:Name="Back" Content="&#x2794;" HorizontalAlignment="Left" Margin="32,32,0,0" VerticalAlignment="Top" Width="64" Height="64
                 "/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="256" Margin="117,37,0,0" VerticalAlignment="Top" Width="320"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="256" Margin="442,37,0,0" TextWrapping="Wrap" Text="SPAGEERTTYEE" VerticalAlignment="Top" Width="863"/>
-        <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="90" Margin="1326,112,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="256" Margin="0,32,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="256" Margin="322,32,0,0" TextWrapping="Wrap" Text="SPAGEERTTYEE" VerticalAlignment="Top" Width="863" Grid.Column="1"/>
+        <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="90" Margin="1229,46,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="Utensils"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="Utensils" Width="502" Margin="32,288,0,517" FontSize="60" TextAlignment="Center" Foreground="Black" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Skills" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skills" VerticalAlignment="Top" Height="64" Width="501" Margin="419,288,0,0" FontSize="48" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="64" Width="506" Margin="925,288,0,0" FontSize="48" TextAlignment="Center" Grid.ColumnSpan="2" Grid.Column="1"/>
 
 
     </Grid>
