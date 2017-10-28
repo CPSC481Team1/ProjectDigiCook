@@ -32,13 +32,13 @@
         <ListBox x:Name="Skills_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="448" SelectionChanged="listBox_SelectionChanged" Grid.Column="1">
             <Canvas Height="68" Width="422">
                 <Label x:Name="label" Content="• Process of Al Dente" Height="68" Width="369" FontSize="24" VerticalContentAlignment="Center"/>
-                <Image x:Name="play" Height="68" Width="68" Canvas.Left="369" Source="C:\Users\kelvin.mei2\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\Images\Recipes\button.png"/>
+                <Image x:Name="play" Height="68" Width="68" Canvas.Left="369" Source=".\Images\Recipes\button.png"/>
             </Canvas>
         </ListBox>
         <Button x:Name="View_Checklist" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" Margin="1295,7,0,0" VerticalAlignment="Top" Width="167" FontSize="24">
             <Grid>
                 <Label Content="Checklist" VerticalContentAlignment="center" HorizontalAlignment="Left" Margin="-20,0,0,0" Width="108"/>
-                <Image Source="C:\Users\kelvin.mei2\Source\Repos\ProjectDigiCook\WpfApp1\WpfApp1\Images\Recipes\bask.png" Margin="81,0,-15,0"/>
+                <Image Source=".\Images\Recipes\bask.png" Margin="81,0,-15,0"/>
             </Grid>
 
         </Button>
@@ -46,11 +46,6 @@
 
 
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="10,409,0,0" VerticalAlignment="Top" Width="438"/>
-        <Button x:Name="backbutton"  HorizontalAlignment="Center"  Width="64" VerticalAlignment ="Center" Height="64" VerticalContentAlignment="Center" Margin="22,29,34,776">
-            <Grid x:Name="backarrow" Height="Auto" Width="Auto">
-                <TextBlock Name ="arrow" FontSize = "60" HorizontalAlignment ="Center"  TextWrapping="Wrap" FontWeight="Bold"  Text ="&#x2190;" Height="auto" Margin="0,-19.804,0,0" d:LayoutOverrides="Height" RenderTransformOrigin="0.678,-0.205"/>
-            </Grid>
-        </Button>
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="905,409,0,0" VerticalAlignment="Top" Width="448"/>
         <Canvas  Background="AliceBlue" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="906,409,0,0" VerticalAlignment="Top" Width="447">
             <ListBox x:Name="Ingredients_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="447" SelectionChanged="listBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
@@ -68,7 +63,14 @@
             <Button x:Name="button" Content="Add to Checklist" Height="68" Canvas.Top="363" Width="223" FontSize="24"/>
             <Button x:Name="button1" Content="See Alternatives" Height="68" Canvas.Left="224" Canvas.Top="363" Width="223" FontSize="24"/>
         </Canvas>
+        <Button x:Name="backbutton"  HorizontalAlignment="Left"  Width="102" VerticalContentAlignment="Center" Margin="10,12,0,795" >
+            <Grid x:Name="Back" Height="Auto" Width="Auto">
+                <Image  Source=".\Images\Misc\searchbutton.png" Stretch="Fill" Margin="0,0,0,0" />
+            </Grid>
+        </Button>
+
 
     </Grid>
+
 </Window>
     
