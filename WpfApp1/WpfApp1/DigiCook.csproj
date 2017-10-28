@@ -175,6 +175,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Resource Include="Images\Recipes\bask.png" />
+    <Resource Include="Images\Misc\searchbutton.png" />
     <Resource Include="Images\Recipes\button.png" />
     <Resource Include="Images\Search\Fett.jpg" />
     <Resource Include="Images\Search\Rav.jpg" />
