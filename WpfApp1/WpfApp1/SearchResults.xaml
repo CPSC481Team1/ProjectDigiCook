@@ -26,8 +26,8 @@
                     <Grid Width="873.2" Height="200" >
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Spaghetti"/>
-                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆★★★★" Margin="345.925,150,205.105,0" Width="Auto"/>
-                        <Image Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆★★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
+                        <Image Height ="150" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,25,46,25" Width="103.2" />
                         <TextBlock></TextBlock>
                     </Grid>
                 </Border>
@@ -38,7 +38,7 @@
                     <Grid Width="873.2" Height="200" >
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Rav.jpg" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Ravioli"/>
-                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆★★★" Margin="345.925,150,205.105,0" Width="Auto"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
                         <TextBlock></TextBlock>
                     </Grid>
                 </Border>
@@ -47,7 +47,7 @@
                     <Grid Width="873.2" Height="200" >
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Fett.jpg" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Fettuccine"/>
-                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆☆★★" Margin="345.925,150,205.105,0" Width="Auto"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆☆★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
                         <TextBlock></TextBlock>
                     </Grid>
                 </Border>
