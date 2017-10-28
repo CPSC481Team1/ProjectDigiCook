@@ -17,7 +17,7 @@
         <Button x:Name="button" Content="Clear All" HorizontalAlignment="Left" Height="112" Margin="365,717,0,0" VerticalAlignment="Top" Width="288" Background="Maroon" Click="button2_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White"/>
         <Button x:Name="button1" Content="Print List" HorizontalAlignment="Left" Height="112" Margin="1259,717,0,0" VerticalAlignment="Top" Width="288" Background="White" Click="button2_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="Maroon"/>
 
-        <Button x:Name="backbutton"  HorizontalAlignment="Left"  Width="168" VerticalContentAlignment="Center" Margin="38,38,0,704.4">
+        <Button x:Name="backbutton"  HorizontalAlignment="Left"  Width="171.273" VerticalContentAlignment="Center" Margin="38,35,0,740">
             <Grid x:Name="Back" Height="Auto" Width="Auto">
                 <Image  Source=".\Images\Misc\searchbutton.png" Stretch="Fill" Margin="0,0,0,0" />
             </Grid>
