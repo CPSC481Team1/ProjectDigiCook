@@ -27,9 +27,9 @@
         <Button x:Name="button" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="254,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" Background="#FFDDDDDD" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat1" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill"/>
-                <TextBlock Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Breakfast" Foreground="Teal"/>
+                <TextBlock Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Breakfast" Foreground="White"/>
                     <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect>
 
                 </TextBlock>
@@ -42,9 +42,9 @@
         <Button x:Name="button2" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="605,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat2" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\Sandwich.jpg" Stretch="Fill"/>
-                <TextBlock Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Lunch" Foreground="Teal" />
+                <TextBlock Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Lunch" Foreground="White" />
                     <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect>
                 </TextBlock>
             </Grid>
@@ -53,9 +53,9 @@
         <Button x:Name="button3" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="952,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat3" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\Steak.jpg" Stretch="Fill"/>
-                <TextBlock Name="category3" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Dinner" Foreground="Teal" />
+                <TextBlock Name="category3" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Dinner" Foreground="White" />
                     <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect>
                 </TextBlock>
             </Grid>
@@ -64,9 +64,9 @@
         <Button x:Name="button4" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="254,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat4" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\Cake.jpg" Stretch="Fill"/>
-                <TextBlock Name="category4" HorizontalAlignment="Center" VerticalAlignment="Bottom" ><Run FontSize="30" FontFamily="Impact" Text="Dessert" Foreground="Teal" />
+                <TextBlock Name="category4" HorizontalAlignment="Center" VerticalAlignment="Bottom" ><Run FontSize="30" FontFamily="Impact" Text="Dessert" Foreground="White" />
                     <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect>
                 </TextBlock>
             </Grid>
@@ -74,9 +74,9 @@
         <Button x:Name="button5" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="605,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat5" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\Veg.jpg" Stretch="Fill"/>
-                <TextBlock Name="category5" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegetarian" Foreground="Teal" />
+                <TextBlock Name="category5" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegetarian" Foreground="White" />
                     <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect>
                 </TextBlock>
             </Grid>
@@ -85,9 +85,9 @@
         <Button x:Name="button6" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="952,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat6" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\veganMeal.jpg" Stretch="Fill"/>
-                <TextBlock Name="category6" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegan" Foreground="Teal" />
+                <TextBlock Name="category6" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegan" Foreground="White" />
                     <TextBlock.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="1" BlurRadius="2"/>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect>
                 </TextBlock>
             </Grid>
