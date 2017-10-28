@@ -24,17 +24,36 @@
 
                 <Border BorderThickness="1" BorderBrush="Black">
                     <Grid Width="873.2" Height="200" >
-                        <Image Source=".\Images\Categories\Steak.jpg" HorizontalAlignment="Left"/>
+                        <Image Width="300"  Stretch="Fill" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left"/>
+                        <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Spaghetti"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆★★★★" Margin="345.925,150,205.105,0" Width="Auto"/>
+                        <Image Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right"/>
+                        <TextBlock></TextBlock>
                     </Grid>
                 </Border>
+
+
+
                 <Border BorderThickness="1" BorderBrush="Black">
                     <Grid Width="873.2" Height="200" >
+                        <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Rav.jpg" HorizontalAlignment="Left"/>
+                        <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Ravioli"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆★★★" Margin="345.925,150,205.105,0" Width="Auto"/>
+                        <TextBlock></TextBlock>
+                    </Grid>
+                </Border>
 
+                <Border BorderThickness="1" BorderBrush="Black">
+                    <Grid Width="873.2" Height="200" >
+                        <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Fett.jpg" HorizontalAlignment="Left"/>
+                        <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Fettuccine"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆☆★★" Margin="345.925,150,205.105,0" Width="Auto"/>
+                        <TextBlock></TextBlock>
                     </Grid>
                 </Border>
 
             </ListBox>
- 
+
 
             <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
             <TextBox x:Name="textBox" Grid.Column="1" Height="67" Margin="218.481,102.367,221.519,62.366" TextWrapping="Wrap" FontSize="48" TextAlignment="Left" Text="Search for your item..." VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2"/>

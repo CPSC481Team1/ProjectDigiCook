@@ -174,7 +174,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Images\Search\Fett.jpg" />
+    <Resource Include="Images\Search\Rav.jpg" />
     <Resource Include="Images\Recipes\Spaghetti-Chicken-Meatballs.png" />
+    <Resource Include="Images\Misc\Recommended.png" />
     <Resource Include="Images\Misc\search.png" />
     <Resource Include="Images\Categories\veganMeal.jpg" />
     <Resource Include="Images\Categories\Cake.jpg" />
