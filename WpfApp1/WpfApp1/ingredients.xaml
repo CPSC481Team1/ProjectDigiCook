@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.Checklist"
+﻿<Window x:Class="WpfApp1.ingredients"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -19,7 +19,7 @@
                 "/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="256" Margin="117,37,0,0" VerticalAlignment="Top" Width="320"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="256" Margin="442,37,0,0" TextWrapping="Wrap" Text="SPAGEERTTYEE" VerticalAlignment="Top" Width="863"/>
-        <Button x:Name="start!" Content="Start!" HorizontalAlignment="Left" Height="90" Margin="1326,112,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="90" Margin="1326,112,0,0" VerticalAlignment="Top" Width="200"/>
 
 
     </Grid>

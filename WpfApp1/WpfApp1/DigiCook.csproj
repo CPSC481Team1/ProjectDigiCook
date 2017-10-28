@@ -54,11 +54,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="arrowControl.xaml.cs">
+      <DependentUpon>arrowControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Checklist.xaml.cs">
       <DependentUpon>Checklist.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchButton.xaml.cs">
+      <DependentUpon>SearchButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="SkillLevel.cs" />
     <Compile Include="UserControl1.xaml.cs">
@@ -67,6 +73,13 @@
     <Compile Include="ingredients.xaml.cs">
       <DependentUpon>ingredients.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="arrowControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BeginnerButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,11 +107,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SearchButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ingredients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,6 +173,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Images\Misc\search.png" />
+    <Resource Include="Images\Categories\veganMeal.jpg" />
+    <Resource Include="Images\Categories\Cake.jpg" />
+    <Resource Include="Images\Categories\Steak.jpg" />
+    <Resource Include="Images\Categories\Veg.jpg" />
+    <Resource Include="Images\Categories\vegan.jpg" />
+    <Resource Include="Images\Categories\Sandwich.jpg" />
+    <Resource Include="Images\Categories\BandEggs.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

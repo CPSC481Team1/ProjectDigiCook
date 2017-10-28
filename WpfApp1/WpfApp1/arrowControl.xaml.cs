@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for arrowControl.xaml
     /// </summary>
-    public partial class ingredients : Window
+    public partial class arrowControl : UserControl
     {
-        public ingredients()
+        public arrowControl()
         {
             InitializeComponent();
         }
