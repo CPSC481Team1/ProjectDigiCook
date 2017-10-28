@@ -24,5 +24,9 @@ namespace WpfApp1
             InitializeComponent();
         }
 
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
