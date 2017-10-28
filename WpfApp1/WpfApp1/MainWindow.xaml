@@ -88,7 +88,7 @@
                 <TextBlock Name="intermediateFlavour" FontSize="34" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Text="For chefs that have learnt the basics of cooking and are ready for more advanced techniques" VerticalAlignment="Center" Foreground="#FFF9F9F9" Height="294" Margin="10" Width="294" Visibility="Hidden"/>
             </Grid>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Height="69.653" Margin="1174,646.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="222.69"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Expert"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="69.653" Margin="1118,646.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Expert"/></TextBlock>
         <Button  HorizontalAlignment="Left" Height="320" Margin="1118,321.532,0,0" VerticalAlignment="Top" Width="320" Click ="Expert_Button_Click" MouseEnter="Expert_MouseEnter" MouseLeave="Expert_MouseLeave">
             <Grid x:Name="expertGrid" Height="Auto" Width="Auto">
                 <Image Name="advancedImg" Source=".\Images\Skill_Level\Advanced.jpg" Stretch="Fill" Opacity="1.0"/>
@@ -103,8 +103,8 @@
                 <TextBlock Name="beginnerFlavour" FontSize="34" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Text="For new chefs who are ready to learn essential cooking skills by completing simple recipes" VerticalAlignment="Center" Foreground="#FFF9F9F9" Height="294" Margin="10" Width="294" Visibility="Hidden"/>
             </Grid>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Height="86.653" Margin="638.666,646.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="329.333"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Intermediate"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="91.653" Margin="208.69,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="228.667"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Beginner"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="86.653" Margin="582.666,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="437.333"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Intermediate"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="91.653" Margin="160.357,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Beginner"/></TextBlock>
         <Button Name="SkipButton" Content="Skip" FontSize="55" Foreground="White" HorizontalAlignment="Left" Height="82" Margin="1426,778,0,0" VerticalAlignment="Top" Width="156" Background="#00d57f" MouseEnter="Skip_Button_MouseEnter"  Style="{StaticResource MyButton}"/>
         <TextBlock HorizontalAlignment="Left" Height="89.653" Margin="160.357,140,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="1277.643"><Run FontSize="60" FontFamily="Segoe UI Black" Text="Please choose your culinary skill level..."/></TextBlock>
 
