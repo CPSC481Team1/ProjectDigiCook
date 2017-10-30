@@ -14,27 +14,15 @@
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1" Background="#dae1e7" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="1353" Grid.ColumnSpan="2">
-            <Border BorderThickness="1" BorderBrush="Black">
+        <Grid Grid.Column="1" Background="#dae1e7" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="876">
+            <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,480,0">
                 <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="256" VerticalAlignment="Top" Width="256"  Margin="10,10,10,10" />
             </Border>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="298,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="575" FontSize="20"  Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. "/>
-            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,22,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
-            <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="114" Margin="967,72,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click"/>
+            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,22,-29,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="256"/>
         </Grid>
-        <TextBlock x:Name="Utensils"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="Utensils" Width="448" Margin="1,354,0,460" FontSize="36" TextAlignment="Center" Foreground="Black" Grid.Column="1"/>
-        <TextBlock x:Name="Skills" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skills" VerticalAlignment="Top" Height="50" Width="448" Margin="453,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1"/>
-        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1"/>
-
-        <Label x:Name="Utensils_Label"  Background="AliceBlue" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" FontSize="24" Margin="0,409,924,29" Grid.Column="1"/>
-
-        <ListBox x:Name="Skills_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" SelectionChanged="listBox_SelectionChanged" Grid.Column="1">
-            <Canvas Height="68" Width="422">
-                <Label x:Name="label" Content="• Process of Al Dente" Height="68" Width="369" FontSize="24" VerticalContentAlignment="Center"/>
-                <Image x:Name="play" Height="68" Width="68" Canvas.Left="344" Source=".\Images\Recipes\button.png"/>
-            </Canvas>
-        </ListBox>
+        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="927,94,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Button x:Name="View_Checklist" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" Margin="1295,7,0,0" VerticalAlignment="Top" Width="167" FontSize="24">
             <Grid>
                 <Label Content="Checklist" VerticalContentAlignment="center" HorizontalAlignment="Left" Margin="-20,0,0,0" Width="108"/>
@@ -42,13 +30,9 @@
             </Grid>
 
         </Button>
-
-
-
-        <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="1,409,0,0" VerticalAlignment="Top" Width="428"/>
-        <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="905,409,0,0" VerticalAlignment="Top" Width="448"/>
-        <Canvas  Background="AliceBlue" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="906,409,0,0" VerticalAlignment="Top" Width="447">
-            <ListBox x:Name="Ingredients_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="447" SelectionChanged="listBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="926,149,0,0" VerticalAlignment="Top" Width="448" Grid.ColumnSpan="2"/>
+        <Canvas  Background="AliceBlue" Grid.Column="1" HorizontalAlignment="Left" Height="665" Margin="927,149,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2">
+            <ListBox x:Name="Ingredients_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="447" SelectionChanged="listBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <Label x:Name="label1" Content="• 1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label2" Content="• 1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label3" Content="• 4 cloves garlic, Minced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
@@ -60,8 +44,8 @@
                 <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label10" Content="• 1/2 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
             </ListBox>
-            <Button x:Name="button" Content="Add to Checklist" Height="53" Canvas.Top="368" Width="199" FontSize="24" Canvas.Left="10"/>
-            <Button x:Name="button1" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="368" Width="191" FontSize="24"/>
+            <Button x:Name="button" Content="Add to Checklist" Height="53" Canvas.Top="602" Width="199" FontSize="24" Canvas.Left="10"/>
+            <Button x:Name="button1" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="602" Width="191" FontSize="24"/>
         </Canvas>
         <Button x:Name="backbutton"  HorizontalAlignment="Left"  Width="102" VerticalContentAlignment="Center" Margin="10,12,0,795" >
             <Grid x:Name="Back" Height="Auto" Width="Auto">
