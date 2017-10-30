@@ -17,14 +17,34 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class ingredients : Window
+    public partial class Recipe : Window
     {
-        public ingredients()
+        public Recipe()
         {
             InitializeComponent();
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

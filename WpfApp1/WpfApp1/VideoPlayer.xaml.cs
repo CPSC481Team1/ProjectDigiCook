@@ -10,26 +10,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for VideoPlayer.xaml
     /// </summary>
-    public partial class Ingredients : Window
+    public partial class VideoPlayer : Window
     {
-        public Ingredients()
+        public VideoPlayer()
         {
             InitializeComponent();
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void start_Click(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -1,11 +1,11 @@
-﻿<Window x:Class="WpfApp1.ingredients"
+﻿<Window x:Class="WpfApp1.Ingredients"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Checklist" Height="900" Width="1600">
+        Title="Ingredients" Height="900" Width="1600">
     <Grid Margin="0,2,0,-2">
 
         <Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
         </Grid>
         <TextBlock x:Name="Utensils"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="Utensils" Width="448" Margin="1,354,0,460" FontSize="36" TextAlignment="Center" Foreground="Black" Grid.Column="1"/>
         <TextBlock x:Name="Skills" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skills" VerticalAlignment="Top" Height="50" Width="448" Margin="453,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1"/>
-        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="IngredientsList" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1"/>
 
         <Label x:Name="Utensils_Label"  Background="AliceBlue" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" FontSize="24" Margin="0,409,924,29" Grid.Column="1"/>
 
