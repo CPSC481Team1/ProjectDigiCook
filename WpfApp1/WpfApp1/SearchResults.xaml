@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.SearchResults"
+﻿<Page x:Class="WpfApp1.SearchResults"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -82,4 +82,4 @@
         </Grid>
         <TextBlock x:Name="textBlock" Height="60.833" Margin="339.707,210.556,0,0" TextWrapping="Wrap" Text="Results..." FontSize="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="222.398"/>
     </Grid>
-</Window>
+</Page>

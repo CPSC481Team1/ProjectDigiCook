@@ -18,19 +18,19 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class FrontPage : Window
+    public partial class FrontPage : Page
     {
         public FrontPage()
         {
             InitializeComponent();
 
-            this.Title = "DigiCook";
+            //this.Title = "DigiCook";
 
-            // Set window to center of the computer screen at startup
-            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            //// Set window to center of the computer screen at startup
+            //this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            // Turn off resizing
-            this.ResizeMode = ResizeMode.NoResize;
+            //// Turn off resizing
+            //this.ResizeMode = ResizeMode.NoResize;
         }
 
         private void ButtonEnter(object sender, MouseEventArgs e)

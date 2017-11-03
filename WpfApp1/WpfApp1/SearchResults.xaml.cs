@@ -17,7 +17,7 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class SearchResults : Window
+    public partial class SearchResults : Page
     {
         public SearchResults()
         {

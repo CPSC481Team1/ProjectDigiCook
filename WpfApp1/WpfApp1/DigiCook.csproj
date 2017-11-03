@@ -79,6 +79,9 @@
     <Compile Include="FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SkillSelection.xaml.cs">
+      <DependentUpon>SkillSelection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Recipe.xaml.cs">
       <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
     <Page Include="FrontPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SkillSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Recipe.xaml">
       <Generator>MSBuild:Compile</Generator>

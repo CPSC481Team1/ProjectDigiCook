@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.FrontPage"
+﻿<Page x:Class="WpfApp1.FrontPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -112,4 +112,4 @@
             </Grid>
         </Button>
     </Grid>
-</Window>
+</Page>
