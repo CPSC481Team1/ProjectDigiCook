@@ -31,7 +31,7 @@ namespace WpfApp1
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
         }
     }
 }

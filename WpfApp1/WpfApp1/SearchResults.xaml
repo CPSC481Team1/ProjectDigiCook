@@ -23,7 +23,7 @@
             <ListBox  BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="AliceBlue" ScrollViewer.VerticalScrollBarVisibility="Visible">
 
                 <Border BorderThickness="1" BorderBrush="Black">
-                    <Grid Width="873.2" Height="200" >
+                    <Grid Width="873.2" Height="200" MouseLeftButtonDown="recipe1_click">
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Spaghetti"/>
                         <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆★★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
@@ -67,7 +67,7 @@
 
             <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
             <TextBox x:Name="textBox" Grid.Column="1" Height="67" Margin="218.481,102.367,221.519,62.366" TextWrapping="Wrap" FontSize="48" TextAlignment="Left" Text="Search for your item..." VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2"/>
-            <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67">
+            <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67" Click="search_Click">
                 <Grid x:Name="searchable" Height="Auto" Width="Auto">
                     <Image Source=".\Images\Misc\search.png" Stretch="Fill"/>
 

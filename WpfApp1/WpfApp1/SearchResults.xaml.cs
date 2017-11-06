@@ -23,5 +23,15 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./SearchResults.xaml", UriKind.Relative));
+        }
+
+        private void recipe1_click(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Ingredients.xaml", UriKind.Relative));
+        }
     }
 }

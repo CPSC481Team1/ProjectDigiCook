@@ -20,7 +20,7 @@
             <ColumnDefinition Width="1360*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="View_Checklist" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" Margin="1295,7,0,0" VerticalAlignment="Top" Width="167" FontSize="24">
+        <Button x:Name="View_Checklist" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" Margin="1295,7,0,0" VerticalAlignment="Top" Width="167" FontSize="24" Click="View_Checklist_Click">
             <Grid>
                 <Label Content="Checklist" VerticalContentAlignment="center" HorizontalAlignment="Left" Margin="-20,0,0,0" Width="108"/>
                 <Image Source=".\Images\Recipes\bask.png" Margin="81,0,-15,0"/>
@@ -99,7 +99,7 @@
                 </TextBlock>
             </Grid>
         </Button>
-        <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67">
+        <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67" Click="search_Click">
             <Grid x:Name="searchable" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Misc\search.png" Stretch="Fill"/>
 
