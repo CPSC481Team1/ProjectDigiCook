@@ -48,7 +48,6 @@ namespace WpfApp1
             this.NavigationService.Navigate(new Uri("./SearchResults.xaml", UriKind.Relative));
         }
 
-
         private void View_Checklist_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Checklist.xaml", UriKind.Relative));
