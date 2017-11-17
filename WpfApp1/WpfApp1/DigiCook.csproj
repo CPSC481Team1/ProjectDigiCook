@@ -79,6 +79,9 @@
     <Compile Include="FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchBar.xaml.cs">
+      <DependentUpon>SearchBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SkillSelection.xaml.cs">
       <DependentUpon>SkillSelection.xaml</DependentUpon>
     </Compile>
@@ -88,7 +91,7 @@
     <Compile Include="SearchButton.xaml.cs">
       <DependentUpon>SearchButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SkillLevel.cs" />
+    <Compile Include="GlobalVars.cs" />
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
     <Page Include="FrontPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SearchBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SkillSelection.xaml">
       <SubType>Designer</SubType>

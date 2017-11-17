@@ -39,19 +39,19 @@ namespace WpfApp1
         // Code to handle button clicks
         private void Beginner_Button_Click(object sender, RoutedEventArgs e)
         {
-            SkillLevel.skillLevel = 1;
+            GlobalVars.skillLevel = 1;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
         }
         private void Intermediate_Button_Click(object sender, RoutedEventArgs e)
         {
-            SkillLevel.skillLevel = 2;
+            GlobalVars.skillLevel = 2;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
 
         }
 
         private void Expert_Button_Click(object sender, RoutedEventArgs e)
         {
-            SkillLevel.skillLevel = 3;
+            GlobalVars.skillLevel = 3;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
 
         }
@@ -62,7 +62,7 @@ namespace WpfApp1
 
         private void SkipButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            SkillLevel.skillLevel = 1; // Set to beginner if skip
+            GlobalVars.skillLevel = 1; // Set to beginner if skip
         }
 
         #region Event Handling
@@ -117,7 +117,7 @@ namespace WpfApp1
 
         private void SkipButton_Click(object sender, RoutedEventArgs e)
         {
-            SkillLevel.skillLevel = 1;
+            GlobalVars.skillLevel = 1;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
         }
     }

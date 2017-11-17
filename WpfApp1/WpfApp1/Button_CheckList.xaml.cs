@@ -46,6 +46,7 @@ namespace WpfApp1
             }
             return parent;
         }
+
         private void View_Checklist_Click(object sender, RoutedEventArgs e)
         {
             Page pg = GetDependencyObjectFromVisualTree(this, typeof(Page)) as Page;

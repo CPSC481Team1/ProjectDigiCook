@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Ingredients" Height="900" Width="1600">
-    <Grid Margin="0,2,0,-2">
+    <Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -35,13 +35,6 @@
                 <Image x:Name="play" Height="68" Width="68" Canvas.Left="344" Source=".\Images\Recipes\button.png"/>
             </Canvas>
         </ListBox>
-        <Button x:Name="View_Checklist" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" Margin="1295,7,0,0" VerticalAlignment="Top" Width="167" FontSize="24">
-            <Grid>
-                <Label Content="Checklist" VerticalContentAlignment="center" HorizontalAlignment="Left" Margin="-20,0,0,0" Width="108"/>
-                <Image Source=".\Images\Recipes\bask.png" Margin="81,0,-15,0"/>
-            </Grid>
-
-        </Button>
 
 
 
@@ -63,11 +56,7 @@
             <Button x:Name="button" Content="Add to Checklist" Height="53" Canvas.Top="368" Width="199" FontSize="24" Canvas.Left="10"/>
             <Button x:Name="button1" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="368" Width="191" FontSize="24"/>
         </Canvas>
-        <Button x:Name="backbutton"  HorizontalAlignment="Left"  Width="102" VerticalContentAlignment="Center" Margin="10,12,0,795" >
-            <Grid x:Name="Back" Height="Auto" Width="Auto">
-                <Image  Source=".\Images\Misc\searchbutton.png" Stretch="Fill" Margin="0,0,0,0" />
-            </Grid>
-        </Button>
+        <local:Button_CheckList HorizontalAlignment="Left" Height="19" Margin="1283,18.5,0,0" VerticalAlignment="Top" Width="167.5" Grid.ColumnSpan="2" Grid.Column="1"/>
     </Grid>
 
 </Page>
