@@ -50,6 +50,7 @@
             </ListBox>
 
             <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
+            <local:SearchBar Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,-46.617" Width="1360"/>
         </Grid>
         <TextBlock x:Name="textBlock" Height="60.833" Margin="339.707,210.556,0,0" TextWrapping="Wrap" Text="Results..." FontSize="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="222.398"/>
         <local:Button_CheckList HorizontalAlignment="Left" Height="19" Margin="1403,18.5,0,0" VerticalAlignment="Top" Width="167.5"/>

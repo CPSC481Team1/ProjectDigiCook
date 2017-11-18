@@ -18,8 +18,11 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
+    /// 
+
     public partial class FrontPage : Page
     {
+
         public FrontPage()
         {
             InitializeComponent();
@@ -46,6 +49,11 @@ namespace WpfApp1
         private void View_Checklist_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Checklist.xaml", UriKind.Relative));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            searchBar.setText();
         }
     }
 }

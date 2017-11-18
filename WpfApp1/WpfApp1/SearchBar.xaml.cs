@@ -20,6 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class SearchBar : UserControl
     {
+
         public SearchBar()
         {
             InitializeComponent();
@@ -59,8 +60,10 @@ namespace WpfApp1
 
             pg.NavigationService.Navigate(new Uri("./SearchResults.xaml", UriKind.Relative));
 
-
         }
+
+        
+
 
         private void search_Click(object sender, RoutedEventArgs e)
         {
@@ -101,10 +104,17 @@ namespace WpfApp1
 
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
         {
+            //GlobalVars.searchText = SearchBox.Text;
+
             if (e.Key == Key.Enter)
             {
                 navigateToSearchResult();
             }
-}
+        }
+
+        public void setText()
+        {
+            SearchBox.Text = GlobalVars.searchText;
+        }
     }
 }

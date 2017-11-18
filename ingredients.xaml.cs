@@ -10,19 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for SearchButton.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class SearchButton : UserControl
+    public partial class Ingredients : Page
     {
-        public SearchButton()
+        public Ingredients()
         {
             InitializeComponent();
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
         }
     }
 }
