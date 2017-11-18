@@ -20,11 +20,12 @@ namespace WpfApp1
     /// </summary>
     public partial class SearchBar : UserControl
     {
-
-        Boolean isfocused = false;
         public SearchBar()
         {
             InitializeComponent();
+
+            // Set the default text to the globalVar
+            SearchBox.Text = GlobalVars.searchText;
         }
 
 
@@ -44,33 +45,38 @@ namespace WpfApp1
             return parent;
         }
 
-
-        private void search_Click(object sender, RoutedEventArgs e)
+        // TO-DO If can't find the url, navigate to 404 page
+        private void navigateToSearchResult()
         {
+
+            // Set serachBox Test
+            GlobalVars.searchText = SearchBox.Text;
+
             Page pg = GetDependencyObjectFromVisualTree(this, typeof(Page)) as Page;
 
             string navPage = "./" + SearchBox.Text + ".xaml";
 
-            GlobalVars.searchText = SearchBox.Text;
 
             pg.NavigationService.Navigate(new Uri("./SearchResults.xaml", UriKind.Relative));
 
-            
-            // TO-DO If can't find the url, navigate to 404 page
 
+        }
+
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            navigateToSearchResult();
         }
 
         private void SearchBox_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             SearchBox.BorderBrush = System.Windows.Media.Brushes.LightBlue;
-
         }
 
         // Handle mouse click events
         private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
         {
 
-            if (SearchBox.Text == "Search for your item...")
+            if (SearchBox.Text == GlobalVars.defaultSearchText)
             {
                 SearchBox.Text = "";
             }
@@ -85,13 +91,20 @@ namespace WpfApp1
         {
             if (SearchBox.Text == "")
             {
-                SearchBox.Text = "Search for your item...";
+                SearchBox.Text = GlobalVars.defaultSearchText;
             }
 
             SearchBox.BorderBrush = System.Windows.Media.Brushes.Black;
 
             SearchBox.Foreground = System.Windows.Media.Brushes.Gray;
-
         }
+
+        private void SearchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                navigateToSearchResult();
+            }
+}
     }
 }
