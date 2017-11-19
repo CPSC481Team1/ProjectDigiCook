@@ -52,6 +52,7 @@
     <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -76,24 +77,33 @@
     <Compile Include="Checklist.xaml.cs">
       <DependentUpon>Checklist.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NoResults.xaml.cs">
+      <DependentUpon>NoResults.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBar.xaml.cs">
+      <DependentUpon>SearchBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SkillSelection.xaml.cs">
+      <DependentUpon>SkillSelection.xaml</DependentUpon>
     </Compile>
     <Compile Include="Recipe.xaml.cs">
       <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SearchButton.xaml.cs">
-      <DependentUpon>SearchButton.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SkillLevel.cs" />
+    <Compile Include="GlobalVars.cs" />
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ingredients.xaml.cs">
       <DependentUpon>Ingredients.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SearchResults.xaml.cs">
-      <DependentUpon>SearchResults.xaml</DependentUpon>
+    <Compile Include="Spaghetti.xaml.cs">
+      <DependentUpon>Spaghetti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Button_CheckList.xaml.cs">
+      <DependentUpon>Button_CheckList.xaml</DependentUpon>
     </Compile>
     <Compile Include="VideoPlayer.xaml.cs">
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
@@ -110,9 +120,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NoResults.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="FrontPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SearchBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SkillSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Recipe.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -133,10 +155,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SearchButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,7 +163,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SearchResults.xaml">
+    <Page Include="Spaghetti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Button_CheckList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

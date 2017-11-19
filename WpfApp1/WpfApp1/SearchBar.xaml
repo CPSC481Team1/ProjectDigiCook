@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="WpfApp1.SearchBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1600">
+    <Grid>
+        <TextBox KeyDown="SearchBox_KeyDown" IsMouseDirectlyOverChanged="SearchBox_IsMouseDirectlyOverChanged" LostFocus="SearchBox_LostFocus" GotFocus="SearchBox_GotFocus" x:Name="SearchBox" Grid.Column="1" Height="67" Margin="218.481,102.367,221.519,62.366" TextWrapping="Wrap" FontSize="42" TextAlignment="Left" Foreground="Gray" BorderBrush="Black" BorderThickness="2"/>
+        <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67" Click="search_Click">
+            <Grid x:Name="searchable" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Misc\search.png" Stretch="Fill"/>
+            </Grid>
+        </Button>
+    </Grid>
+
+</UserControl>

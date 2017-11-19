@@ -17,7 +17,7 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Recipe : Window
+    public partial class Recipe : Page
     {
         public Recipe()
         {

@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfApp1.FrontPage"
+﻿<Page x:Class="WpfApp1.NoResults"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -91,5 +91,6 @@
         </Button>
         <local:Button_CheckList Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="1283,18.5,0,0" VerticalAlignment="Top" Width="167.5" Grid.ColumnSpan="2"/>
         <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286.617" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46.617"/>
+        <TextBlock x:Name="textBlock" Height="60.833" Margin="219.707,-29.444,178.062,0" TextWrapping="Wrap" Text="No results found... Try searching with a new term or try a category" FontSize="30" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </Page>

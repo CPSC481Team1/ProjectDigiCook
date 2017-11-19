@@ -17,21 +17,29 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Ingredients : Page
+    public partial class Spaghetti : Page
     {
-        public Ingredients()
+        public Spaghetti()
         {
             InitializeComponent();
+
+            
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void recipe1_click(object sender, MouseButtonEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri("./Ingredients.xaml", UriKind.Relative));
         }
 
-        private void start_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
+            searchBar.setText();
+        }
+
+        //set text
+        private void textBlock_Loaded(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text = "Results for spaghetti...";
         }
     }
 }

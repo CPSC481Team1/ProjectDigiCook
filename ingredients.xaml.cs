@@ -17,11 +17,21 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class SearchResults : Window
+    public partial class Ingredients : Page
     {
-        public SearchResults()
+        public Ingredients()
         {
             InitializeComponent();
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
         }
     }
 }

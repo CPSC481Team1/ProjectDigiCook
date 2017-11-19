@@ -20,10 +20,10 @@ namespace WpfApp1
     /// </summary>
     /// 
 
-    public partial class FrontPage : Page
+    public partial class NoResults : Page
     {
 
-        public FrontPage()
+        public NoResults()
         {
             InitializeComponent();
 
