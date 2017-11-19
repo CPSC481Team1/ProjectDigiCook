@@ -203,6 +203,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Images\Video\cooking_video.jpg" />
+    <Resource Include="Images\Video\cooking_video_thumbnail.jpg" />
+    <Resource Include="Images\Video\fullscreen_button.png" />
+    <Resource Include="Images\Video\play_button.png" />
+    <Resource Include="Images\Video\TopChefPhoto4.jpg" />
+    <Resource Include="Images\Video\volume_button.png" />
     <Resource Include="Images\Recipes\bask.png" />
     <Resource Include="Images\Misc\searchbutton.png" />
     <Resource Include="Images\Recipes\button.png" />
