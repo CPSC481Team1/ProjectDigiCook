@@ -24,14 +24,44 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ingredientslistBox_SelectionChanged(object sender, EventArgs e)
         {
+            if (ingredientsBox.SelectedIndex >= 0)
+            {
+                addButton.IsEnabled = true;
 
+                if(ingredientsBox.SelectedItem == label5)
+                {
+                    altButton.IsEnabled = true;
+                }
+                else
+                {
+                    altButton.IsEnabled = false;
+                }
+            }
+            else
+            {
+                addButton.IsEnabled = false;
+            }
         }
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
         }
+
+        
+        private void ingredientsCanvas_MouseEnter(object sender, EventArgs e)
+        {
+            ingredientslistBox_SelectionChanged(sender, e);
+        }
+
+        private void ingredientsCanvas_MouseLeave(object sender, MouseEventArgs e)
+        {
+          //  ingredientsBox.SelectedIndex = -1;    
+            addButton.IsEnabled = false;
+            altButton.IsEnabled = false;
+        }
+        
     }
 }

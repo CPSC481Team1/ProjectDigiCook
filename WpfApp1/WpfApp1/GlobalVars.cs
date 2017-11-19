@@ -21,5 +21,7 @@ namespace WpfApp1
 
         public static string[] ingredients { get; set; }
 
+        public static string[] checklist { get; set; }
+
     }
 }
