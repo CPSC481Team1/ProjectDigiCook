@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Web;
+using System.Reflection;
 
 namespace WpfApp1
 {
@@ -21,12 +24,15 @@ namespace WpfApp1
     public partial class SearchBar : UserControl
     {
 
+        private string initialSeatchString;
         public SearchBar()
         {
             InitializeComponent();
 
             // Set the default text to the globalVar
             SearchBox.Text = GlobalVars.searchText;
+
+            initialSeatchString = SearchBox.Text;
         }
 
 
@@ -54,16 +60,20 @@ namespace WpfApp1
             GlobalVars.searchText = SearchBox.Text;
 
             Page pg = GetDependencyObjectFromVisualTree(this, typeof(Page)) as Page;
-
             string navPage = "./" + SearchBox.Text + ".xaml";
 
 
-            pg.NavigationService.Navigate(new Uri("./SearchResults.xaml", UriKind.Relative));
+            string fileDir = System.IO.Path.GetFullPath(@"..\..\");
 
+             if (File.Exists(fileDir + SearchBox.Text + ".xaml"))
+            {
+                pg.NavigationService.Navigate(new Uri(navPage, UriKind.Relative));
+            }
+            else //Navigate to 404 page
+            {
+                pg.NavigationService.Navigate(new Uri("./NoResults.xaml", UriKind.Relative));
+            }
         }
-
-        
-
 
         private void search_Click(object sender, RoutedEventArgs e)
         {
@@ -114,7 +124,12 @@ namespace WpfApp1
 
         public void setText()
         {
-            SearchBox.Text = GlobalVars.searchText;
+            //SearchBox.Text = GlobalVars.searchText;
+        }
+
+        public string getText()
+        {
+            return initialSeatchString;
         }
     }
 }

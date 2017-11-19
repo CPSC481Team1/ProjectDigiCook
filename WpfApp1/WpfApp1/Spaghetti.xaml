@@ -1,11 +1,11 @@
-﻿<Page x:Class="WpfApp1.SearchResults"
+﻿<Page x:Class="WpfApp1.Spaghetti"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="SearchResults" Height="900" Width="1600">
+        Title="Spaghetti" Height="900" Width="1600">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -50,9 +50,9 @@
             </ListBox>
 
             <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
-            <local:SearchBar Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,-46.617" Width="1360"/>
+            <local:SearchBar x:Name ="searchBar" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,-46.617" Width="1360"/>
         </Grid>
-        <TextBlock x:Name="textBlock" Height="60.833" Margin="339.707,210.556,0,0" TextWrapping="Wrap" Text="Results..." FontSize="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="222.398"/>
+        <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Loaded="textBlock_Loaded" FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
         <local:Button_CheckList HorizontalAlignment="Left" Height="19" Margin="1403,18.5,0,0" VerticalAlignment="Top" Width="167.5"/>
     </Grid>
 </Page>
