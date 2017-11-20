@@ -33,8 +33,8 @@ namespace WpfApp1
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            checklistBox.Items.RemoveAt
-                (checklistBox.Items.IndexOf(checklistBox.SelectedItem));
+            GlobalVars.checklist.RemoveAt(checklistBox.Items.IndexOf(checklistBox.SelectedItem));
+            checklistBox.Items.RemoveAt(checklistBox.Items.IndexOf(checklistBox.SelectedItem));
 
             disableClearWhenEmpty();
         }
@@ -75,6 +75,7 @@ namespace WpfApp1
         {
             checklistBox.Items.Clear();
             clearButton.IsEnabled = false;
+            GlobalVars.checklist.Clear();
         }
     }
 }
