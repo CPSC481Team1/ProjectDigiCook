@@ -6,15 +6,13 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Checklist" Height="900" Width="1600">
-    <Grid Background="#FFDADADA">
+    <Grid Background="#FFFFE5B4">
 
         <Label x:Name="label" Content="Checklist" HorizontalAlignment="Center" Height="166" Margin="495,0,495.6,0" VerticalAlignment="Top" Width="603" FontSize="85" FontFamily="Segoe Script" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="maroon"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="506" Margin="0,171,-0.4,0" VerticalAlignment="Top" Width="1594">
-            <TextBlock x:Name="textBlock1" Height="67" TextWrapping="Wrap" Text="• 15 lb Ground Beef" Width="1574" FontSize="50" FontFamily="Sakkal Majalla" HorizontalAlignment="Center" TextAlignment="Center"/>
-            <TextBlock x:Name="textBlock" Height="73" TextWrapping="Wrap" Width="1574" FontSize="50" FontFamily="Sakkal Majalla" TextAlignment="Center"><Run Text="• "/><Run Text="1.75 lb Diced Tomatoes"/></TextBlock>
-        </ListBox>
-        <Button x:Name="button2" Content="Delete" HorizontalAlignment="Left" Height="112" Margin="38,717,0,0" VerticalAlignment="Top" Width="288" Background="Maroon" Click="button2_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White"/>
-        <Button x:Name="button" Content="Clear All" HorizontalAlignment="Left" Height="112" Margin="365,717,0,0" VerticalAlignment="Top" Width="288" Background="Maroon" Click="button2_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White"/>
-        <Button x:Name="button1" Content="Print List" HorizontalAlignment="Left" Height="112" Margin="1259,717,0,0" VerticalAlignment="Top" Width="288" Background="White" Click="button2_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="Maroon"/>
+        <ListBox x:Name="checklistBox" HorizontalAlignment="Left" Height="506" Margin="0,171,-0.4,0" VerticalAlignment="Top" Width="1594" SelectionChanged="checklistBox_SelectionChanged"/>
+
+        <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Height="112" Margin="38,717,0,0" VerticalAlignment="Top" Width="288" Background="DarkOrange" Click="deleteButton_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" IsEnabled="False"/>
+        <Button x:Name="clearButton" Content="Clear All" HorizontalAlignment="Left" Height="112" Margin="365,717,0,0" VerticalAlignment="Top" Width="288" Background="Maroon" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" Click="clearButton_Click"/>
+        <Button x:Name="printButton" Content="Print List" HorizontalAlignment="Left" Height="112" Margin="1259,717,0,0" VerticalAlignment="Top" Width="288" Background="White" FontSize="70" FontFamily="Sakkal Majalla" Foreground="DarkOrange"/>
     </Grid>
 </Page>

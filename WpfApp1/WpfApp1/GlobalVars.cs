@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace WpfApp1
 {
@@ -20,6 +21,8 @@ namespace WpfApp1
 
 
         public static string[] ingredients { get; set; }
+
+        public static List<string> checklist { get; set; } = new List<string>();
 
     }
 }
