@@ -22,6 +22,25 @@ namespace WpfApp1
         public Recipe()
         {
             InitializeComponent();
+            expander1.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+            expander2.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+            expander3.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+            expander4.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+            expander5.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+            expander6.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+        }
+
+        private void expander_MouseLeftButtonUp(object sender, RoutedEventArgs e)
+        {
+            Expander caller = sender as Expander;
+            foreach (UIElement element in expanderContainer.Children)
+            {
+                Expander expander = element as Expander;
+                if (expander != null && expander != caller)
+                {
+                    expander.IsExpanded = false;
+                }
+            }
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,5 +72,6 @@ namespace WpfApp1
         {
 
         }
+
     }
 }
