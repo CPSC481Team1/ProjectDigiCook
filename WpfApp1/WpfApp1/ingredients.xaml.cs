@@ -26,10 +26,12 @@ namespace WpfApp1
 
         private void ingredientslistBox_SelectionChanged(object sender, EventArgs e)
         {
+            Label[] ingredientWithAlts = new Label[] { label4, label6, label8 };
+
             addButton.IsEnabled = true;
             skillsBox.SelectedIndex = -1;
 
-            if (ingredientsBox.SelectedItem == label5)   //instead of label5, we can make it select from a list (of labels?)
+            if (ingredientWithAlts.Contains(ingredientsBox.SelectedItem))   //instead of label6, we can make it select from a list (of labels?)
             {
                 altButton.IsEnabled = true;
             }
@@ -75,6 +77,17 @@ namespace WpfApp1
             Label selection = (Label) ingredientsBox.SelectedItem;
             string selectionStr = selection.Content.ToString();
             GlobalVars.checklist.Add(selectionStr);
+
+            MessageBox.Show("Added item to checklist");
+        }
+
+        private void altButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<Label> ingredientWithAlts = new List<Label> { label4, label6, label8 };
+            string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
+
+            int idx = ingredientWithAlts.IndexOf((Label)ingredientsBox.SelectedItem);
+            MessageBox.Show(alts[idx], "Alternative Ingredient:");
         }
     }
 }
