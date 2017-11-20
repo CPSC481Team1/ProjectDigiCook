@@ -26,42 +26,55 @@ namespace WpfApp1
 
         private void ingredientslistBox_SelectionChanged(object sender, EventArgs e)
         {
-            if (ingredientsBox.SelectedIndex >= 0)
-            {
-                addButton.IsEnabled = true;
+            addButton.IsEnabled = true;
+            skillsBox.SelectedIndex = -1;
 
-                if(ingredientsBox.SelectedItem == label5)
-                {
-                    altButton.IsEnabled = true;
-                }
-                else
-                {
-                    altButton.IsEnabled = false;
-                }
+            if (ingredientsBox.SelectedItem == label5)   //instead of label5, we can make it select from a list (of labels?)
+            {
+                altButton.IsEnabled = true;
             }
             else
             {
-                addButton.IsEnabled = false;
+                altButton.IsEnabled = false;
             }
         }
-
+  
+        private void skillsBox_SelectionChanged(object sender, EventArgs e)
+        {
+            ingredientsBox.SelectedIndex = -1;
+            addButton.IsEnabled = false;
+            altButton.IsEnabled = false;
+        }
+        
         private void start_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
         }
 
-        
-        private void ingredientsCanvas_MouseEnter(object sender, EventArgs e)
+        private void Grid_MouseDown(object sender, EventArgs e)
         {
-            ingredientslistBox_SelectionChanged(sender, e);
+            if (ingredientsBox.IsMouseOver)
+            {
+                ingredientslistBox_SelectionChanged(sender, e);
+            }
+            else if (skillsBox.IsMouseOver)
+            {
+                skillsBox_SelectionChanged(sender, e);
+            }
+            else
+            {
+                skillsBox.SelectedIndex = -1;
+                ingredientsBox.SelectedIndex = -1;
+                addButton.IsEnabled = false;
+                altButton.IsEnabled = false;
+            }
         }
 
-        private void ingredientsCanvas_MouseLeave(object sender, MouseEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e)
         {
-          //  ingredientsBox.SelectedIndex = -1;    
-            addButton.IsEnabled = false;
-            altButton.IsEnabled = false;
+            Label selection = (Label) ingredientsBox.SelectedItem;
+            string selectionStr = selection.Content.ToString();
+            GlobalVars.checklist.Add(selectionStr);
         }
-        
     }
 }
