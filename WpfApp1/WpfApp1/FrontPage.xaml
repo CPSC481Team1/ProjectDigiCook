@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Title="FrontPage" Height="900" Width="1600" Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid Background="#FFFFE5B4">
         <Grid.RowDefinitions>
             <RowDefinition Height="240*"/>
             <RowDefinition Height="330*"/>
@@ -18,8 +18,8 @@
             <ColumnDefinition Width="1360*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="AliceBlue"/>
-        <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="#FFF0F0F0"/>
+        <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023" Foreground="DarkOrange"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" /></TextBlock>
 
         <Button x:Name="button" Grid.Column="1" HorizontalAlignment="Left" Height="150" Margin="254,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="150" Background="#FFDDDDDD" BorderBrush="Black" BorderThickness="2">
             <Grid x:Name="cat1" Height="Auto" Width="Auto">
@@ -90,6 +90,6 @@
             </Grid>
         </Button>
         <local:Button_CheckList Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="1283,18.5,0,0" VerticalAlignment="Top" Width="167.5" Grid.ColumnSpan="2"/>
-        <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286.617" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46.617"/>
+        <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="1360" Grid.Column="1" Grid.RowSpan="2"/>
     </Grid>
 </Page>
