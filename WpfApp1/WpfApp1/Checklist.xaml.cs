@@ -54,5 +54,6 @@ namespace WpfApp1
                 checklistBox.Items.Add(item);
             }
         }
+        
     }
 }

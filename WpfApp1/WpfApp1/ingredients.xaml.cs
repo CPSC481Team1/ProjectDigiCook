@@ -76,7 +76,7 @@ namespace WpfApp1
             string selectionStr = selection.Content.ToString();
 
 
-            GlobalVars.checklist.Add("selectionStr");
+            GlobalVars.checklist.Add(selectionStr);
 
         }
     }

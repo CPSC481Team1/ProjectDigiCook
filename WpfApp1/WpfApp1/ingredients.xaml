@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Ingredients" Height="900" Width="1600">
-    <Grid Background="#FFFFE5B4">
-    <Grid MouseDown="Grid_MouseDown">
+    <Grid Background="#FFFFE5B4" MouseDown="Grid_MouseDown">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -29,8 +28,7 @@
         <TextBlock x:Name="IngredientsLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Foreground="DarkOrange" FontWeight="Bold"/>
         <Label x:Name="UtensilsBox" Background="#FFF0F0F0" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" FontSize="24" Margin="0,409,931,60" Grid.Column="1"/>
 
-        <ListBox x:Name="SkillsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1">
-        <ListBox x:Name="skillsBox" Background="AliceBlue" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged">
+        <ListBox x:Name="skillsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged">
             <Canvas Height="68" Width="422">
                 <Label x:Name="label" Content="• Process of Al Dente" Height="68" Width="369" FontSize="24" VerticalContentAlignment="Center"/>
                 <Image x:Name="play" Height="68" Width="68" Canvas.Left="344" Source=".\Images\Recipes\button.png"/>
@@ -41,7 +39,7 @@
 
         <Border x:Name="UtensilBorder" BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="1,409,0,0" VerticalAlignment="Top" Width="428"/>
         <Border x:Name="IngredientsBorder" BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="906,409,0,0" VerticalAlignment="Top" Width="447">
-            <Canvas x:Name="IngredientsBox"  Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="447" MouseEnter="ingredientsCanvas_MouseEnter" MouseLeave="ingredientsCanvas_MouseLeave">
+            <Canvas x:Name="IngredientsBox"  Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="447">
                 <ListBox x:Name="ingredientsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="447" SelectionChanged="ingredientslistBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <Label x:Name="label1" Content="• 1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                     <Label x:Name="label2" Content="• 1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
