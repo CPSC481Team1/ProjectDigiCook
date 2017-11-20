@@ -80,8 +80,8 @@
             </Setter>
         </Style>
     </Page.Resources>
-    <Grid>
-        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Height="105.653" Margin="474,10,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="Teal" /></TextBlock>
+    <Grid Background="#FFFFE5B4">
+        <TextBlock FontWeight="DemiBold" HorizontalAlignment="Left" Height="105.653" Margin="474,10,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023" Foreground="DarkOrange"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" /></TextBlock>
         <Button  Name ="Intermediate_Button" HorizontalAlignment="Left" Height="320" Margin="638.666,321.532,0,0" VerticalAlignment="Top" Width="320" Click="Intermediate_Button_Click" MouseEnter="Intermediate_Button_MouseEnter" MouseLeave="Intermediate_Button_MouseLeave">
             <Grid x:Name="intermediateGrid" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Skill_Level\Intermediate.jpg" Stretch="Fill"/>
