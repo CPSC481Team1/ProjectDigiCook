@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Title="FrontPage" Height="900" Width="1600" Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid Background="#FFFFE5B4" >
         <Grid.RowDefinitions>
             <RowDefinition Height="240*"/>
             <RowDefinition Height="330*"/>
