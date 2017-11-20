@@ -22,15 +22,38 @@ namespace WpfApp1
     /// </summary>
     public partial class Checklist : Page
     {
+
         public Checklist()
         {
             InitializeComponent();
+            addToChecklist(GlobalVars.checklist);
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            listBox.Items.RemoveAt
-                (listBox.Items.IndexOf(listBox.SelectedItem));
+            checklistBox.Items.RemoveAt
+                (checklistBox.Items.IndexOf(checklistBox.SelectedItem));
         }
+
+        private void checklistBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (checklistBox.SelectedIndex >= 0)
+            {
+                deleteButton.IsEnabled = true;
+            }
+            else
+            {
+                deleteButton.IsEnabled = false;
+            }
+        }
+
+        public void addToChecklist(List<string> checklist)
+        {
+            foreach (string item in checklist)
+            {
+                checklistBox.Items.Add(item);
+            }
+        }
+        
     }
 }

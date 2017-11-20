@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Recipe" Height="900" Width="1600">
 
-    <Grid>
+    <Grid Background="#FFFAE5B4">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -15,7 +15,7 @@
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1" Background="#dae1e7" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="876">
+        <Grid Grid.Column="1" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="876">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="319*"/>
                 <ColumnDefinition Width="557*"/>
@@ -27,10 +27,10 @@
             <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,22,-29,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center" Grid.ColumnSpan="2"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="256"/>
         </Grid>
-        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="927,94,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="926,149,0,0" VerticalAlignment="Top" Width="448" Grid.ColumnSpan="2"/>
-        <Canvas  Background="AliceBlue" Grid.Column="1" HorizontalAlignment="Left" Height="541" Margin="927,149,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2">
-            <ListBox x:Name="Ingredients_Box" Background="AliceBlue" HorizontalAlignment="Left" Height="542" VerticalAlignment="Top" Width="447" SelectionChanged="listBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="927,94,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Foreground="DarkOrange"/>
+        <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="665" Margin="927,149,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2"/>
+        <Canvas  Background="#FFF0F0F0" Grid.Column="1" HorizontalAlignment="Left" Height="665" Margin="927,149,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2">
+            <ListBox x:Name="Ingredients_Box" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="447" SelectionChanged="listBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <Label x:Name="label1" Content="• 1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label2" Content="• 1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label3" Content="• 4 cloves garlic, Minced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
@@ -46,13 +46,13 @@
             <Button x:Name="button1" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="478" Width="191" FontSize="24"/>
         </Canvas>
         <ContentControl Content="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="448" Margin="1,366,0,0" VerticalAlignment="Top" Width="877">
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="1,366,0,0" VerticalAlignment="Top" Width="877" Background="#FFF0F0F0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="855*"/>
                 <ColumnDefinition Width="22*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Name="expanderContainer" Height="Auto">
-                <Expander x:Name="expander1" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="1. Cook pasta al dente" HorizontalAlignment="Left" IsExpanded="True" FontSize="24" Height="Auto" Background="AliceBlue" Width="855">
+                <Expander x:Name="expander1" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="1. Cook pasta al dente" HorizontalAlignment="Left" IsExpanded="True" FontSize="24" Height="Auto" Background="#FFF0F0F0" Width="855">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="34*"/>
@@ -63,18 +63,18 @@
                         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xD;&#xA;Bring water to boil.&#xD;&#xA;Add 250g of dried pasta to the boiling water.&#xD;&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xD;&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander2" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="2. Combine meat with spices and form meatballs" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="AliceBlue">
-                <Grid Background="#FFE5E5E5"  Height="Auto">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="34*"/>
-                        <ColumnDefinition Width="169*"/>
-                        <ColumnDefinition Width="82*"/>
-                    </Grid.ColumnDefinitions>
-                    <Image x:Name="image2" Source=".\Images\Video\cooking_video_thumbnail.jpg" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                    <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Defrost meat and put in a large mixing bowl.&#xD;&#xA;Add 2 cloves of garlic, half an onion, salt, and pepper.&#xD;&#xA;Using wet hands, form the meat mixture into golfball-sized meatballs." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
-                </Grid>
+                <Expander x:Name="expander2" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="2. Combine meat with spices and form meatballs" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="#FFF0F0F0">
+                    <Grid Background="#FFE5E5E5"  Height="Auto">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="34*"/>
+                            <ColumnDefinition Width="169*"/>
+                            <ColumnDefinition Width="82*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="image2" Source=".\Images\Video\cooking_video_thumbnail.jpg" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Defrost meat and put in a large mixing bowl.&#xD;&#xA;Add 2 cloves of garlic, half an onion, salt, and pepper.&#xD;&#xA;Using wet hands, form the meat mixture into golfball-sized meatballs." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                    </Grid>
                 </Expander>
-                <Expander x:Name="expander3" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="3. Brown meatballs and remove from pan" HorizontalAlignment="Left" Width="855" Height="Auto" FontSize="24" Background="AliceBlue">
+                <Expander x:Name="expander3" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="3. Brown meatballs and remove from pan" HorizontalAlignment="Left" Width="855" Height="Auto" FontSize="24" Background="#FFF0F0F0">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="34*"/>
@@ -85,7 +85,7 @@
                         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Pour a tablespoon of olive oil into a large saucepan.&#xD;&#xA;Heat the pan until it is very hot.&#xD;&#xA;Put all meatballs in the pan and cook.&#xD;&#xA;Cook for 5-7 minutes, and then flip the meatballs.&#xD;&#xA;Remove meatballs and set aside." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander4" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="4. Cook sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="AliceBlue">
+                <Expander x:Name="expander4" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="4. Cook sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="#FFF0F0F0">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="34*"/>
@@ -96,7 +96,7 @@
                         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="In the same pan used to cook the meatballs, add a splash of water to deglaze the pan.&#xD;&#xA;Add in diced tomatoes, peppers, basil and tomato paste.&#xD;&#xA;Allow to simmer until sauce reaches desired consistency(8-10 minutes).&#xD;&#xA;Add salt and pepper to taste." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander5" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="5. Add meatballs back into the sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Background="AliceBlue" Height="Auto">
+                <Expander x:Name="expander5" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="5. Add meatballs back into the sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Background="#FFF0F0F0" Height="Auto">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="34*"/>
@@ -107,7 +107,7 @@
                         <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Step 5&#xD;&#xA;Step 5" VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
-                <Expander x:Name="expander6" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="6. Combine and serve" HorizontalAlignment="Right" Width="855" FontSize="24" Background="AliceBlue" Height="Auto">
+                <Expander x:Name="expander6" PreviewMouseLeftButtonUp="expander_MouseLeftButtonUp" Header="6. Combine and serve" HorizontalAlignment="Right" Width="855" FontSize="24" Background="#FFF0F0F0" Height="Auto">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="34*"/>
@@ -119,14 +119,10 @@
                     </Grid>
                 </Expander>
             </StackPanel>
-            <ScrollViewer HorizontalAlignment="Right" Height="448" VerticalAlignment="Top" Width="17"/>
+            <ScrollViewer HorizontalAlignment="Right" Height="Auto" VerticalAlignment="Top" Width="17"/>
         </Grid>
-        <Button x:Name="button2" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="1025,724,0,0" VerticalAlignment="Top" Width="252" Click="button2_Click" Height="90" FontSize="48"/>
-        <local:Button_CheckList HorizontalAlignment="Left" Height="19" Margin="1283,18.5,0,0" VerticalAlignment="Top" Width="167.5" Grid.ColumnSpan="2" Grid.Column="1"/>
-
-
-
+        <Button x:Name="button2" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="1024,703,0,0" VerticalAlignment="Top" Width="252" Click="button2_Click" Height="90" FontSize="48"/>
+        <local:Button_CheckList HorizontalAlignment="Left" Height="71" Margin="1283,18,0,0" VerticalAlignment="Top" Width="167" Grid.ColumnSpan="2" Grid.Column="1"/>
     </Grid>
-
 </Page>
     
