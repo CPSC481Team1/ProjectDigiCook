@@ -23,7 +23,7 @@ namespace WpfApp1
     public partial class Checklist : Page
     {
 
-        public Checklist(Ingredients ing)
+        public Checklist()
         {
             InitializeComponent();
             addToChecklist(GlobalVars.checklist);
