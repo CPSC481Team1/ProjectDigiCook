@@ -86,9 +86,20 @@ namespace WpfApp1
         {
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void listBox_SelectionChanged(object sender, EventArgs e)
         {
+            Label[] ingredientWithAlts = new Label[] { label4, label6, label8 };
 
+            addButton.IsEnabled = true;
+
+            if (ingredientWithAlts.Contains(Ingredients_Box.SelectedItem))   //instead of label6, we can make it select from a list (of labels?)
+            {
+                altButton.IsEnabled = true;
+            }
+            else
+            {
+                altButton.IsEnabled = false;
+            }
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -113,12 +124,38 @@ namespace WpfApp1
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
-        private void volume_button_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e)
         {
+            Label selection = (Label)Ingredients_Box.SelectedItem;
+            string selectionStr = selection.Content.ToString();
+            GlobalVars.checklist.Add(selectionStr);
 
+            MessageBox.Show("Added item to checklist");
+        }
+
+        private void altButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<Label> ingredientWithAlts = new List<Label> { label4, label6, label8 };
+            string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
+
+            int idx = ingredientWithAlts.IndexOf((Label)Ingredients_Box.SelectedItem);
+            MessageBox.Show(alts[idx], "Alternative Ingredient:");
+        }
+
+        private void Grid_MouseDown(object sender, EventArgs e)
+        {
+            if (Ingredients_Box.IsMouseOver)
+            {
+                listBox_SelectionChanged(sender, e);
+            }
+            else
+            {
+                Ingredients_Box.SelectedIndex = -1;
+                addButton.IsEnabled = false;
+                altButton.IsEnabled = false;
+            }
         }
     }
 }

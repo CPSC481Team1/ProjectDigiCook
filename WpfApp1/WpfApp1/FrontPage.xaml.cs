@@ -36,14 +36,40 @@ namespace WpfApp1
             //this.ResizeMode = ResizeMode.NoResize;
         }
 
-        private void ButtonEnter(object sender, MouseEventArgs e)
+
+        private DependencyObject GetDependencyObjectFromVisualTree(DependencyObject startObject, Type type)
         {
-            this.button.Content = "Enter";
+            //Walk the visual tree to get the parent(ItemsControl)
+            //of this control
+
+            DependencyObject parent = startObject;
+            while (parent != null)
+            {
+                if (type.IsInstanceOfType(parent))
+                    break;
+                else
+                    parent = VisualTreeHelper.GetParent(parent);
+            }
+            return parent;
         }
 
-        private void ButtonLeave(object sender, MouseEventArgs e)
+        private void CategoryResult()
         {
-            this.button.Content = "Left";
+
+            Page destination = GetDependencyObjectFromVisualTree(this, typeof(Page)) as Page;
+
+            if (GlobalVars.skillLevel == 1)
+            {
+                destination.NavigationService.Navigate(new Uri("./NoResults.xaml", UriKind.Relative));
+            }
+            else if (GlobalVars.skillLevel == 2)
+            {
+                destination.NavigationService.Navigate(new Uri("./NoResultsIntermediate.xaml", UriKind.Relative));
+            }
+            else
+            {
+                destination.NavigationService.Navigate(new Uri("./NoResultsExpert.xaml", UriKind.Relative));
+            }
         }
 
         private void View_Checklist_Click(object sender, RoutedEventArgs e)
@@ -54,6 +80,110 @@ namespace WpfApp1
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             searchBar.setText();
+        }
+
+
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            CategoryResult();
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            CategoryResult();
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            CategoryResult();
+        }
+
+        private void button6_Click(object sender, RoutedEventArgs e)
+        {
+            CategoryResult();
+        }
+
+        private void button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            button.Width = 210;
+            button.Height = 210;
+        }
+
+        private void button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            button.Width = 200;
+            button.Height = 200;
+        }
+
+        private void button2_MouseEnter(object sender, MouseEventArgs e)
+        {
+            button2.Width = 210;
+            button2.Height = 210;
+        }
+
+        private void button2_MouseLeave(object sender, MouseEventArgs e)
+        {
+            button2.Width = 200;
+            button2.Height = 200;
+        }
+
+        private void button3_MouseEnter(object sender, MouseEventArgs e)
+        {
+            button3.Width = 210;
+            button3.Height = 210;
+        }
+
+        private void button3_MouseLeave(object sender, MouseEventArgs e)
+        {
+            button3.Width = 200;
+            button3.Height = 200;
+        }
+
+        private void button4_MouseEnter(object sender, MouseEventArgs e)
+        {
+            button4.Width = 210;
+            button4.Height = 210;
+        }
+
+        private void button4_MouseLeave(object sender, MouseEventArgs e)
+        {
+            button4.Width = 200;
+            button4.Height = 200;
+        }
+
+        private void button5_MouseEnter(object sender, MouseEventArgs e)
+        {
+            button5.Width = 210;
+            button5.Height = 210;
+        }
+
+        private void button5_MouseLeave(object sender, MouseEventArgs e)
+        {
+            button5.Width = 200;
+            button5.Height = 200;
+        }
+
+        private void button6_MouseEnter(object sender, MouseEventArgs e)
+        {
+            button6.Width = 210;
+            button.Height = 210;
+        }
+
+        private void button6_MouseLeave(object sender, MouseEventArgs e)
+        {
+            button6.Width = 200;
+            button6.Height = 200;
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Spaghetti.xaml", UriKind.Relative));
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Spaghetti.xaml", UriKind.Relative));
         }
     }
 }

@@ -9,10 +9,10 @@
     <Grid Background="#FFFFE5B4">
 
         <Label x:Name="label" Content="Checklist" HorizontalAlignment="Center" Height="166" Margin="495,0,495.6,0" VerticalAlignment="Top" Width="603" FontSize="85" FontFamily="Segoe Script" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="maroon"/>
-        <ListBox x:Name="checklistBox" HorizontalAlignment="Left" Height="506" Margin="0,171,-0.4,0" VerticalAlignment="Top" Width="1594" SelectionChanged="checklistBox_SelectionChanged">
-        </ListBox>
+        <ListBox x:Name="checklistBox" HorizontalAlignment="Left" Height="506" Margin="0,171,-0.4,0" VerticalAlignment="Top" Width="1594" SelectionChanged="checklistBox_SelectionChanged"/>
+
         <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Height="112" Margin="38,717,0,0" VerticalAlignment="Top" Width="288" Background="DarkOrange" Click="deleteButton_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" IsEnabled="False"/>
-        <Button x:Name="clearButton" Content="Clear All" HorizontalAlignment="Left" Height="112" Margin="365,717,0,0" VerticalAlignment="Top" Width="288" Background="Maroon" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" IsEnabled="False"/>
+        <Button x:Name="clearButton" Content="Clear All" HorizontalAlignment="Left" Height="112" Margin="365,717,0,0" VerticalAlignment="Top" Width="288" Background="Maroon" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" Click="clearButton_Click"/>
         <Button x:Name="printButton" Content="Print List" HorizontalAlignment="Left" Height="112" Margin="1259,717,0,0" VerticalAlignment="Top" Width="288" Background="White" FontSize="70" FontFamily="Sakkal Majalla" Foreground="DarkOrange"/>
     </Grid>
 </Page>

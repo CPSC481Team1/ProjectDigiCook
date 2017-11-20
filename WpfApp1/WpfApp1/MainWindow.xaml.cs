@@ -37,7 +37,7 @@ namespace WpfApp1
             // Turn off resizing
             this.ResizeMode = ResizeMode.NoResize;
 
-
+            
             MainFrame.Content = new SkillSelection();
             // Code for a message box
             // MessageBoxResult result = MessageBox.Show(SkillLevel.skillLevel.ToString(), "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
