@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,15 +23,15 @@ namespace WpfApp1
         public Recipe()
         {
             InitializeComponent();
-            expander1.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
-            expander2.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
-            expander3.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
-            expander4.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
-            expander5.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
-            expander6.Expanded += new RoutedEventHandler(expander_MouseLeftButtonUp);
+            expander1.Expanded += new RoutedEventHandler(expander);
+            expander2.Expanded += new RoutedEventHandler(expander);
+            expander3.Expanded += new RoutedEventHandler(expander);
+            expander4.Expanded += new RoutedEventHandler(expander);
+            expander5.Expanded += new RoutedEventHandler(expander);
+            expander6.Expanded += new RoutedEventHandler(expander);
         }
 
-        private void expander_MouseLeftButtonUp(object sender, RoutedEventArgs e)
+        private void expander(object sender, RoutedEventArgs e)
         {
             Expander caller = sender as Expander;
             foreach (UIElement element in expanderContainer.Children)
@@ -41,6 +42,48 @@ namespace WpfApp1
                     expander.IsExpanded = false;
                 }
             }
+        }
+        private void openVideo(object sender, MouseButtonEventArgs e)
+        {
+            var source = ((Image)sender).Tag;
+            var original = Video.Source;
+            Video.Source = new Uri(source.ToString(), UriKind.Relative);
+            VideoPlayer.IsOpen = true;
+        }
+
+        private void playButton(object sender, MouseButtonEventArgs e)
+        {
+            var currentState = GetMediaState(Video);
+            if(currentState == MediaState.Pause)
+            {
+                Video.Play();
+            }
+            else if(currentState == MediaState.Play)
+            {
+                Video.Pause();
+            }
+            else
+            {
+                
+            }
+            
+        }
+
+        private MediaState GetMediaState(MediaElement myMedia)
+        {
+            FieldInfo hlp = typeof(MediaElement).GetField("_helper", BindingFlags.NonPublic | BindingFlags.Instance);
+            object helperObject = hlp.GetValue(myMedia);
+            FieldInfo stateField = helperObject.GetType().GetField("_currentState", BindingFlags.NonPublic | BindingFlags.Instance);
+            MediaState state = (MediaState)stateField.GetValue(helperObject);
+            return state;
+        }
+
+        private void volumeButton(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void fullscreenButton(object sender, MouseButtonEventArgs e)
+        {
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -73,5 +116,9 @@ namespace WpfApp1
 
         }
 
+        private void volume_button_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
