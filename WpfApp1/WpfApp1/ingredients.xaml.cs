@@ -74,10 +74,7 @@ namespace WpfApp1
         {
             Label selection = (Label) ingredientsBox.SelectedItem;
             string selectionStr = selection.Content.ToString();
-
-
             GlobalVars.checklist.Add(selectionStr);
-
         }
     }
 }

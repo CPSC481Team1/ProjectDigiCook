@@ -27,12 +27,16 @@ namespace WpfApp1
         {
             InitializeComponent();
             addToChecklist(GlobalVars.checklist);
+
+            disableClearWhenEmpty();
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
             checklistBox.Items.RemoveAt
                 (checklistBox.Items.IndexOf(checklistBox.SelectedItem));
+
+            disableClearWhenEmpty();
         }
 
         private void checklistBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -54,6 +58,23 @@ namespace WpfApp1
                 checklistBox.Items.Add(item);
             }
         }
-        
+
+        public void disableClearWhenEmpty()
+        {
+            if (checklistBox.Items.IsEmpty)
+            {
+                clearButton.IsEnabled = false;
+            }
+            else
+            {
+                clearButton.IsEnabled = true;
+            }
+        }
+
+        private void clearButton_Click(object sender, RoutedEventArgs e)
+        {
+            checklistBox.Items.Clear();
+            clearButton.IsEnabled = false;
+        }
     }
 }
