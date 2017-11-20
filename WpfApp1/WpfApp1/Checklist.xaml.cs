@@ -22,9 +22,11 @@ namespace WpfApp1
     /// </summary>
     public partial class Checklist : Page
     {
-        public Checklist()
+
+        public Checklist(Ingredients ing)
         {
             InitializeComponent();
+            addToChecklist(GlobalVars.checklist);
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
@@ -42,6 +44,14 @@ namespace WpfApp1
             else
             {
                 deleteButton.IsEnabled = false;
+            }
+        }
+
+        public void addToChecklist(List<string> checklist)
+        {
+            foreach (string item in checklist)
+            {
+                checklistBox.Items.Add(item);
             }
         }
     }
