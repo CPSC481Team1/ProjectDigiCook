@@ -71,7 +71,19 @@ namespace WpfApp1
             }
             else //Navigate to 404 page
             {
-                pg.NavigationService.Navigate(new Uri("./NoResults.xaml", UriKind.Relative));
+                if (GlobalVars.skillLevel == 1)
+                {
+                    pg.NavigationService.Navigate(new Uri("./NoResults.xaml", UriKind.Relative));
+                }
+                else if (GlobalVars.skillLevel == 2)
+                {
+                    pg.NavigationService.Navigate(new Uri("./NoResultsIntermediate.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    pg.NavigationService.Navigate(new Uri("./NoResultsExpert.xaml", UriKind.Relative));
+                }
+                
             }
         }
 

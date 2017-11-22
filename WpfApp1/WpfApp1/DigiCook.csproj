@@ -83,6 +83,12 @@
     <Compile Include="FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NoResultsIntermediate.xaml.cs">
+      <DependentUpon>NoResultsIntermediate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoResultsExpert.xaml.cs">
+      <DependentUpon>NoResultsExpert.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchBar.xaml.cs">
       <DependentUpon>SearchBar.xaml</DependentUpon>
     </Compile>
@@ -127,6 +133,14 @@
     <Page Include="FrontPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NoResultsIntermediate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NoResultsExpert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchBar.xaml">
       <SubType>Designer</SubType>
