@@ -78,8 +78,7 @@ namespace WpfApp1
 
                 if (dupInstances.Count > 1)
                 {
-                    string[] splits_dup = checklist[i].Split(new[] {' '}, 3);
-                    string newStr = "• " + (dupInstances.Sum()) + " " + splits_dup[2];
+                    string newStr = "• " + (dupInstances.Sum()) + " " + splits_i[2];
                     checklist[i] = newStr;
                 }
             }
