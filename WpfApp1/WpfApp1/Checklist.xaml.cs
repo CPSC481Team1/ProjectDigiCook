@@ -53,9 +53,34 @@ namespace WpfApp1
 
         public void addToChecklist(List<string> checklist)
         {
+            for (int i = 0; i < checklist.Count; i++)
+            {
+                int instances = 1;
+
+                for (int j = i + 1; j < checklist.Count; j++)
+                {
+                    if (checklist[i] == checklist[j])
+                    {
+                        instances++;
+                        checklist.RemoveAt(j);
+                        j--;
+                    }
+                }
+
+                if (instances > 1)
+                {
+                    string newStr = "• " + instances + " x " + checklist[i].Substring(2);
+                    checklist[i] = newStr;
+                }
+            }
+
             foreach (string item in checklist)
             {
-                checklistBox.Items.Add(item);
+                ListBoxItem addition = new ListBoxItem();
+                addition.Content = item;
+                addition.HorizontalContentAlignment = HorizontalAlignment.Center;
+                addition.FontSize = 30;
+                checklistBox.Items.Add(addition);
             }
         }
 
