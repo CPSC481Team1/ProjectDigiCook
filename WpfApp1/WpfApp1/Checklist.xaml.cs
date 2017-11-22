@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -55,21 +56,30 @@ namespace WpfApp1
         {
             for (int i = 0; i < checklist.Count; i++)
             {
-                int instances = 1;
+                List<float> dupInstances = new List<float>();
+
+                string[] splits_i = checklist[i].Split(new[] { ' ' }, 3);
+                string ingredient_i = splits_i[2];
+
+                dupInstances.Add(float.Parse(splits_i[1]));
 
                 for (int j = i + 1; j < checklist.Count; j++)
                 {
-                    if (checklist[i] == checklist[j])
+                    string[] splits_j = checklist[j].Split(new[] { ' ' }, 3);
+                    string ingredient_j = splits_j[2];
+
+                    if (ingredient_i.Equals(ingredient_j))
                     {
-                        instances++;
+                        dupInstances.Add(float.Parse(splits_j[1]));
                         checklist.RemoveAt(j);
                         j--;
                     }
                 }
 
-                if (instances > 1)
+                if (dupInstances.Count > 1)
                 {
-                    string newStr = "• " + instances + " x " + checklist[i].Substring(2);
+                    string[] splits_dup = checklist[i].Split(new[] {' '}, 3);
+                    string newStr = "• " + (dupInstances.Sum()) + " " + splits_dup[2];
                     checklist[i] = newStr;
                 }
             }
