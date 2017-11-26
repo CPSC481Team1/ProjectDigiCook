@@ -26,7 +26,7 @@
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Spaghetti"/>
                         <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆★★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
                         <Image Height ="150" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,25,46,25" Width="103.2" />
-                        <TextBlock></TextBlock>
+                        <TextBlock/>
                     </Grid>
                 </Border>
                 <Border BorderThickness="1" BorderBrush="Black">
@@ -34,7 +34,7 @@
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Rav.jpg" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Ravioli"/>
                         <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
-                        <TextBlock></TextBlock>
+                        <TextBlock/>
                     </Grid>
                 </Border>
 
@@ -43,16 +43,14 @@
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Fett.jpg" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Fettuccine"/>
                         <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆☆★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
-                        <TextBlock></TextBlock>
+                        <TextBlock/>
                     </Grid>
                 </Border>
 
             </ListBox>
-
-            <TextBlock FontWeight="DemiBold" Grid.Column="1" HorizontalAlignment="Center" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="654.023" Foreground="DarkOrange"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" /></TextBlock>
-            <local:SearchBar x:Name ="searchBar" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,0,273" Width="1360" Foreground="{x:Null}" Grid.RowSpan="2"/>
+            <local:NavigationBar Margin="0,0,0,44" Grid.ColumnSpan="3"/>
+            <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46"/>
         </Grid>
         <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Loaded="textBlock_Loaded" FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
-        <local:Button_CheckList HorizontalAlignment="Left" Height="19" Margin="1403,18.5,0,0" VerticalAlignment="Top" Width="167.5"/>
     </Grid>
 </Page>

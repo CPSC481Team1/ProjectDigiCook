@@ -8,7 +8,7 @@
         Title="MainWindow" Height="900" Width="1600"
         Icon="./icons/icon.png">
     <Grid>
-        <Frame x:Name="MainFrame" Margin="0,0,0,0"/>
+        <Frame x:Name="MainFrame" Margin="0,0,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
 
 </Window>

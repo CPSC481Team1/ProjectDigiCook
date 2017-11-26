@@ -27,6 +27,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
+            
             //this.Title = "DigiCook";
 
             //// Set window to center of the computer screen at startup
@@ -34,6 +35,7 @@ namespace WpfApp1
 
             //// Turn off resizing
             //this.ResizeMode = ResizeMode.NoResize;
+
         }
 
 

@@ -41,6 +41,7 @@ namespace WpfApp1
         {
             GlobalVars.skillLevel = 1;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
+
         }
         private void Intermediate_Button_Click(object sender, RoutedEventArgs e)
         {
