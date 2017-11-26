@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="1360*"/>
                 <ColumnDefinition Width="120*"/>
             </Grid.ColumnDefinitions>
-            <ListBox  BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="#FFF0F0F0" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBox  ScrollViewer.CanContentScroll="False" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="#FFF0F0F0" ScrollViewer.VerticalScrollBarVisibility="Visible">
 
                 <Border BorderThickness="1" BorderBrush="Black">
                     <Grid Width="873.2" Height="200" MouseLeftButtonDown="recipe1_click">
