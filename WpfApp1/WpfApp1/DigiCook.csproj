@@ -250,12 +250,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Images\Skill_Level\chef.png" />
+    <Resource Include="Images\Skill_Level\cook.jpg" />
+    <Resource Include="Images\Skill_Level\home.jpg" />
     <Resource Include="s4cfeuya.bmp" />
     <Resource Include="Images\Misc\recommended-star.png" />
     <Resource Include="Images\Misc\clockwise-rotation.png" />
-    <Resource Include="Images\Skill_Level\home.jpg" />
-    <Resource Include="Images\Skill_Level\chef.png" />
-    <Resource Include="Images\Skill_Level\cook.jpg" />
     <Resource Include="Images\Navigation\foward_arrow.png" />
     <Resource Include="Images\Navigation\back_arrow.png" />
     <Resource Include="Images\Navigation\arrow_left.png" />
