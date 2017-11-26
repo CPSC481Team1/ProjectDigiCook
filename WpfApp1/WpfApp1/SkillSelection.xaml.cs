@@ -69,51 +69,39 @@ namespace WpfApp1
         #region Event Handling
         private void Expert_MouseEnter(object sender, MouseEventArgs e)
         {
-            DoubleAnimation animation = new DoubleAnimation();
-
-            animation.From = 1.0;
-            animation.To = 0.0;
-
-            animation.Duration = new Duration(TimeSpan.FromSeconds(4));
-
-            myStoryboard = new Storyboard();
-            myStoryboard.Children.Add(animation);
-            Storyboard.SetTargetName(animation, Expert_Button.Name);
-            //Storyboard.SetTargetProperty(animation, new PropertyPath(Expert_Button.Opacity));
-
-            advancedImgGray.Visibility = Visibility.Visible;
-            advancedFlavour.Visibility = Visibility.Visible;
+            // advancedImgGray.Visibility = Visibility.Visible;
+            //advancedFlavour.Visibility = Visibility.Visible;
         }
 
         private void Expert_MouseLeave(object sender, MouseEventArgs e)
         {
 
-            advancedImgGray.Visibility = Visibility.Hidden;
-            advancedFlavour.Visibility = Visibility.Hidden;
+            //advancedImgGray.Visibility = Visibility.Hidden;
+            //advancedFlavour.Visibility = Visibility.Hidden;
         }
 
         private void Intermediate_Button_MouseEnter(object sender, MouseEventArgs e)
         {
-            intermediateImgGray.Visibility = Visibility.Visible;
-            intermediateFlavour.Visibility = Visibility.Visible;
+            //intermediateImgGray.Visibility = Visibility.Visible;
+            //intermediateFlavour.Visibility = Visibility.Visible;
         }
 
         private void Intermediate_Button_MouseLeave(object sender, MouseEventArgs e)
         {
-            intermediateImgGray.Visibility = Visibility.Hidden;
-            intermediateFlavour.Visibility = Visibility.Hidden;
+            //intermediateImgGray.Visibility = Visibility.Hidden;
+            //intermediateFlavour.Visibility = Visibility.Hidden;
         }
 
         private void Beginner_Button_MouseEnter(object sender, MouseEventArgs e)
         {
-            beginnerImgGray.Visibility = Visibility.Visible;
-            beginnerFlavour.Visibility = Visibility.Visible;
+            //beginnerImgGray.Visibility = Visibility.Visible;
+           // beginnerFlavour.Visibility = Visibility.Visible;
         }
 
         private void Beginner_Button_MouseLeave(object sender, MouseEventArgs e)
         {
-            beginnerImgGray.Visibility = Visibility.Hidden;
-            beginnerFlavour.Visibility = Visibility.Hidden;
+            //beginnerImgGray.Visibility = Visibility.Hidden;
+            //beginnerFlavour.Visibility = Visibility.Hidden;
         }
 
         private void SkipButton_Click(object sender, RoutedEventArgs e)
