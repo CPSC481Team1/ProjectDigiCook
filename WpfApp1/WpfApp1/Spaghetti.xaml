@@ -18,31 +18,46 @@
                 <ColumnDefinition Width="1360*"/>
                 <ColumnDefinition Width="120*"/>
             </Grid.ColumnDefinitions>
-            <ListBox  ScrollViewer.CanContentScroll="False" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="#FFF0F0F0" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBox Name ="resultsList"  ScrollViewer.CanContentScroll="False" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="#FFF0F0F0" ScrollViewer.VerticalScrollBarVisibility="Visible">
 
-                <Border BorderThickness="1" BorderBrush="Black">
-                    <Grid Width="873.2" Height="200" MouseLeftButtonDown="recipe1_click">
+                <Border  BorderThickness="1" BorderBrush="Black">
+                    <Grid Name="Recipe1" MouseEnter="ItemHighlight" Width="873.2" Height="200" MouseLeftButtonDown="recipe1_click" Margin="0,0,21,0">
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Spaghetti"/>
-                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆★★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
-                        <Image Height ="150" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,25,46,25" Width="103.2" />
+
+                        <!--<TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Prep Time:  30 m" Margin="336.6,58.203,214.43,0" Width="Auto"/>
+                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Cook Time:  60 m" Margin="336.6,101.892,214.43,0" Width="Auto"/>-->
+
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,0,0" Width="322.17"/>
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="                  ★☆☆☆☆" Margin="0,143.446,0,0" Width="322.17"/>
+                        <Image ToolTip ="Recommended" Visibility="Visible" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,10,10,82.298" Width="100" RenderTransformOrigin="0.291,0.404" />
+                        <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+                        <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="391.6,143.446,159.43,0" Width="Auto"/>
+
                         <TextBlock/>
                     </Grid>
                 </Border>
                 <Border BorderThickness="1" BorderBrush="Black">
-                    <Grid Width="873.2" Height="200" >
+                    <Grid Width="873.2" Height="200" Margin="0,0,21,0">
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Rav.jpg" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Ravioli"/>
-                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆★★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,0,0" Width="322.17"/>
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="                  ★★☆☆☆" Margin="0,143.446,0,0" Width="322.17"/>
+                        <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+                        <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 45 min" Margin="391.6,143.446,159.43,0" Width="Auto"/>
+
                         <TextBlock/>
                     </Grid>
                 </Border>
 
-                <Border BorderThickness="1" BorderBrush="Black">
-                    <Grid Width="873.2" Height="200" >
+                <Border BorderThickness="1" BorderBrush="Black" >
+                    <Grid Width="873.2" Height="200" Margin="0,0,21,0">
                         <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Fett.jpg" HorizontalAlignment="Left"/>
                         <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Fettuccine"/>
-                        <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   ☆☆☆★★" Margin="336.6,153.446,214.43,0" Width="Auto"/>
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,0,0" Width="322.17"/>
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="                  ★★★☆☆" Margin="0,143.446,0,0" Width="322.17"/>
+                        <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+                        <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 90 min" Margin="391.6,143.446,159.43,0" Width="Auto"/>
                         <TextBlock/>
                     </Grid>
                 </Border>

@@ -250,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="s4cfeuya.bmp" />
+    <Resource Include="Images\Misc\recommended-star.png" />
+    <Resource Include="Images\Misc\clockwise-rotation.png" />
     <Resource Include="Images\Skill_Level\home.jpg" />
     <Resource Include="Images\Skill_Level\chef.png" />
     <Resource Include="Images\Skill_Level\cook.jpg" />

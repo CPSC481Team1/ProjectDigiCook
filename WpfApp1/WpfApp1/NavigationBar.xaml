@@ -18,7 +18,7 @@
             </Button>
 
         </Canvas>
-        <TextBlock x:Name="TitleText" ToolTip ="Home"  MouseLeftButtonDown="Title_MouseLeftButtonDown"  MouseEnter="Title_MouseEnter" MouseLeave="Title_MouseLeave" FontWeight="DemiBold" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" Width="345.024" Canvas.Left="628.988" Canvas.Top="10" d:LayoutOverrides="LeftMargin, RightMargin"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="DarkOrange" /></TextBlock>
+        <TextBlock Style="{StaticResource Title}" x:Name="TitleText" ToolTip ="Home"  MouseLeftButtonDown="Title_MouseLeftButtonDown"  MouseEnter="Title_MouseEnter" MouseLeave="Title_MouseLeave" FontWeight="DemiBold" Height="105.653" Margin="0" TextAlignment="Center" TextWrapping="Wrap" Width="345.024" Canvas.Left="628.988" Canvas.Top="10" d:LayoutOverrides="LeftMargin, RightMargin"><Run FontSize="75" FontFamily="Segoe UI Black" Text="DigiCook" Foreground="DarkOrange" /></TextBlock>
 
     </Canvas>
 </UserControl>

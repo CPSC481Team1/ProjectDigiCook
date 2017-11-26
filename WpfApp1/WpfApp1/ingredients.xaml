@@ -24,6 +24,9 @@
             <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,22,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
             <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="114" Margin="967,72,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click" Background="DarkOrange"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="256"/>
+            <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="298,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+            <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="353,204.445,198.03,0" Width="Auto"/>
+
         </Grid>
         <TextBlock x:Name="UtensilsLabel"  HorizontalAlignment="Left" TextWrapping="Wrap" Width="428" Margin="1,354,0,460" FontSize="36" TextAlignment="Center" Foreground="DarkOrange" Grid.Column="1"><Run FontWeight="Bold" Text="Utensils"/></TextBlock>
         <TextBlock x:Name="SkillsLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skills" VerticalAlignment="Top" Height="50" Width="423" Margin="454,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Foreground="DarkOrange" FontWeight="Bold"/>
