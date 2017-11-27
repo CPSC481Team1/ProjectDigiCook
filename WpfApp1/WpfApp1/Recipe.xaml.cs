@@ -49,33 +49,33 @@ namespace WpfApp1
             var original = Video.Source;
             Video.Source = new Uri(source.ToString(), UriKind.Relative);
             VideoPlayer.IsOpen = true;
+            Video.Play();
+            play_button.Visibility = Visibility.Hidden;
+            play_button.IsEnabled = false;
+            pause_button.Visibility = Visibility.Visible;
+            play_button.IsEnabled = true;
+        }
+        
+        private void videoPlayerClose(object sender, EventArgs e)
+        {
+            Video.Stop();
         }
 
         private void playButton(object sender, MouseButtonEventArgs e)
         {
-            var currentState = GetMediaState(Video);
-            if(currentState == MediaState.Pause)
-            {
-                Video.Play();
-            }
-            else if(currentState == MediaState.Play)
-            {
-                Video.Pause();
-            }
-            else
-            {
-                
-            }
-            
+            Video.Play();
+            play_button.Visibility = Visibility.Hidden;
+            play_button.IsEnabled = false;
+            pause_button.Visibility = Visibility.Visible;
+            pause_button.IsEnabled = true;
         }
-
-        private MediaState GetMediaState(MediaElement myMedia)
+        private void pauseButton(object sender, MouseButtonEventArgs e)
         {
-            FieldInfo hlp = typeof(MediaElement).GetField("_helper", BindingFlags.NonPublic | BindingFlags.Instance);
-            object helperObject = hlp.GetValue(myMedia);
-            FieldInfo stateField = helperObject.GetType().GetField("_currentState", BindingFlags.NonPublic | BindingFlags.Instance);
-            MediaState state = (MediaState)stateField.GetValue(helperObject);
-            return state;
+            Video.Pause();
+            pause_button.Visibility = Visibility.Hidden;
+            pause_button.IsEnabled = false;
+            play_button.Visibility = Visibility.Visible;
+            play_button.IsEnabled = true;
         }
 
         private void volumeButton(object sender, MouseButtonEventArgs e)
