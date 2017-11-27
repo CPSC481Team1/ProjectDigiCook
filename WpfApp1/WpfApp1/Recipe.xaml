@@ -14,13 +14,18 @@
         </Grid.ColumnDefinitions>
         <local:NavigationBar Grid.ColumnSpan="3" Height="196" VerticalAlignment="Top"/>
         <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" Grid.ColumnSpan="3" StaysOpen="False">
-                <Grid Background="#FFBDBDBD">
-                    <Rectangle Height="Auto" Width="Auto"/>
-                <MediaElement x:Name="Video" HorizontalAlignment="Left" Source="./Images/Video/clip2.mp4" Height="333" VerticalAlignment="Top" Width="591" LoadedBehavior="Manual"/>
-                <Image x:Name="pause_button" HorizontalAlignment="Left" MouseLeftButtonUp="pauseButton" Source="./Images/Video/pause_button.png" Height="27" Margin="5,333,0,0" VerticalAlignment="Top" Width="35"/>
-                <Image x:Name="play_button" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/play_button.png" Height="27" Margin="5,333,0,0" VerticalAlignment="Top" Width="35"/>
-                <Image x:Name="volume_button" HorizontalAlignment="Left" MouseLeftButtonUp="volumeButton" Source="./Images/Video/volume_button.png" Height="27" Margin="56,333,0,0" VerticalAlignment="Top" Width="30"/>
-                <Image x:Name="fullscreen_button" HorizontalAlignment="Left" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Margin="543,333,0,0" VerticalAlignment="Top" Width="48"/>
+            <Grid Background="#FFBDBDBD">
+                <Rectangle Height="Auto" Width="Auto"/>
+                <MediaElement x:Name="Video" HorizontalAlignment="Left" Source="./Images/Video/clip2.mp4" Height="333" VerticalAlignment="Top" Width="591" Stretch="Fill" LoadedBehavior="Manual" MediaOpened="videoOpened"  MediaEnded="videoEnded" MouseLeftButtonUp="pauseButton"/>
+                <Image x:Name="exit_button" HorizontalAlignment="Right" MouseLeftButtonUp="exitButton" Height="30" VerticalAlignment="Top" Width="25" Source="Images/Video/exit.png" Margin="0,8,8,0"/>
+                <Slider Name="seekSlider" Margin="10,0,10,30" VerticalAlignment="Bottom" Maximum="1" ValueChanged="videoSeek" IsMoveToPointEnabled="True" Height="21"/>
+                <Grid VerticalAlignment="Bottom" Height="Auto" Background="#FFBDBDBD" Margin="0,0,0,-3">
+                    <Image x:Name="pause_button" HorizontalAlignment="Left" MouseLeftButtonUp="pauseButton" Source="./Images/Video/pause_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
+                    <Image x:Name="play_button" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/play_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
+                    <Image x:Name="volume_button" HorizontalAlignment="Left" MouseLeftButtonUp="volumeButton" Source="./Images/Video/volume_button.png" Height="27" Margin="56,3,0,5" VerticalAlignment="Bottom" Width="30"/>
+                    <Image x:Name="fullscreen_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Width="48" Margin="0,3,0,5"/>
+                    <Image x:Name="fullscreenclose_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButtonClose" Source="./Images/Video/fullscreenclose_button.png" Height="27" Width="48" Margin="0,3,8,5"/>
+                </Grid>
             </Grid>
         </Popup>
         <Grid Grid.Column="1" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="220" Margin="0,135,0,0" VerticalAlignment="Top" Width="878">
@@ -68,7 +73,15 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image1" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xA;Bring water to boil.&#xA;Add 250g of dried pasta to the boiling water.&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <RichTextBox x:Name="textBox1" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
+                            <FlowDocument>
+                                <Paragraph>Fill a large pot with water, and add two large pinches of salt.</Paragraph>
+                                <Paragraph>Bring water to boil.</Paragraph>
+                                <Paragraph>Add 250g of dried pasta to the boiling water.</Paragraph>
+                                <Paragraph>Cook for 5-7 minutes or until pasta reaches desired firmness.</Paragraph>
+                                <Paragraph>Drain the pasta water.</Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander2" PreviewMouseLeftButtonUp="expander" Header="2. Combine meat with spices and form meatballs" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="#FFF0F0F0">
@@ -79,7 +92,13 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image2" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag=".\Images\Video\clip2.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Defrost meat and put in a large mixing bowl.&#xA;Add 2 cloves of garlic, half an onion, salt, and pepper.&#xA;Using wet hands, form the meat mixture into golfball-sized meatballs." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <RichTextBox x:Name="textBox2" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
+                            <FlowDocument>
+                                <Paragraph>Defrost meat and put in a large mixing bowl.</Paragraph>
+                                <Paragraph>Add 2 cloves of garlic, half an onion, salt, and pepper.</Paragraph>
+                                <Paragraph>Using wet hands, form the meat mixture into golfball-sized meatballs.</Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander3" PreviewMouseLeftButtonUp="expander" Header="3. Brown meatballs and remove from pan" HorizontalAlignment="Left" Width="855" Height="Auto" FontSize="24" Background="#FFF0F0F0">
@@ -90,7 +109,15 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image3" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Pour a tablespoon of olive oil into a large saucepan.&#xA;Heat the pan until it is very hot.&#xA;Put all meatballs in the pan and cook.&#xA;Cook for 5-7 minutes, and then flip the meatballs.&#xA;Remove meatballs and set aside." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <RichTextBox x:Name="textBox3" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
+                            <FlowDocument>
+                                <Paragraph>Pour a tablespoon of olive oil into a large saucepan.</Paragraph>
+                                <Paragraph>Heat the pan until it is very hot.</Paragraph>
+                                <Paragraph>Put all meatballs in the pan and cook.</Paragraph>
+                                <Paragraph>Cook for 5-7 minutes, and then flip the meatballs.</Paragraph>
+                                <Paragraph>Remove meatballs and set aside.</Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander4" PreviewMouseLeftButtonUp="expander" Header="4. Cook sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="#FFF0F0F0">
@@ -101,7 +128,14 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image4" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="In the same pan used to cook the meatballs, add a splash of water to deglaze the pan.&#xA;Add in diced tomatoes, peppers, basil and tomato paste.&#xA;Allow to simmer until sauce reaches desired consistency(8-10 minutes).&#xA;Add salt and pepper to taste." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <RichTextBox x:Name="textBox4" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
+                            <FlowDocument>
+                                <Paragraph>In the same pan used to cook the meatballs, add a splash of water to deglaze the pan.</Paragraph>
+                                <Paragraph>Add in diced tomatoes, peppers, basil and tomato paste.</Paragraph>
+                                <Paragraph>Allow to simmer until sauce reaches desired consistency(8-10 minutes).</Paragraph>
+                                <Paragraph>Add salt and pepper to taste.</Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander5" PreviewMouseLeftButtonUp="expander" Header="5. Add meatballs back into the sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Background="#FFF0F0F0" Height="Auto">
@@ -112,10 +146,15 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image5" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Step 5&#xA;Step 5" VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <RichTextBox x:Name="textBox5" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
+                            <FlowDocument>
+                                <Paragraph>Step 5</Paragraph>
+                                <Paragraph>Step 5</Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
                     </Grid>
                 </Expander>
-                
+
                 <Expander x:Name="expander6" PreviewMouseLeftButtonUp="expander" Header="6. Combine and serve" HorizontalAlignment="Right" Width="855" FontSize="24" Background="#FFF0F0F0" Height="Auto">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
@@ -124,7 +163,15 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image6" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xA;Bring water to boil.&#xA;Add 250g of dried pasta to the boiling water.&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <RichTextBox x:Name="textBox6" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
+                            <FlowDocument>
+                                <Paragraph>Fill a large pot with water, and add two large pinches of salt.</Paragraph>
+                                <Paragraph>Bring water to boil.</Paragraph>
+                                <Paragraph>Add 250g of dried pasta to the boiling water.</Paragraph>
+                                <Paragraph>Cook for 5-7 minutes or until pasta reaches desired firmness.</Paragraph>
+                                <Paragraph>Drain the pasta water.</Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
                     </Grid>
                 </Expander>
             </StackPanel>

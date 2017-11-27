@@ -250,9 +250,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="Images\Video\clip1.mp4" />
-    <Content Include="Images\Video\clip2.mp4" />
-    <Resource Include="Images\Video\pause_button.png" />
+    <Content Include="Images\Video\clip1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Video\clip2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Video\fullscreenclose_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Video\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Video\pause_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Skill_Level\chef.png" />
     <Resource Include="Images\Skill_Level\cook.jpg" />
     <Resource Include="Images\Skill_Level\home.jpg" />
@@ -265,7 +277,9 @@
     <Resource Include="Images\Video\cooking_video.jpg" />
     <Resource Include="Images\Video\cooking_video_thumbnail.jpg" />
     <Resource Include="Images\Video\fullscreen_button.png" />
-    <Resource Include="Images\Video\play_button.png" />
+    <Resource Include="Images\Video\play_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Video\TopChefPhoto4.jpg" />
     <Resource Include="Images\Video\volume_button.png" />
     <Resource Include="Images\Recipes\bask.png" />
