@@ -15,6 +15,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 
 namespace WpfApp1
 {
@@ -52,6 +53,8 @@ namespace WpfApp1
 
         private void Expert_Button_Click(object sender, RoutedEventArgs e)
         {
+            
+            advancedFlavour.Opacity = 0.9;
             GlobalVars.skillLevel = 3;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
 
@@ -108,6 +111,13 @@ namespace WpfApp1
         {
             GlobalVars.skillLevel = 1;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
+        }
+
+        private void ExpertMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+            advancedFlavour.Opacity = 0.9;
+            advancedImgGray.Opacity = 0.9;
         }
     }
     #endregion

@@ -173,7 +173,7 @@
             </Grid>
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="86.653" Margin="1118,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Expert"/></TextBlock>
-        <Button x:Name="Expert_Button"  HorizontalAlignment="Left" Height="320" Margin="1118,321.532,0,0" VerticalAlignment="Top" Width="320" Click ="Expert_Button_Click" MouseEnter="Expert_MouseEnter" MouseLeave="Expert_MouseLeave">
+        <Button x:Name="Expert_Button"  MouseDown="ExpertMouseDown" HorizontalAlignment="Left" Height="320" Margin="1118,321.532,0,0" VerticalAlignment="Top" Width="320" Click ="Expert_Button_Click" MouseEnter="Expert_MouseEnter" MouseLeave="Expert_MouseLeave">
             <Grid x:Name="expertGrid" Height="Auto" Width="Auto">
                 <Image x:Name="advancedImg" Source=".\Images\Skill_Level\chef.png" Stretch="Fill" Opacity="1.0"/>
                 <Image x:Name="advancedImgGray" Source=".\Images\Skill_Level\GreyOverlay.jpg" Stretch="Fill"  Opacity="0"/>
