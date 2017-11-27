@@ -42,40 +42,6 @@ namespace WpfApp1
 
 
 
-        private void fettuccine_MouseEnter(object sender, MouseEventArgs e)
-        {
-            fettuccine.Width = 215;
-            fettuccine.Height = 215;
-        }
-
-        private void fettuccine_MouseLeave(object sender, MouseEventArgs e)
-        {
-            fettuccine.Width = 200;
-            fettuccine.Height = 200;
-        }
-
-        private void vegan_MouseEnter(object sender, MouseEventArgs e)
-        {
-            vegan.Width = 215;
-            vegan.Height = 215;
-        }
-
-        private void vegan_MouseLeave(object sender, MouseEventArgs e)
-        {
-            vegan.Width = 200;
-            vegan.Height = 200;
-        }
-
-        private void vegetarian_MouseEnter(object sender, MouseEventArgs e)
-        {
-            vegetarian.Width = 215;
-            vegetarian.Height = 215;
-        }
-
-        private void vegetarian_MouseLeave(object sender, MouseEventArgs e)
-        {
-            vegetarian.Width = 200;
-            vegetarian.Height = 200;
-        }
+      
     }
 }

@@ -20,67 +20,39 @@
         </Grid.ColumnDefinitions>
         <local:NavigationBar Margin="0,0,0,44" Grid.ColumnSpan="3"/>
         <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286.617" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46.617"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="219.707,46.617,220.293,46.617" Grid.Row="1" Grid.RowSpan="2" Background="Orange">
-            <Button x:Name="dessert" HorizontalAlignment="Right" Width="200" BorderBrush="Silver" BorderThickness="10"  RenderTransformOrigin="0.5,0.5" Margin="0,0,353.5,34.766" MouseEnter="dessert_MouseEnter" MouseLeave="dessert_MouseLeave" Height="200" VerticalAlignment="Bottom" >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="8"/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-                <Button.Effect>
-                    <DropShadowEffect ShadowDepth="4" BlurRadius="4.2" Direction="324"/>
-                </Button.Effect>
-                <Grid x:Name="cat1" Height="Auto" Width="Auto">
-                    <Image Source=".\Images\Categories\Cake.jpg" Stretch="Fill" Height="178" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                        <TextBlock.Effect>
-                            <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
-                        </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Dessert" Foreground="White" /></TextBlock>
-                </Grid>
-            </Button>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="219.707,46.617,220.293,46.617" Grid.Row="1" Grid.RowSpan="2" Background="MintCream">
+
+
 
 
         </Border>
-        <local:Button_CheckList Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="1283,18.5,0,0" VerticalAlignment="Top" Width="167.5" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="textBlock" Height="60.833" Margin="219.707,-29.444,178.062,0" TextWrapping="Wrap" Text="No results found... Try searching with a new term or try a category" FontSize="30" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock x:Name="Alternatives" Grid.Column="1"  Grid.Row="1" TextWrapping="Wrap" Height="102" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="401.061,48,401.061,0" d:LayoutOverrides="LeftMargin, RightMargin"><Run FontSize="75" FontFamily="Segoe UI Black" Text="You Might Like" Foreground="SteelBlue" /></TextBlock>
-        <Button x:Name="breakfast" HorizontalAlignment="Right" Width="200" Height="200" BorderBrush="Silver" BorderThickness="10"  d:LayoutOverrides="HorizontalAlignment"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="0,0,319,-53.994" Grid.Row="1" VerticalAlignment="Bottom" MouseEnter="breakfast_MouseEnter" MouseLeave="breakfast_MouseLeave" >
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="8"/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Effect>
-                <DropShadowEffect ShadowDepth="4" BlurRadius="4.2" Direction="324"/>
-            </Button.Effect>
+        <TextBlock x:Name="Alternatives" Grid.Column="1"  Grid.Row="1" TextWrapping="Wrap" Height="102" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="401.061,48,401.061,0" d:LayoutOverrides="LeftMargin, RightMargin"><Run FontSize="75" FontFamily="Segoe UI Black" Text="You Might Like" Foreground="DarkOrange"></Run></TextBlock>
+        <Button x:Name="dessert" HorizontalAlignment="Center" Width="295" BorderBrush="Orange" BorderThickness="5"  RenderTransformOrigin="0.5,0.5" Margin="532.5,-127,532.5,162"  Grid.Row="2" Grid.Column="1" >
+
+            <Grid x:Name="cat1" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Categories\Cake.jpg" Stretch="Fill" VerticalAlignment="Center"/>
+                <TextBlock x:Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
+                    </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Dessert" Foreground="White" /></TextBlock>
+            </Grid>
+        </Button>
+        <Button x:Name="breakfast" HorizontalAlignment="Right" Width="295" Height="295" BorderBrush="Orange" BorderThickness="5"  d:LayoutOverrides="HorizontalAlignment"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="0,-127,230,162" Grid.Row="2" VerticalAlignment="Bottom">
+
+
             <Grid x:Name="cat3" Height="Auto" Width="Auto">
-                <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill" Height="178" VerticalAlignment="Top"/>
-                <TextBlock x:Name="category3" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill"  VerticalAlignment="Top"/>
+                <TextBlock x:Name="category3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="73.525,246.406,73.525,0">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
                     </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Breakfast" Foreground="White" /></TextBlock>
             </Grid>
         </Button>
-        <Button x:Name="ravioli" HorizontalAlignment="Right" Width="200" Height="200" BorderBrush="Silver" BorderThickness="10"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="0,0,875.5,-53.994" Grid.Row="1" VerticalAlignment="Bottom" MouseEnter="ravioli_MouseEnter" MouseLeave="ravioli_MouseLeave" Click="ravioli_Click" >
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="8"/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Effect>
-                <DropShadowEffect ShadowDepth="4" BlurRadius="4.2" Direction="324"/>
-            </Button.Effect>
+        <Button x:Name="ravioli" HorizontalAlignment="Left" Width="295" Height="295" BorderBrush="Orange" BorderThickness="5"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="230,-127,0,162" Grid.Row="2" VerticalAlignment="Bottom" Click="ravioli_Click" >
+
             <Grid x:Name="cat2" Height="Auto" Width="Auto">
-                <Image Source=".\Images\Search\Rav.jpg" Stretch="Fill" Height="178" VerticalAlignment="Top"/>
+                <Image Source=".\Images\Search\Rav.jpg" Stretch="Fill" VerticalAlignment="Top"/>
                 <TextBlock x:Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>

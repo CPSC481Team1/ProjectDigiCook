@@ -43,40 +43,6 @@ namespace WpfApp1
 
       
 
-        private void ravioli_MouseEnter(object sender, MouseEventArgs e)
-        {
-            ravioli.Width = 215;
-            ravioli.Height = 215;
-        }
-
-        private void ravioli_MouseLeave(object sender, MouseEventArgs e)
-        {
-            ravioli.Width = 200;
-            ravioli.Height = 200;
-        }
-
-        private void dessert_MouseEnter(object sender, MouseEventArgs e)
-        {
-            dessert.Width = 215;
-            dessert.Height = 215;
-        }
-
-        private void dessert_MouseLeave(object sender, MouseEventArgs e)
-        {
-            dessert.Width = 200;
-            dessert.Height = 200;
-        }
-
-        private void breakfast_MouseEnter(object sender, MouseEventArgs e)
-        {
-            breakfast.Width = 215;
-            breakfast.Height = 215;
-        }
-
-        private void breakfast_MouseLeave(object sender, MouseEventArgs e)
-        {
-            breakfast.Width = 200;
-            breakfast.Height = 200;
-        }
+       
     }
 }
