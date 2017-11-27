@@ -16,16 +16,16 @@
 
         <local:NavigationBar Grid.ColumnSpan="3" Height="196" VerticalAlignment="Top"/>
 
-        <Grid Grid.Column="1" Background="White" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="1353" Grid.ColumnSpan="2">
+        <Grid Grid.Column="1" Background="White" HorizontalAlignment="Left" Height="220" Margin="1,120,0,0" VerticalAlignment="Top" Width="1352">
             <Border BorderThickness="1" BorderBrush="#FF834343" Background="#FFF0F0F0">
-                <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="256" VerticalAlignment="Top" Width="256"  Margin="10,10,10,10" />
+                <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="240"  Margin="-1,-1,0,-1" />
             </Border>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="298,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="575" FontSize="20"  Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. "/>
-            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,22,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
-            <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="114" Margin="967,72,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click" Background="DarkOrange"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="256"/>
-            <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="298,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
-            <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="353,204.445,198.03,0" Width="Auto"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="225,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="685" FontSize="20"  Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. "/>
+            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,0,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
+            <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="114" Margin="1011,83,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click" Background="DarkOrange"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="220"/>
+            <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="225,0,0,10" Height="50" VerticalAlignment="Bottom" />
+            <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="275,160,276,0" Width="Auto"/>
 
         </Grid>
         <TextBlock x:Name="UtensilsLabel"  HorizontalAlignment="Left" TextWrapping="Wrap" Width="428" Margin="1,354,0,460" FontSize="36" TextAlignment="Center" Foreground="DarkOrange" Grid.Column="1"><Run FontWeight="Bold" Text="Utensils"/></TextBlock>
