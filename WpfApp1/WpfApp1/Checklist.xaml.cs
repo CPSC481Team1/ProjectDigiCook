@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -53,9 +54,42 @@ namespace WpfApp1
 
         public void addToChecklist(List<string> checklist)
         {
+            for (int i = 0; i < checklist.Count; i++)
+            {
+                List<float> dupInstances = new List<float>();
+
+                string[] splits_i = checklist[i].Split(new[] { ' ' }, 3);
+                string ingredient_i = splits_i[2];
+
+                dupInstances.Add(float.Parse(splits_i[1]));
+
+                for (int j = i + 1; j < checklist.Count; j++)
+                {
+                    string[] splits_j = checklist[j].Split(new[] { ' ' }, 3);
+                    string ingredient_j = splits_j[2];
+
+                    if (ingredient_i.Equals(ingredient_j))
+                    {
+                        dupInstances.Add(float.Parse(splits_j[1]));
+                        checklist.RemoveAt(j);
+                        j--;
+                    }
+                }
+
+                if (dupInstances.Count > 1)
+                {
+                    string newStr = "• " + (dupInstances.Sum()) + " " + splits_i[2];
+                    checklist[i] = newStr;
+                }
+            }
+
             foreach (string item in checklist)
             {
-                checklistBox.Items.Add(item);
+                ListBoxItem addition = new ListBoxItem();
+                addition.Content = item;
+                addition.HorizontalContentAlignment = HorizontalAlignment.Center;
+                addition.FontSize = 30;
+                checklistBox.Items.Add(addition);
             }
         }
 

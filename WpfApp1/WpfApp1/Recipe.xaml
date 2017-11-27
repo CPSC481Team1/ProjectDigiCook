@@ -12,6 +12,7 @@
             <ColumnDefinition Width="1360*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
+        <local:NavigationBar Grid.ColumnSpan="3" Height="196" VerticalAlignment="Top"/>
         <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" Grid.ColumnSpan="3" StaysOpen="False">
                 <Grid Background="#FFBDBDBD">
                     <Rectangle Height="Auto" Width="Auto"/>
@@ -20,21 +21,21 @@
                 <Image x:Name="play_button" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/play_button.png" Height="27" Margin="5,333,0,0" VerticalAlignment="Top" Width="35"/>
                 <Image x:Name="volume_button" HorizontalAlignment="Left" MouseLeftButtonUp="volumeButton" Source="./Images/Video/volume_button.png" Height="27" Margin="56,333,0,0" VerticalAlignment="Top" Width="30"/>
                 <Image x:Name="fullscreen_button" HorizontalAlignment="Left" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Margin="543,333,0,0" VerticalAlignment="Top" Width="48"/>
-                </Grid>
-            </Popup>
-        <Grid Grid.Column="1" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="261" Margin="1,79,0,0" VerticalAlignment="Top" Width="876">
+            </Grid>
+        </Popup>
+        <Grid Grid.Column="1" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="220" Margin="0,135,0,0" VerticalAlignment="Top" Width="878">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="319*"/>
                 <ColumnDefinition Width="557*"/>
             </Grid.ColumnDefinitions>
-            <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,48,0">
-                <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="256" VerticalAlignment="Top" Width="256"  Margin="10,10,10,10" />
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="878" Grid.ColumnSpan="2"/>
+            <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,100,0">
+                <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="220"  Margin="-1,-1,0,-1" />
             </Border>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="288,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="578" FontSize="20"  Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. " Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,22,-29,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center" Grid.ColumnSpan="2"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="256"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="225,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="578" FontSize="20"  Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. " Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="220,0,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
-        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="927,94,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Foreground="DarkOrange"/>
+        <TextBlock x:Name="Ingredients" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="927,99,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Foreground="DarkOrange"/>
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="665" Margin="927,149,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2"/>
         <Canvas  Background="#FFF0F0F0" Grid.Column="1" HorizontalAlignment="Left" Height="665" Margin="927,149,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2">
             <ListBox x:Name="Ingredients_Box" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="447" SelectionChanged="listBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
@@ -58,7 +59,7 @@
                 <ColumnDefinition Width="855*"/>
                 <ColumnDefinition Width="22*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Name="expanderContainer" Height="Auto">
+            <StackPanel x:Name="expanderContainer" Height="Auto">
                 <Expander x:Name="expander1" PreviewMouseLeftButtonUp="expander" Header="1. Cook pasta al dente" HorizontalAlignment="Left" IsExpanded="True" FontSize="24" Height="Auto" Background="#FFF0F0F0" Width="855">
                     <Grid Background="#FFE5E5E5"  Height="Auto">
                         <Grid.ColumnDefinitions>
@@ -67,7 +68,7 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image1" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xD;&#xA;Bring water to boil.&#xD;&#xA;Add 250g of dried pasta to the boiling water.&#xD;&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xD;&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xA;Bring water to boil.&#xA;Add 250g of dried pasta to the boiling water.&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander2" PreviewMouseLeftButtonUp="expander" Header="2. Combine meat with spices and form meatballs" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="#FFF0F0F0">
@@ -78,7 +79,7 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image2" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag=".\Images\Video\clip2.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Defrost meat and put in a large mixing bowl.&#xD;&#xA;Add 2 cloves of garlic, half an onion, salt, and pepper.&#xD;&#xA;Using wet hands, form the meat mixture into golfball-sized meatballs." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Defrost meat and put in a large mixing bowl.&#xA;Add 2 cloves of garlic, half an onion, salt, and pepper.&#xA;Using wet hands, form the meat mixture into golfball-sized meatballs." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander3" PreviewMouseLeftButtonUp="expander" Header="3. Brown meatballs and remove from pan" HorizontalAlignment="Left" Width="855" Height="Auto" FontSize="24" Background="#FFF0F0F0">
@@ -89,7 +90,7 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image3" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Pour a tablespoon of olive oil into a large saucepan.&#xD;&#xA;Heat the pan until it is very hot.&#xD;&#xA;Put all meatballs in the pan and cook.&#xD;&#xA;Cook for 5-7 minutes, and then flip the meatballs.&#xD;&#xA;Remove meatballs and set aside." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Pour a tablespoon of olive oil into a large saucepan.&#xA;Heat the pan until it is very hot.&#xA;Put all meatballs in the pan and cook.&#xA;Cook for 5-7 minutes, and then flip the meatballs.&#xA;Remove meatballs and set aside." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander4" PreviewMouseLeftButtonUp="expander" Header="4. Cook sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Height="Auto" Background="#FFF0F0F0">
@@ -100,7 +101,7 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image4" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="In the same pan used to cook the meatballs, add a splash of water to deglaze the pan.&#xD;&#xA;Add in diced tomatoes, peppers, basil and tomato paste.&#xD;&#xA;Allow to simmer until sauce reaches desired consistency(8-10 minutes).&#xD;&#xA;Add salt and pepper to taste." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="In the same pan used to cook the meatballs, add a splash of water to deglaze the pan.&#xA;Add in diced tomatoes, peppers, basil and tomato paste.&#xA;Allow to simmer until sauce reaches desired consistency(8-10 minutes).&#xA;Add salt and pepper to taste." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
                 <Expander x:Name="expander5" PreviewMouseLeftButtonUp="expander" Header="5. Add meatballs back into the sauce" HorizontalAlignment="Left" Width="855" FontSize="24" Background="#FFF0F0F0" Height="Auto">
@@ -111,7 +112,7 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image5" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Step 5&#xD;&#xA;Step 5" VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Step 5&#xA;Step 5" VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
                 
@@ -123,14 +124,13 @@
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
                         <Image x:Name="image6" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
-                        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xD;&#xA;Bring water to boil.&#xD;&#xA;Add 250g of dried pasta to the boiling water.&#xD;&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xD;&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" TextWrapping="Wrap" Text="Fill a large pot with water, and add two large pinches of salt.&#xA;Bring water to boil.&#xA;Add 250g of dried pasta to the boiling water.&#xA;Cook for 5-7 minutes or until pasta reaches desired firmness.&#xA;Drain the pasta water." VerticalAlignment="Top" Width="534" FontSize="18" TextChanged="textBox1_TextChanged" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Expander>
             </StackPanel>
             <ScrollViewer HorizontalAlignment="Right" Height="Auto" VerticalAlignment="Top" Width="17"/>
         </Grid>
         <Button x:Name="button2" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="1024,703,0,0" VerticalAlignment="Top" Width="252" Click="button2_Click" Height="90" FontSize="48"/>
-        <local:Button_CheckList HorizontalAlignment="Left" Height="71" Margin="1283,18,0,0" VerticalAlignment="Top" Width="167" Grid.ColumnSpan="2" Grid.Column="1"/>
     </Grid>
 </Page>
     

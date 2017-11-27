@@ -27,6 +27,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
+            
             //this.Title = "DigiCook";
 
             //// Set window to center of the computer screen at startup
@@ -34,6 +35,7 @@ namespace WpfApp1
 
             //// Turn off resizing
             //this.ResizeMode = ResizeMode.NoResize;
+
         }
 
 
@@ -106,74 +108,63 @@ namespace WpfApp1
 
         private void button_MouseEnter(object sender, MouseEventArgs e)
         {
-            button.Width = 210;
-            button.Height = 210;
+            
         }
 
         private void button_MouseLeave(object sender, MouseEventArgs e)
         {
-            button.Width = 200;
-            button.Height = 200;
+           
         }
 
         private void button2_MouseEnter(object sender, MouseEventArgs e)
         {
-            button2.Width = 210;
-            button2.Height = 210;
+          
         }
 
         private void button2_MouseLeave(object sender, MouseEventArgs e)
         {
-            button2.Width = 200;
-            button2.Height = 200;
+            
         }
 
         private void button3_MouseEnter(object sender, MouseEventArgs e)
         {
-            button3.Width = 210;
-            button3.Height = 210;
+           
         }
 
         private void button3_MouseLeave(object sender, MouseEventArgs e)
         {
-            button3.Width = 200;
-            button3.Height = 200;
+            
         }
 
         private void button4_MouseEnter(object sender, MouseEventArgs e)
         {
-            button4.Width = 210;
-            button4.Height = 210;
+           
         }
 
         private void button4_MouseLeave(object sender, MouseEventArgs e)
         {
-            button4.Width = 200;
-            button4.Height = 200;
+          
         }
 
         private void button5_MouseEnter(object sender, MouseEventArgs e)
         {
-            button5.Width = 210;
-            button5.Height = 210;
+           
         }
 
         private void button5_MouseLeave(object sender, MouseEventArgs e)
         {
-            button5.Width = 200;
-            button5.Height = 200;
+            
+           
         }
 
         private void button6_MouseEnter(object sender, MouseEventArgs e)
         {
-            button6.Width = 210;
-            button.Height = 210;
+            
         }
 
         private void button6_MouseLeave(object sender, MouseEventArgs e)
         {
-            button6.Width = 200;
-            button6.Height = 200;
+           
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)

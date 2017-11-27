@@ -22,8 +22,7 @@ namespace WpfApp1
         public Spaghetti()
         {
             InitializeComponent();
-
-            
+   
         }
 
         private void recipe1_click(object sender, MouseButtonEventArgs e)
@@ -40,6 +39,11 @@ namespace WpfApp1
         private void textBlock_Loaded(object sender, RoutedEventArgs e)
         {
             textBlock.Text = "Results for spaghetti...";
+        }
+
+        private void ItemHighlight(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

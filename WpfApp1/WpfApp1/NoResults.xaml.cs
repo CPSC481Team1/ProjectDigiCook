@@ -48,45 +48,6 @@ namespace WpfApp1
             searchBar.setText();
         }
 
-       
-
-        private void spaghetti_MouseEnter(object sender, MouseEventArgs e)
-        {
-            spaghetti.Width = 215;
-            spaghetti.Height = 215;
-        }
-
-       
-
-        private void spaghetti_MouseLeave(object sender, MouseEventArgs e)
-        {
-            spaghetti.Width = 200;
-            spaghetti.Height = 200;
-        }
-
-        private void lunch_MouseEnter(object sender, MouseEventArgs e)
-        {
-            lunch.Height = 215;
-            lunch.Width = 215;
-        }
-
-        private void lunch_MouseLeave(object sender, MouseEventArgs e)
-        {
-            lunch.Height = 200;
-            lunch.Width = 200;
-        }
-
-        private void dinner_MouseEnter(object sender, MouseEventArgs e)
-        {
-            dinner.Height = 215;
-            dinner.Width = 215;
-        }
-
-        private void dinner_MouseLeave(object sender, MouseEventArgs e)
-        {
-            dinner.Height = 200;
-            dinner.Width = 200;
-        }
 
         private void spaghetti_Click(object sender, RoutedEventArgs e)
         {

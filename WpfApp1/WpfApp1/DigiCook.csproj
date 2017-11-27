@@ -50,9 +50,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -76,6 +79,9 @@
     </Compile>
     <Compile Include="Checklist.xaml.cs">
       <DependentUpon>Checklist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationBar.xaml.cs">
+      <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="NoResults.xaml.cs">
       <DependentUpon>NoResults.xaml</DependentUpon>
@@ -123,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Checklist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -208,6 +218,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Design\projectGuides.guides" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -239,6 +250,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Images\Video\clip1.mp4" />
+    <Content Include="Images\Video\clip2.mp4" />
+    <Resource Include="Images\Video\pause_button.png" />
+    <Resource Include="Images\Skill_Level\chef.png" />
+    <Resource Include="Images\Skill_Level\cook.jpg" />
+    <Resource Include="Images\Skill_Level\home.jpg" />
+    <Resource Include="s4cfeuya.bmp" />
+    <Resource Include="Images\Misc\recommended-star.png" />
+    <Resource Include="Images\Misc\clockwise-rotation.png" />
+    <Resource Include="Images\Navigation\foward_arrow.png" />
+    <Resource Include="Images\Navigation\back_arrow.png" />
+    <Resource Include="Images\Navigation\arrow_left.png" />
     <Resource Include="Images\Video\cooking_video.jpg" />
     <Resource Include="Images\Video\cooking_video_thumbnail.jpg" />
     <Resource Include="Images\Video\fullscreen_button.png" />
