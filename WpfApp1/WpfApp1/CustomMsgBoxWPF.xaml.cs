@@ -24,5 +24,43 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        static CustomMsgBoxWPF MsgBox;
+        static bool result = false;
+        static Window window;
+
+        public static bool Show(string Text, string btnOK, string btnCancel)
+        {
+            MsgBox = new CustomMsgBoxWPF();
+            MsgBox.label.Content = Text;
+            MsgBox.button_yes.Content = btnOK;
+            MsgBox.button_no.Content = btnCancel;
+        //    Uri iconUri = new Uri(Environment.CurrentDirectory + "/icons/icon.png", UriKind.RelativeOrAbsolute);
+
+            window = new Window
+            {
+                Title = "DigiCook",
+                Content = MsgBox,
+                SizeToContent = SizeToContent.WidthAndHeight,
+                ResizeMode = ResizeMode.NoResize,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen
+        //        Icon = BitmapFrame.Create(iconUri)
+            };
+
+            window.ShowDialog();
+            return result;
+        }
+
+        private void button_yes_Click(object sender, RoutedEventArgs e)
+        {
+            result = true;
+            window.Close();
+        }
+
+        private void button_no_Click(object sender, RoutedEventArgs e)
+        {
+            result = false;
+            window.Close();
+        }
     }
 }

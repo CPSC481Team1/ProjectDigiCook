@@ -7,7 +7,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -28,7 +27,7 @@ namespace WpfApp1
 
         private void ingredientslistBox_SelectionChanged(object sender, EventArgs e)
         {
-            System.Windows.Controls.Label[] ingredientWithAlts = new System.Windows.Controls.Label[] { label4, label6, label8 };
+            Label[] ingredientWithAlts = new Label[] { label4, label6, label8 };
 
             addButton.IsEnabled = true;
             skillsBox.SelectedIndex = -1;
@@ -76,11 +75,12 @@ namespace WpfApp1
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult result = CustomMsgBox.Show("Added item to checklist", "DigiCook", "Accept", "Cancel");
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Added item to checklist", "DigiCook", "Accept", "Cancel");
+            //bool result = CustomMsgBoxWPF.Show("Added item to checklist", "Accept", "Cancel");
 
-            if(result == DialogResult.Yes)
+            if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                System.Windows.Controls.Label selection = (System.Windows.Controls.Label)ingredientsBox.SelectedItem;
+                Label selection = (Label)ingredientsBox.SelectedItem;
                 string selectionStr = selection.Content.ToString();
                 GlobalVars.checklist.Add(selectionStr);
             }
@@ -88,13 +88,15 @@ namespace WpfApp1
 
         private void altButton_Click(object sender, RoutedEventArgs e)
         {
-            List<System.Windows.Controls.Label> ingredientWithAlts = new List<System.Windows.Controls.Label> { label4, label6, label8 };
+            List<Label> ingredientWithAlts = new List<Label> { label4, label6, label8 };
             string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
 
-            int idx = ingredientWithAlts.IndexOf((System.Windows.Controls.Label)ingredientsBox.SelectedItem);
-            DialogResult result = CustomMsgBox.Show("Alternative Ingredient:\n• " + alts[idx], "DigiCook", "Add Alternative", "Close");
+            int idx = ingredientWithAlts.IndexOf((Label)ingredientsBox.SelectedItem);
 
-            if (result == DialogResult.Yes)
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Alternative Ingredient:\n• " + alts[idx], "DigiCook", "Add Alternative", "Close");
+            //bool result = CustomMsgBoxWPF.Show("Alternative Ingredient:\n• " + alts[idx], "Add Alternative", "Close");
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 GlobalVars.checklist.Add("• " + alts[idx]);
             }

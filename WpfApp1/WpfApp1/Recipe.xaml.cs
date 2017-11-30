@@ -216,8 +216,9 @@ namespace WpfApp1
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult mbResult = MessageBox.Show("Added item to checklist", "", MessageBoxButton.OKCancel);
-            if (mbResult == MessageBoxResult.OK)
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Added item to checklist", "DigiCook", "Accept", "Cancel");
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 Label selection = (Label)Ingredients_Box.SelectedItem;
                 string selectionStr = selection.Content.ToString();
@@ -231,7 +232,12 @@ namespace WpfApp1
             string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
 
             int idx = ingredientWithAlts.IndexOf((Label)Ingredients_Box.SelectedItem);
-            MessageBox.Show(alts[idx], "Alternative Ingredient:");
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Alternative Ingredient:\n• " + alts[idx], "DigiCook", "Add Alternative", "Close");
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                GlobalVars.checklist.Add("• " + alts[idx]);
+            }
         }
 
         private void Grid_MouseDown(object sender, EventArgs e)
