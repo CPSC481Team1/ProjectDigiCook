@@ -88,6 +88,9 @@
     <Compile Include="CustomMsgBox.Designer.cs">
       <DependentUpon>CustomMsgBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomMsgBoxWPF.xaml.cs">
+      <DependentUpon>CustomMsgBoxWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Checklist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomMsgBoxWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
