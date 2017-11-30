@@ -216,11 +216,13 @@ namespace WpfApp1
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            Label selection = (Label)Ingredients_Box.SelectedItem;
-            string selectionStr = selection.Content.ToString();
-            GlobalVars.checklist.Add(selectionStr);
-
-            MessageBox.Show("Added item to checklist");
+            MessageBoxResult mbResult = MessageBox.Show("Added item to checklist", "", MessageBoxButton.OKCancel);
+            if (mbResult == MessageBoxResult.OK)
+            {
+                Label selection = (Label)Ingredients_Box.SelectedItem;
+                string selectionStr = selection.Content.ToString();
+                GlobalVars.checklist.Add(selectionStr);
+            } 
         }
 
         private void altButton_Click(object sender, RoutedEventArgs e)

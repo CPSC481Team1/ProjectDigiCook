@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -27,7 +28,7 @@ namespace WpfApp1
 
         private void ingredientslistBox_SelectionChanged(object sender, EventArgs e)
         {
-            Label[] ingredientWithAlts = new Label[] { label4, label6, label8 };
+            System.Windows.Controls.Label[] ingredientWithAlts = new System.Windows.Controls.Label[] { label4, label6, label8 };
 
             addButton.IsEnabled = true;
             skillsBox.SelectedIndex = -1;
@@ -75,20 +76,28 @@ namespace WpfApp1
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            Label selection = (Label) ingredientsBox.SelectedItem;
-            string selectionStr = selection.Content.ToString();
-            GlobalVars.checklist.Add(selectionStr);
+            DialogResult result = CustomMsgBox.Show("Added item to checklist", "DigiCook", "Accept", "Cancel");
 
-            MessageBox.Show("Added item to checklist");
+            if(result == DialogResult.Yes)
+            {
+                System.Windows.Controls.Label selection = (System.Windows.Controls.Label)ingredientsBox.SelectedItem;
+                string selectionStr = selection.Content.ToString();
+                GlobalVars.checklist.Add(selectionStr);
+            }
         }
 
         private void altButton_Click(object sender, RoutedEventArgs e)
         {
-            List<Label> ingredientWithAlts = new List<Label> { label4, label6, label8 };
+            List<System.Windows.Controls.Label> ingredientWithAlts = new List<System.Windows.Controls.Label> { label4, label6, label8 };
             string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
 
-            int idx = ingredientWithAlts.IndexOf((Label)ingredientsBox.SelectedItem);
-            MessageBox.Show(alts[idx], "Alternative Ingredient:");
+            int idx = ingredientWithAlts.IndexOf((System.Windows.Controls.Label)ingredientsBox.SelectedItem);
+            DialogResult result = CustomMsgBox.Show("Alternative Ingredient:\n• " + alts[idx], "DigiCook", "Add Alternative", "Close");
+
+            if (result == DialogResult.Yes)
+            {
+                GlobalVars.checklist.Add("• " + alts[idx]);
+            }
         }
         private TimeSpan TotalTime;
         private DispatcherTimer timerVideoTime;
