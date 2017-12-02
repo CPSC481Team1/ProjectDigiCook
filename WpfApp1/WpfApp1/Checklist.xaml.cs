@@ -108,14 +108,13 @@ namespace WpfApp1
                 clearButton.IsEnabled = true;
                 printButton.IsEnabled = true;
             }
-
-
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
             checklistBox.Items.Clear();
             clearButton.IsEnabled = false;
+            printButton.IsEnabled = false;
             GlobalVars.checklist.Clear();
         }
 
