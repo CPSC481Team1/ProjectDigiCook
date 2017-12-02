@@ -30,6 +30,7 @@ namespace WpfApp1
         public Checklist()
         {
             InitializeComponent();
+
             addToChecklist(GlobalVars.checklist);
 
             disableClearandPrintWhenEmpty();
@@ -102,6 +103,7 @@ namespace WpfApp1
             {
                 clearButton.IsEnabled = false;
                 printButton.IsEnabled = false;
+                showEmptyMessage();
             }
             else
             {
@@ -110,12 +112,18 @@ namespace WpfApp1
             }
         }
 
+        public void showEmptyMessage()
+        {
+            EmptyMessage.Visibility = Visibility.Visible;
+        }
+
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
             checklistBox.Items.Clear();
             clearButton.IsEnabled = false;
             printButton.IsEnabled = false;
             GlobalVars.checklist.Clear();
+            showEmptyMessage();
         }
 
         private void invokePrint(object sender, RoutedEventArgs e)
