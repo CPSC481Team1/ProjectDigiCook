@@ -89,7 +89,7 @@ namespace WpfApp1
         private void altButton_Click(object sender, RoutedEventArgs e)
         {
             List<Label> ingredientWithAlts = new List<Label> { label4, label6, label8 };
-            string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
+            string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoon Oregano" };
 
             int idx = ingredientWithAlts.IndexOf((Label)ingredientsBox.SelectedItem);
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -15,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Windows.Xps.Packaging;
 
 namespace WpfApp1
 {
@@ -29,7 +32,7 @@ namespace WpfApp1
             InitializeComponent();
             addToChecklist(GlobalVars.checklist);
 
-            disableClearWhenEmpty();
+            disableClearandPrintWhenEmpty();
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
@@ -37,7 +40,7 @@ namespace WpfApp1
             GlobalVars.checklist.RemoveAt(checklistBox.Items.IndexOf(checklistBox.SelectedItem));
             checklistBox.Items.RemoveAt(checklistBox.Items.IndexOf(checklistBox.SelectedItem));
 
-            disableClearWhenEmpty();
+            disableClearandPrintWhenEmpty();
         }
 
         private void checklistBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -93,16 +96,20 @@ namespace WpfApp1
             }
         }
 
-        public void disableClearWhenEmpty()
+        public void disableClearandPrintWhenEmpty()
         {
             if (checklistBox.Items.IsEmpty)
             {
                 clearButton.IsEnabled = false;
+                printButton.IsEnabled = false;
             }
             else
             {
                 clearButton.IsEnabled = true;
+                printButton.IsEnabled = true;
             }
+
+
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
@@ -110,6 +117,21 @@ namespace WpfApp1
             checklistBox.Items.Clear();
             clearButton.IsEnabled = false;
             GlobalVars.checklist.Clear();
+        }
+
+        private void invokePrint(object sender, RoutedEventArgs e)
+        {
+            // Create the print dialog object and set options
+            PrintDialog pDialog = new PrintDialog();
+            pDialog.PageRangeSelection = PageRangeSelection.AllPages;
+            pDialog.UserPageRangeEnabled = true;
+
+            // Display the dialog. This returns true if the user presses the Print button.
+            Nullable<Boolean> print = pDialog.ShowDialog();
+            if (print == true)
+            {
+                var printMessage = MessageBox.Show("Checklist sent to printer");
+            }
         }
     }
 }

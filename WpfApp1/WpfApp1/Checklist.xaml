@@ -12,7 +12,7 @@
 
         <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Height="112" Margin="38,717,0,0" VerticalAlignment="Top" Width="288" Background="DarkOrange" Click="deleteButton_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" IsEnabled="False"/>
         <Button x:Name="clearButton" Content="Clear All" HorizontalAlignment="Left" Height="112" Margin="365,717,0,0" VerticalAlignment="Top" Width="288" Background="#FFFF8E00" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" Click="clearButton_Click" IsEnabled="False"/>
-        <Button x:Name="printButton" Content="Print List" HorizontalAlignment="Left" Height="112" Margin="1259,717,0,0" VerticalAlignment="Top" Width="288" Background="White" FontSize="70" FontFamily="Sakkal Majalla" Foreground="DarkOrange"/>
+        <Button x:Name="printButton" Content="Print List" HorizontalAlignment="Left" Height="112" Margin="1259,717,0,0" VerticalAlignment="Top" Width="288" Background="White" FontSize="70" FontFamily="Sakkal Majalla" Foreground="DarkOrange" Click="invokePrint"/>
         <local:NavigationBar Height="166" VerticalAlignment="Top"/>
 
     </Grid>
