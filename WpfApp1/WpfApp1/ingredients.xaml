@@ -40,7 +40,7 @@
             <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="240,0,0,10" Height="50" VerticalAlignment="Bottom" />
             <TextBlock Foreground="Black" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="290,160,0,0" HorizontalAlignment="Left" Width="114.5"/>
             <TextBlock HorizontalAlignment="Left" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="541.83,160,0,0" Width="152" RenderTransformOrigin="0.429,1.473"/>
-            <TextBlock Foreground="Goldenrod" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="698.83,160,10,0"/>
+            <TextBlock Foreground="Goldenrod" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="698.83,160,485,0"/>
 
         </Grid>
         <TextBlock x:Name="UtensilsLabel"  HorizontalAlignment="Left" TextWrapping="Wrap" Width="428" Margin="1,354,0,460" FontSize="36" TextAlignment="Center" Foreground="DarkOrange" Grid.Column="1"><Run FontWeight="Bold" Text="Utensils"/></TextBlock>

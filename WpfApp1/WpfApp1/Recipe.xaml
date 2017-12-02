@@ -75,7 +75,7 @@
                             <ColumnDefinition Width="169*"/>
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="image1" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Image x:Name="image1" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
                         <RichTextBox x:Name="textBox1" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Fill a large pot with water, and add two large pinches of salt.</Paragraph>
@@ -94,7 +94,7 @@
                             <ColumnDefinition Width="169*"/>
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="image2" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag=".\Images\Video\clip2.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Image x:Name="image2" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag=".\Images\Video\clip2.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
                         <RichTextBox x:Name="textBox2" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Defrost meat and put in a large mixing bowl.</Paragraph>
@@ -111,7 +111,7 @@
                             <ColumnDefinition Width="169*"/>
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="image3" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Image x:Name="image3" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
                         <RichTextBox x:Name="textBox3" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Pour a tablespoon of olive oil into a large saucepan.</Paragraph>
@@ -130,7 +130,7 @@
                             <ColumnDefinition Width="169*"/>
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="image4" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Image x:Name="image4" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
                         <RichTextBox x:Name="textBox4" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>In the same pan used to cook the meatballs, add a splash of water to deglaze the pan.</Paragraph>
@@ -148,7 +148,7 @@
                             <ColumnDefinition Width="169*"/>
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="image5" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Image x:Name="image5" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
                         <RichTextBox x:Name="textBox5" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Step 5</Paragraph>
@@ -165,7 +165,7 @@
                             <ColumnDefinition Width="169*"/>
                             <ColumnDefinition Width="82*"/>
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="image6" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Image x:Name="image6" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Tag="Step1.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Margin="456,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2" Grid.Column="1"/>
                         <RichTextBox x:Name="textBox6" IsReadOnly="True" HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,5" VerticalAlignment="Top" Width="534" FontSize="18" Grid.ColumnSpan="2" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Fill a large pot with water, and add two large pinches of salt.</Paragraph>
