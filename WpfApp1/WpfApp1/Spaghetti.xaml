@@ -28,9 +28,10 @@
                         <TextBlock HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text="Cook Time:  60 m" Margin="336.6,101.892,214.43,0" Width="Auto"/>-->
 
                         <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,174.17,0" Width="152"/>
-                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="0,143.446,10,0" Width="169.17"/>
                         <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
                         <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
+                        <TextBlock/>
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="0,143.446,10,0" Width="169.17"/>
                         <Image Cursor="Hand" ToolTip ="Recommended" Visibility="Visible" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,10,30,82.298" Width="100" RenderTransformOrigin="0.291,0.404" />
                     </Grid>
                 </Border>
@@ -42,7 +43,6 @@
                         <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★★☆☆☆" Margin="0,143.446,10,0" Width="169.17"/>
                         <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
                         <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 45 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
-
                         <TextBlock Cursor="Hand"/>
                     </Grid>
                 </Border>
@@ -55,6 +55,7 @@
                         <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★★★☆☆" Margin="0,143.446,10,0" Width="169.17"/>
                         <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
                         <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 75 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
+                        <TextBlock/>
                     </Grid>
                 </Border>
 
