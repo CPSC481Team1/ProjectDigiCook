@@ -35,7 +35,7 @@
             </Border>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="225,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="685" FontSize="20"  Text="Spaghetti is an Italian word that literally means little twines. Spaghetti is a very popular form (dare I say the most popular form) of Italian pasta. "/>
             <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,0,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
-            <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="114" Margin="1011,83,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click" Background="DarkOrange"/>
+            <Button Cursor="Hand" x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="114" Margin="1011,83,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click" Background="DarkOrange"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="220"/>
             <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="225,0,0,10" Height="50" VerticalAlignment="Bottom" />
             <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="275,160,276,0" Width="Auto"/>
@@ -46,10 +46,10 @@
         <TextBlock x:Name="IngredientsLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Foreground="DarkOrange" FontWeight="Bold"/>
         <Label x:Name="UtensilsBox" Background="#FFF0F0F0" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" FontSize="24" Margin="0,409,931,60" Grid.Column="1"/>
 
-        <ListBox x:Name="skillsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged">
+        <ListBox x:Name="skillsBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged">
             <Canvas Height="68" Width="422">
                 <Label x:Name="label" Content="• Process of Al Dente" Height="68" Width="369" FontSize="24" VerticalContentAlignment="Center"/>
-                <Image x:Name="play" Height="68" Width="68" Canvas.Left="344" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" Source=".\Images\Recipes\button.png"/>
+                <Image Cursor="Hand" ToolTip = "Play Video" x:Name="play" Height="68" Width="68" Canvas.Left="344" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" Source=".\Images\Recipes\button.png"/>
             </Canvas>
         </ListBox>
 
@@ -70,8 +70,8 @@
                     <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                     <Label x:Name="label10" Content="• 1/2 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 </ListBox>
-                <Button x:Name="addButton" Content="Add to Checklist" Height="53" Canvas.Top="368" Width="199" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
-                <Button x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="368" Width="191" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
+                <Button Cursor="Hand" x:Name="addButton" Content="Add to Checklist" Height="53" Canvas.Top="368" Width="199" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
+                <Button Cursor="Hand" x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="368" Width="191" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
             </Canvas>
         </Border>
         <local:Button_CheckList Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="44,-396,0,0" VerticalAlignment="Top" Width="100"/>

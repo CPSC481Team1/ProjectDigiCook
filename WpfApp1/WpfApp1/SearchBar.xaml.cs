@@ -31,6 +31,8 @@ namespace WpfApp1
 
             // Set the default text to the globalVar
             SearchBox.Text = GlobalVars.searchText;
+            if (SearchBox.Text == GlobalVars.defaultSearchText)
+                SearchBox.FontStyle = FontStyles.Italic;
 
             initialSeatchString = SearchBox.Text;
         }
@@ -89,9 +91,11 @@ namespace WpfApp1
 
         private void search_Click(object sender, RoutedEventArgs e)
         {
-            navigateToSearchResult();
+            if (!String.IsNullOrWhiteSpace(SearchBox.Text) && SearchBox.Text != GlobalVars.defaultSearchText) // Only search if text
+                navigateToSearchResult();
         }
 
+        // Blue highlight on hover
         private void SearchBox_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             SearchBox.BorderBrush = System.Windows.Media.Brushes.LightBlue;
@@ -104,8 +108,10 @@ namespace WpfApp1
             if (SearchBox.Text == GlobalVars.defaultSearchText)
             {
                 SearchBox.Text = "";
+                SearchBox.FontStyle = FontStyles.Italic;
             }
 
+            SearchBox.FontStyle = FontStyles.Normal;
             SearchBox.Foreground = System.Windows.Media.Brushes.Black;
 
             SearchBox.BorderBrush = System.Windows.Media.Brushes.LightBlue;
@@ -117,18 +123,22 @@ namespace WpfApp1
             if (SearchBox.Text == "")
             {
                 SearchBox.Text = GlobalVars.defaultSearchText;
+                SearchBox.FontStyle = FontStyles.Italic;
             }
 
+            SearchBox.FontStyle = FontStyles.Normal;
             SearchBox.BorderBrush = System.Windows.Media.Brushes.Black;
 
             SearchBox.Foreground = System.Windows.Media.Brushes.Gray;
         }
 
+        // Search if user presses enter
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             //GlobalVars.searchText = SearchBox.Text;
 
-            if (e.Key == Key.Enter)
+            
+            if (e.Key == Key.Enter && !String.IsNullOrWhiteSpace(SearchBox.Text) && SearchBox.Text != GlobalVars.defaultSearchText) // enter pressed and text not empty or all spaces
             {
                 navigateToSearchResult();
             }

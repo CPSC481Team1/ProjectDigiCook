@@ -20,7 +20,7 @@
             <ColumnDefinition Width="1360*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" Grid.Column="1" Margin="220,46.617" Grid.Row="1" Grid.RowSpan="2" ScrollViewer.VerticalScrollBarVisibility="Visible"  ScrollViewer.CanContentScroll="False" Background= "MintCream">
+        <ListBox x:Name="listBox" Grid.Column="1" Margin="220,46.617" Grid.Row="1" Grid.RowSpan="2" ScrollViewer.VerticalScrollBarVisibility="Visible"  ScrollViewer.CanContentScroll="False" Background= "MintCream" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-                <Button x:Name="button" Grid.Column="0" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="0" VerticalAlignment="Center" Width="285" Background="#FFDDDDDD" BorderBrush="Orange" BorderThickness="5" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Click="button_Click">
+                <Button Cursor="Hand" x:Name="button" Grid.Column="0" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="0" VerticalAlignment="Center" Width="285" Background="#FFDDDDDD" BorderBrush="Orange" BorderThickness="5" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Click="button_Click">
                     <Grid x:Name="cat1" Height="Auto" Width="Auto">
                         <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill"/>
                         <TextBlock Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Breakfast" Foreground="White"/>
@@ -54,7 +54,7 @@
 
 
 
-                <Button x:Name="button2" Grid.Column="1" HorizontalAlignment="Center" Height="295" Margin="0" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" Click="button2_Click">
+                <Button Cursor="Hand" x:Name="button2" Grid.Column="1" HorizontalAlignment="Center" Height="295" Margin="0" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" Click="button2_Click">
                     <Grid x:Name="cat2" Height="Auto" Width="Auto">
                         <Image Source=".\Images\Categories\Sandwich.jpg" Stretch="Fill" MouseEnter="button2_MouseEnter" MouseLeave="button2_MouseLeave"/>
                         <TextBlock Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Lunch" Foreground="White" />
@@ -65,7 +65,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="button3" Grid.Column="2" HorizontalAlignment="Center" Height="295" Margin="0" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" Click="button3_Click">
+                <Button Cursor="Hand" x:Name="button3" Grid.Column="2" HorizontalAlignment="Center" Height="295" Margin="0" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" Click="button3_Click">
                     <Grid x:Name="cat3" Height="Auto" Width="Auto">
                         <Image Source=".\Images\Categories\Steak.jpg" Stretch="Fill" MouseEnter="button3_MouseEnter" MouseLeave="button3_MouseLeave"/>
                         <TextBlock Name="category3" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Dinner" Foreground="White" />
@@ -76,7 +76,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="button4" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="2" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" MouseEnter="button4_MouseEnter" MouseLeave="button4_MouseLeave" Click="button4_Click">
+                <Button Cursor="Hand" x:Name="button4" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="2" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" MouseEnter="button4_MouseEnter" MouseLeave="button4_MouseLeave" Click="button4_Click">
                     <Grid x:Name="cat4" Height="Auto" Width="Auto">
                         <Image Source=".\Images\Categories\Cake.jpg" Stretch="Fill"/>
                         <TextBlock Name="category4" HorizontalAlignment="Center" VerticalAlignment="Bottom" ><Run FontSize="30" FontFamily="Impact" Text="Dessert" Foreground="White" />
@@ -86,7 +86,7 @@
                         </TextBlock>
                     </Grid>
                 </Button>
-                <Button x:Name="button5" Grid.Column="1" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="2" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" MouseEnter="button5_MouseEnter" MouseLeave="button5_MouseLeave" Click="button5_Click">
+                <Button Cursor="Hand" x:Name="button5" Grid.Column="1" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="2" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" MouseEnter="button5_MouseEnter" MouseLeave="button5_MouseLeave" Click="button5_Click">
                     <Grid x:Name="cat5" Height="Auto" Width="Auto">
                         <Image Source=".\Images\Categories\Veg.jpg" Stretch="Fill"/>
                         <TextBlock Name="category5" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegetarian" Foreground="White" />
@@ -97,7 +97,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="button6" Grid.Column="2" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="2" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" MouseEnter="button6_MouseEnter" MouseLeave="button6_MouseLeave" Click="button6_Click">
+                <Button Cursor="Hand" x:Name="button6" Grid.Column="2" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="2" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" MouseEnter="button6_MouseEnter" MouseLeave="button6_MouseLeave" Click="button6_Click">
                     <Grid x:Name="cat6" Height="Auto" Width="Auto">
                         <Image Source=".\Images\Categories\veganMeal.jpg" Stretch="Fill"/>
                         <TextBlock Name="category6" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Vegan" Foreground="White" />

@@ -8,7 +8,7 @@
              d:DesignHeight="500" d:DesignWidth="1600">
     <Grid>
         <TextBox KeyDown="SearchBox_KeyDown" IsMouseDirectlyOverChanged="SearchBox_IsMouseDirectlyOverChanged" LostFocus="SearchBox_LostFocus" GotFocus="SearchBox_GotFocus" x:Name="SearchBox" Grid.Column="1" Height="67" Margin="218.481,102.367,221.519,62.366" TextWrapping="Wrap" FontSize="42" TextAlignment="Left" Foreground="Gray" BorderBrush="Black" BorderThickness="2"/>
-        <Button x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67" Click="search_Click">
+        <Button Cursor="Hand" ToolTip = "Search"  x:Name="search"  Grid.Column="1" HorizontalAlignment="Right" Margin="70,40,150,0" Height="67" Width="67" Click="search_Click">
             <Grid x:Name="searchable" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Misc\search.png" Stretch="Fill"/>
             </Grid>
