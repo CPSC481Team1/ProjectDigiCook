@@ -30,7 +30,7 @@
         <TextBlock x:Name="Alternatives" Grid.Column="1"  Grid.Row="1" TextWrapping="Wrap" Height="102" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="401.061,48,401.061,0" d:LayoutOverrides="LeftMargin, RightMargin"><Run FontSize="75" FontFamily="Segoe UI Black" Text="You Might Like" Foreground="DarkOrange"></Run></TextBlock>
         <Button x:Name="dessert" HorizontalAlignment="Center" Width="295" BorderBrush="Orange" BorderThickness="5"  RenderTransformOrigin="0.5,0.5" Margin="532.5,-127,532.5,162"  Grid.Row="2" Grid.Column="1" >
 
-            <Grid x:Name="cat1" Height="Auto" Width="Auto">
+            <Grid Cursor="Hand" x:Name="cat1" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\Cake.jpg" Stretch="Fill" VerticalAlignment="Center"/>
                 <TextBlock x:Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                     <TextBlock.Effect>
@@ -41,7 +41,7 @@
         <Button x:Name="breakfast" HorizontalAlignment="Right" Width="295" Height="295" BorderBrush="Orange" BorderThickness="5"  d:LayoutOverrides="HorizontalAlignment"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="0,-127,230,162" Grid.Row="2" VerticalAlignment="Bottom">
 
 
-            <Grid x:Name="cat3" Height="Auto" Width="Auto">
+            <Grid Cursor="Hand" x:Name="cat3" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill"  VerticalAlignment="Top"/>
                 <TextBlock x:Name="category3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="73.525,246.406,73.525,0">
                     <TextBlock.Effect>
@@ -51,7 +51,7 @@
         </Button>
         <Button x:Name="ravioli" HorizontalAlignment="Left" Width="295" Height="295" BorderBrush="Orange" BorderThickness="5"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="230,-127,0,162" Grid.Row="2" VerticalAlignment="Bottom" Click="ravioli_Click" >
 
-            <Grid x:Name="cat2" Height="Auto" Width="Auto">
+            <Grid Cursor="Hand" x:Name="cat2" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Search\Rav.jpg" Stretch="Fill" VerticalAlignment="Top"/>
                 <TextBlock x:Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                     <TextBlock.Effect>

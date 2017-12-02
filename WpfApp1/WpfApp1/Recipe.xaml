@@ -56,7 +56,7 @@
                 <Label x:Name="label7" Content="• 0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label8" Content="• 2 Teaspoons Dried Basil" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                <Label x:Name="label10" Content="• 1/2 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
+                <Label x:Name="label10" Content="• 0.5 Teaspoons Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
             </ListBox>
             <Button Cursor="Hand" IsEnabled="False" x:Name="addButton" Content="Add to Checklist" Height="53" Canvas.Top="478" Width="199" FontSize="24" Canvas.Left="10" Click="addButton_Click"/>
             <Button Cursor="Hand" IsEnabled="False" x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="478" Width="191" FontSize="24" Click="altButton_Click"/>
@@ -180,7 +180,8 @@
             </StackPanel>
             <ScrollViewer HorizontalAlignment="Right" Height="Auto" VerticalAlignment="Top" Width="17"/>
         </Grid>
-        <Button Cursor="Hand" x:Name="button2" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="1024,703,0,0" VerticalAlignment="Top" Width="252" Click="button2_Click" Height="90" FontSize="48"/>
+        <Button Cursor="Hand" x:Name="button2" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="1024,703,0,0" VerticalAlignment="Top" Width="252" Click="FinishClick" Height="90" FontSize="48"/>
+        <local:Button_CheckList x:Name ="checklistButton" Grid.Column="1" Height="Auto" Margin="0,40.52,89.001,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto"/>
     </Grid>
 </Page>
     

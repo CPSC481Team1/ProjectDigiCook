@@ -76,7 +76,7 @@
                 <Button Cursor="Hand" x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="246" Canvas.Top="368" Width="191" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
             </Canvas>
         </Border>
-        <local:Button_CheckList Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="44,-396,0,0" VerticalAlignment="Top" Width="100"/>
+        <local:Button_CheckList x:Name ="checklistButton" Grid.Column="1" Height="Auto" Margin="0,40.52,89.001,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto"/>
     </Grid>
 
 </Page>

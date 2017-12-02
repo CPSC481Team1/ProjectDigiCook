@@ -42,6 +42,7 @@ namespace WpfApp1
             checklistBox.Items.RemoveAt(checklistBox.Items.IndexOf(checklistBox.SelectedItem));
 
             disableClearandPrintWhenEmpty();
+            checklistButton.updateNumber(GlobalVars.checklist.Count.ToString()); // Update cart number
         }
 
         private void checklistBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -124,6 +125,7 @@ namespace WpfApp1
             printButton.IsEnabled = false;
             GlobalVars.checklist.Clear();
             showEmptyMessage();
+            checklistButton.updateNumber(GlobalVars.checklist.Count.ToString()); // Update cart number
         }
 
         private void invokePrint(object sender, RoutedEventArgs e)
