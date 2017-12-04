@@ -72,8 +72,9 @@
                     <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                     <Label x:Name="label10" Content="• 0.5 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 </ListBox>
-                <Button Cursor="Hand" x:Name="addButton" Content="Add to Checklist" Height="53" Canvas.Top="368" Width="206" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
-                <Button Cursor="Hand" x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="229" Canvas.Top="368" Width="208" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
+                <Button Cursor="Hand" x:Name="addButton" Content="Add Item" Height="53" Canvas.Top="368" Width="135" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
+                <Button Cursor="Hand" x:Name="altButton" Content="Alternative" Height="53" Canvas.Left="150" Canvas.Top="368" Width="148" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
+                <Button Cursor="Hand" x:Name="addAllButton" Content="Add All" Height="53" Canvas.Left="302" Canvas.Top="368" Width="135" FontSize="24" Click="addAllButton_Click"/>
             </Canvas>
         </Border>
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="906,772,0,0" VerticalAlignment="Top" Width="448"/>

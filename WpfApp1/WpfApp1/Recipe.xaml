@@ -56,7 +56,7 @@
                 <Label x:Name="label7" Content="• 0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label8" Content="• 2 Teaspoons Dried Basil" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
                 <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                <Label x:Name="label10" Content="• 0.5 Teaspoons Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
+                <Label x:Name="label10" Content="• 0.5 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
             </ListBox>
             <Button Cursor="Hand" IsEnabled="False" x:Name="addButton" Content="Add to Checklist" Height="53" Canvas.Top="528" Width="207" FontSize="24" Canvas.Left="10" Click="addButton_Click"/>
             <Button Cursor="Hand" IsEnabled="False" x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="226" Canvas.Top="528" Width="207" FontSize="24" Click="altButton_Click"/>

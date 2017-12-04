@@ -270,5 +270,23 @@ namespace WpfApp1
             fullscreen_button.Visibility = Visibility.Visible;
             fullscreen_button.IsEnabled = true;
         }
+
+        private void addAllButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Add all ingredients?", "DigiCook", "Accept", "Cancel");
+            //bool result = CustomMsgBoxWPF.Show("Added item to checklist", "Accept", "Cancel");
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                for (int i = 0; i < ingredientsBox.Items.Count; i++)
+                {
+                    Label selection = (Label)ingredientsBox.Items.GetItemAt(i);
+                    string selectionStr = selection.Content.ToString();
+                    GlobalVars.checklist.Add(selectionStr);
+                    addToChecklist(GlobalVars.checklist);
+                }
+                
+            }
+        }
     }
 }
