@@ -49,32 +49,32 @@
         <TextBlock x:Name="IngredientsLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Foreground="DarkOrange" FontWeight="Bold"/>
         <Label x:Name="UtensilsBox" Background="#FFF0F0F0" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" FontSize="24" Margin="0,409,931,60" Grid.Column="1"/>
 
-        <ListBox x:Name="skillsBox" Cursor="Hand" ToolTip = "Play Video" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-            <Button x:Name="skill1" HorizontalContentAlignment="Left" Tag="./Images/Video/How_to_Cook_Pasta_Al_Dente.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center">
-                <Grid Background="#FFDDDDDD"  Height="Auto" Width="414">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="172*"/>
-                        <ColumnDefinition Width="35*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" IsHitTestVisible="False" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Cooking pasta al dente</TextBox>
-                    <Image Grid.Column="1" x:Name="play1" Source="/Images/Recipes/button.png"/>
+        <ListBox x:Name="skillsBox" Cursor="Hand" ToolTip = "Play Video" Background="#FFF0F0F0" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="0">
+            <Button x:Name="skill1" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Cook_Pasta_Al_Dente.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center" Padding="0">
+                <Grid Background="#FFDDDDDD">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Cooking pasta al dente</TextBox>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play1" Source="/Images/Recipes/button.png" Height="70"/>
                 </Grid>
             </Button>
-
-            <Button x:Name="skill2" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Make_Meatballs.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center">
-                <Grid Background="#FFDDDDDD" Width="414">
-                    <TextBox Grid.Column="0" IsHitTestVisible="False" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Making meatballs</TextBox>
-                    <Image Grid.Column="1" HorizontalAlignment="Right" x:Name="play2" Source="/Images/Recipes/button.png" Height="70"/>
+            <Button x:Name="skill2" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Make_Meatballs.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center" Padding="0">
+                <Grid Background="#FFDDDDDD">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Making meatballs</TextBox>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play2" Source="/Images/Recipes/button.png" Height="70"/>
                 </Grid>
             </Button>
-            <Button x:Name="skill3" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Left" Tag="./Images/Video/How_to_Make_Spaghetti_Sauce.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center">
-                <Grid Background="#FFDDDDDD"  Height="Auto" Width="414">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="172*"/>
-                        <ColumnDefinition Width="35*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" IsHitTestVisible="False" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Preparing spaghetti sauce</TextBox>
-                    <Image Grid.Column="1" x:Name="play3" Source="/Images/Recipes/button.png"/>
+            <Button x:Name="skill3" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Make_Spaghetti_Sauce.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center" Padding="0">
+                <Grid Background="#FFDDDDDD">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Preparing pasta sauce</TextBox>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play3" Source="/Images/Recipes/button.png" Height="70"/>
                 </Grid>
             </Button>
         </ListBox>
