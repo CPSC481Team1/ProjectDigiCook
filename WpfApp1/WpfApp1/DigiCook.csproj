@@ -276,6 +276,12 @@
     <Resource Include="Images\Navigation\cart128.png" />
     <Resource Include="Images\Navigation\cart256.png" />
     <Resource Include="Images\Navigation\shop2.png" />
+    <Resource Include="Images\Search\risotto.jpg" />
+    <Resource Include="Images\Search\chicken.jpg" />
+    <Resource Include="Images\Search\ladyfinger.jpg" />
+    <Resource Include="Images\Search\crepes.jpg" />
+    <Resource Include="Images\Search\chili.jpg" />
+    <Resource Include="Images\Search\falafel.jpg" />
     <Content Include="Images\Video\clip1.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

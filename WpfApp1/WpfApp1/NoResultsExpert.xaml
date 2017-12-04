@@ -31,22 +31,22 @@
         <Button x:Name="vegan" HorizontalAlignment="Center" Width="295" BorderBrush="Orange" BorderThickness="5"  RenderTransformOrigin="0.5,0.5" Margin="532.5,-127,532.5,162"  Grid.Row="2" Grid.Column="1" >
 
             <Grid Cursor="Hand" x:Name="cat1" Height="Auto" Width="Auto">
-                <Image Source=".\Images\Categories\veganMeal.jpg" Stretch="Fill" VerticalAlignment="Center"/>
+                <Image Source=".\Images\Search\chili.jpg" Stretch="Fill" VerticalAlignment="Center"/>
                 <TextBlock x:Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
-                    </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Vegan" Foreground="White" /></TextBlock>
+                    </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Pork Chili" Foreground="White" /></TextBlock>
             </Grid>
         </Button>
         <Button x:Name="vegetarain" HorizontalAlignment="Right" Width="295" Height="295" BorderBrush="Orange" BorderThickness="5"  d:LayoutOverrides="HorizontalAlignment"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="0,-127,230,162" Grid.Row="2" VerticalAlignment="Bottom">
 
 
             <Grid Cursor="Hand" x:Name="cat3" Height="Auto" Width="Auto">
-                <Image Source=".\Images\Categories\Veg.jpg" Stretch="Fill"  VerticalAlignment="Top"/>
+                <Image Source=".\Images\Search\falafel.jpg" Stretch="Fill"  VerticalAlignment="Top"/>
                 <TextBlock x:Name="category3" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
-                    </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Vegetarian" Foreground="White" /></TextBlock>
+                    </TextBlock.Effect><Run FontSize="30" FontFamily="Impact" Text="Falafel Burger" Foreground="White" /></TextBlock>
             </Grid>
         </Button>
         <Button x:Name="fettuccine" HorizontalAlignment="Left" Width="295" Height="295" BorderBrush="Orange" BorderThickness="5"  RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="230,-127,0,162" Grid.Row="2" VerticalAlignment="Bottom" Click="fettuccine_Click">
