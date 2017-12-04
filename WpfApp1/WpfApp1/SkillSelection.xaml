@@ -197,7 +197,7 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
             <Grid x:Name="beginnerGrid" Height="Auto" Width="Auto">
-                <Image Source=".\Images\Skill_Level\home.jpg" Stretch="Fill"/>
+                <Image Source=".\Images\Skill_Level\sauce.jpg" Stretch="Fill"/>
                 <Image x:Name="beginnerImgGray" Source=".\Images\Skill_Level\GreyOverlay.jpg" Stretch="Fill"  Opacity="0" />
                 <TextBlock Opacity="0" x:Name="beginnerFlavour" FontSize="34" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Text="For new chefs who are ready to learn essential cooking skills by completing simple recipes" VerticalAlignment="Center" Foreground="#FFF9F9F9" Height="294" Margin="10" Width="294" Background="{x:Null}">
                 </TextBlock>
@@ -205,7 +205,7 @@
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="86.653" Margin="580.952,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="437.333"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Intermediate"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="91.653" Margin="160.357,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Beginner"/></TextBlock>
-        <Button Cursor="Hand" x:Name="SkipButton" Click="SkipButton_Click" Content="Skip" FontSize="55" Foreground="White" HorizontalAlignment="Left" Height="82" Margin="1426,778,0,0" VerticalAlignment="Top" Width="156" Background="#00d57f" MouseEnter="Skip_Button_MouseEnter"  Style="{StaticResource MyButton}"/>
+        <Button Cursor="Hand" x:Name="SkipButton" Click="SkipButton_Click" Content="Skip" FontSize="55" Foreground="White" HorizontalAlignment="Left" Height="96" Margin="1395,777,0,0" VerticalAlignment="Top" Width="172" Background="DarkOrange" MouseEnter="Skip_Button_MouseEnter"  Style="{StaticResource MyButton}"/>
         <TextBlock HorizontalAlignment="Left" Height="89.653" Margin="160.357,140,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="1277.643"><Run FontSize="60" FontFamily="Segoe UI Black" Text="Please choose your culinary skill level..."/></TextBlock>
 
     </Grid>

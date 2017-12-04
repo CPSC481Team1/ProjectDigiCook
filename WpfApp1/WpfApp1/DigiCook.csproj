@@ -282,6 +282,10 @@
     <Resource Include="Images\Search\crepes.jpg" />
     <Resource Include="Images\Search\chili.jpg" />
     <Resource Include="Images\Search\falafel.jpg" />
+    <Resource Include="Images\Categories\Breakfest.jpg" />
+    <Resource Include="Images\Categories\lunch.jpg" />
+    <Resource Include="Images\Skill_Level\beginer.jpg" />
+    <Resource Include="Images\Skill_Level\sauce.jpg" />
     <Content Include="Images\Video\clip1.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

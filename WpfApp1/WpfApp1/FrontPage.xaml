@@ -54,7 +54,7 @@
 
                 <Button Cursor="Hand" x:Name="button" Grid.Column="0" HorizontalAlignment="Center" Height="295" Margin="0" Grid.Row="0" VerticalAlignment="Center" Width="285" Background="#FFDDDDDD" BorderBrush="Orange" BorderThickness="5" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Click="button_Click">
                     <Grid x:Name="cat1" Height="Auto" Width="Auto">
-                        <Image Source=".\Images\Categories\BandEggs.jpg" Stretch="Fill"/>
+                        <Image Source=".\Images\Categories\Breakfest.jpg" Stretch="Fill"/>
                         <TextBlock Name="category1" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Breakfast" Foreground="White"/>
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
@@ -69,7 +69,7 @@
 
                 <Button Cursor="Hand" x:Name="button2" Grid.Column="1" HorizontalAlignment="Center" Height="295" Margin="0" VerticalAlignment="Center" Width="285" BorderBrush="Orange" BorderThickness="5" Click="button2_Click">
                     <Grid x:Name="cat2" Height="Auto" Width="Auto">
-                        <Image Source=".\Images\Categories\Sandwich.jpg" Stretch="Fill" MouseEnter="button2_MouseEnter" MouseLeave="button2_MouseLeave"/>
+                        <Image Source=".\Images\Categories\Lunch.jpg" Stretch="Fill" MouseEnter="button2_MouseEnter" MouseLeave="button2_MouseLeave"/>
                         <TextBlock Name="category2" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run FontSize="30" FontFamily="Impact" Text="Lunch" Foreground="White" />
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1" BlurRadius="20"/>
