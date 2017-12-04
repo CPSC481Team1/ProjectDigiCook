@@ -29,7 +29,6 @@ namespace WpfApp1
             expander3.Expanded += new RoutedEventHandler(expander);
             expander4.Expanded += new RoutedEventHandler(expander);
             expander5.Expanded += new RoutedEventHandler(expander);
-            expander6.Expanded += new RoutedEventHandler(expander);
         }
 
         private void expander(object sender, RoutedEventArgs e)
@@ -46,6 +45,8 @@ namespace WpfApp1
         }
         private TimeSpan TotalTime;
         private DispatcherTimer timerVideoTime;
+        private DispatcherTimer eventTimer;
+
         private void openVideo(object sender, MouseButtonEventArgs e)
         {
             var source = ((Image)sender).Tag;
@@ -74,6 +75,9 @@ namespace WpfApp1
             timerVideoTime.Start();
         }
         bool suppressValueChanged = false;
+        bool supressSliderDrag = false;
+        bool surpressTicker = false;
+        bool surpressDragTicker = false;
         bool paused = false;
         void timerTick(object sender, EventArgs e)
         {
@@ -87,29 +91,57 @@ namespace WpfApp1
                 if (TotalTime.TotalSeconds > 0)
                 {
                     // Updating time slider
-                    suppressValueChanged = true;
-                    seekSlider.Value = Video.Position.TotalSeconds;
+                    if (!surpressTicker && !surpressDragTicker)
+                    {
+                        suppressValueChanged = true;
+                        supressSliderDrag = false;
+                        seekSlider.Value = Video.Position.TotalSeconds;
+                    }
                 }
             }
         }
 
         private void videoSeek(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (suppressValueChanged)
+            if(!supressSliderDrag)
             {
-                suppressValueChanged = false;
-            }
-            else
-            {
-                Video.Position = TimeSpan.FromSeconds(seekSlider.Value);
+                if (suppressValueChanged)
+                {
+                    suppressValueChanged = false;
+                }
+                else
+                {
+                    surpressTicker = true;
+                    supressSliderDrag = true;
+                    eventTimer = new DispatcherTimer();
+                    eventTimer.Interval = TimeSpan.FromMilliseconds(200);
+                    eventTimer.Tick += new EventHandler(stopSurpress);
+                    eventTimer.Start();
+                    Video.Position = TimeSpan.FromSeconds(seekSlider.Value);
+                }
             }
         }
-
+        private void dragSurpressTicker(object sender, MouseButtonEventArgs e)
+        {
+            supressSliderDrag = true;
+            surpressDragTicker = true;
+        }
+        private void dragUnsurpressTicker(object sender, MouseButtonEventArgs e)
+        {
+            Video.Position = TimeSpan.FromSeconds(seekSlider.Value);
+            supressSliderDrag = false;
+            surpressDragTicker = false;
+        }
+        void stopSurpress(object sender, EventArgs e)
+        {
+            eventTimer.Stop();
+            surpressTicker = false;
+        }
         private void videoPlayerClose(object sender, EventArgs e)
         {
+            timerVideoTime.Stop();
             seekSlider.Value = 0;
             Video.Stop();
-            timerVideoTime.Stop();
             Video.Height = 333;
             Video.Width = 591;
         }

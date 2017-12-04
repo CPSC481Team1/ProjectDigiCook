@@ -250,10 +250,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="Images\Video\clip1.mp4">
+    <Content Include="Images\Video\How_to_Cook_Pasta_Al_Dente.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Video\clip2.mp4">
+    <Content Include="Images\Video\How_to_Make_Meatballs.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Video\How_to_Make_Spaghetti_Sauce.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Images\Video\fullscreenclose_button.png">
