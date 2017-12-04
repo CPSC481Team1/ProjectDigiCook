@@ -43,7 +43,32 @@ namespace WpfApp1
 
         private void ItemHighlight(object sender, MouseEventArgs e)
         {
+            Recipe1.Background = Brushes.BlanchedAlmond;
+        }
 
+        private void ItemUnhighlight(object sender, MouseEventArgs e)
+        {
+            Recipe1.Background = Brushes.AliceBlue;
+        }
+
+        private void ItemHighlight2(object sender, MouseEventArgs e)
+        {
+            Recipe2.Background = Brushes.BlanchedAlmond;
+        }
+
+        private void ItemUnhighlight2(object sender, MouseEventArgs e)
+        {
+            Recipe2.Background = Brushes.AliceBlue;
+        }
+
+        private void ItemHighlight3(object sender, MouseEventArgs e)
+        {
+            Recipe3.Background = Brushes.BlanchedAlmond;
+        }
+
+        private void ItemUnhighlight3(object sender, MouseEventArgs e)
+        {
+            Recipe3.Background = Brushes.AliceBlue;
         }
     }
 }

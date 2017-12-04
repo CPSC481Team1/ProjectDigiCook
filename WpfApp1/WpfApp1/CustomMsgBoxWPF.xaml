@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WpfApp1.CustomMsgBoxWPF"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" Height="130" Width="200">
+    <Grid Background="#FFFF9300" Margin="0,0,0,-0.4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FF2F86A6" Margin="0,-0.533,0,0" Grid.Row="1">
+            <Button x:Name="button_yes" Content="Button" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="button_yes_Click"/>
+            <Button x:Name="button_no" Content="Button" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="button_no_Click"/>
+        </Grid>
+        <Label x:Name="label" Content="Label" Margin="10,31.732,0,23.637" d:LayoutOverrides="Height" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Center"/>
+    </Grid>
+
+</UserControl>

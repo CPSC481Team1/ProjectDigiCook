@@ -15,9 +15,9 @@ namespace WpfApp1
 
         public static int skillLevel { get; set; }
 
-        public static string searchText { get; set; } = "Search for your item...";
+        public static string searchText { get; set; } = "Find a recipe";
 
-        public static string defaultSearchText { get;} = "Search for your item...";
+        public static string defaultSearchText { get;} = "Find a recipe";
 
 
         public static string[] ingredients { get; set; }

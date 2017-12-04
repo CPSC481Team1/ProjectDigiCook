@@ -242,17 +242,18 @@ namespace WpfApp1
 
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-        }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            Label selection = (Label)Ingredients_Box.SelectedItem;
-            string selectionStr = selection.Content.ToString();
-            GlobalVars.checklist.Add(selectionStr);
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Added item to checklist", "DigiCook", "Accept", "Cancel");
 
-            MessageBox.Show("Added item to checklist");
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Label selection = (Label)Ingredients_Box.SelectedItem;
+                string selectionStr = selection.Content.ToString();
+                GlobalVars.checklist.Add(selectionStr);
+                addToChecklist(GlobalVars.checklist);
+            }
         }
 
         private void altButton_Click(object sender, RoutedEventArgs e)
@@ -261,9 +262,47 @@ namespace WpfApp1
             string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoons Oregano" };
 
             int idx = ingredientWithAlts.IndexOf((Label)Ingredients_Box.SelectedItem);
-            MessageBox.Show(alts[idx], "Alternative Ingredient:");
-        }
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Alternative Ingredient:\n• " + alts[idx], "DigiCook", "Add Alternative", "Close");
 
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                GlobalVars.checklist.Add("• " + alts[idx]);
+                addToChecklist (GlobalVars.checklist); // Update cart number
+            }
+        }
+        public void addToChecklist(List<string> checklist)
+        {
+            for (int i = 0; i < checklist.Count; i++)
+            {
+                List<float> dupInstances = new List<float>();
+
+                string[] splits_i = checklist[i].Split(new[] { ' ' }, 3);
+                string ingredient_i = splits_i[2];
+
+                dupInstances.Add(float.Parse(splits_i[1]));
+
+                for (int j = i + 1; j < checklist.Count; j++)
+                {
+                    string[] splits_j = checklist[j].Split(new[] { ' ' }, 3);
+                    string ingredient_j = splits_j[2];
+
+                    if (ingredient_i.Equals(ingredient_j))
+                    {
+                        dupInstances.Add(float.Parse(splits_j[1]));
+                        checklist.RemoveAt(j);
+                        j--;
+                    }
+                }
+
+                if (dupInstances.Count > 1)
+                {
+                    string newStr = "• " + (dupInstances.Sum()) + " " + splits_i[2];
+                    checklist[i] = newStr;
+                }
+                checklistButton.updateNumber(checklist.Count.ToString()); // Update cart number
+
+            }
+        }
         private void Grid_MouseDown(object sender, EventArgs e)
         {
             if (Ingredients_Box.IsMouseOver)
@@ -276,6 +315,11 @@ namespace WpfApp1
                 addButton.IsEnabled = false;
                 altButton.IsEnabled = false;
             }
+        }
+
+        private void FinishClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
         }
     }
 }

@@ -43,5 +43,10 @@ namespace WpfApp1
             // MessageBoxResult result = MessageBox.Show(SkillLevel.skillLevel.ToString(), "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
         }
+
+        public void setTitle(string title)
+        {
+            this.Title = title;
+        }
     }
 }

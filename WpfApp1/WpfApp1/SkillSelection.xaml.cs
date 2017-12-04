@@ -24,29 +24,37 @@ namespace WpfApp1
     /// </summary>
     /// 
 
+
+
     public partial class SkillSelection : Page
     {
+
         private Storyboard myStoryboard;
+
+        private Window getWindow()
+        {
+            return Window.GetWindow(this);
+        }
 
         public SkillSelection()
         {
             InitializeComponent();
-            //advancedImage = new Uri(".\\Images\\Skill_Level\\Advanced.jpg", UriKind.Relative);
-            this.Title = "DigiCook";
-
-
         }
 
         // Code to handle button clicks
         private void Beginner_Button_Click(object sender, RoutedEventArgs e)
         {
             GlobalVars.skillLevel = 1;
+            var window = getWindow();
+            window.Title = "DigiCook - Beginner";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
 
         }
         private void Intermediate_Button_Click(object sender, RoutedEventArgs e)
         {
             GlobalVars.skillLevel = 2;
+            var window = getWindow();
+            window.Title = "DigiCook - Intermediate";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
 
         }
@@ -54,8 +62,9 @@ namespace WpfApp1
         private void Expert_Button_Click(object sender, RoutedEventArgs e)
         {
             
-            advancedFlavour.Opacity = 0.9;
             GlobalVars.skillLevel = 3;
+            var window = getWindow();
+            window.Title = "DigiCook - Expert";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
 
         }
@@ -67,6 +76,8 @@ namespace WpfApp1
         private void SkipButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             GlobalVars.skillLevel = 1; // Set to beginner if skip
+            var window = getWindow();
+            window.Title = "DigiCook - Beginner";
         }
 
         #region Event Handling
@@ -110,6 +121,8 @@ namespace WpfApp1
         private void SkipButton_Click(object sender, RoutedEventArgs e)
         {
             GlobalVars.skillLevel = 1;
+            var window = getWindow();
+            window.Title = "DigiCook - Beginner";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
         }
 
@@ -118,6 +131,10 @@ namespace WpfApp1
             
             advancedFlavour.Opacity = 0.9;
             advancedImgGray.Opacity = 0.9;
+        }
+
+        private void Page_Initialized(object sender, EventArgs e)
+        {
         }
     }
     #endregion
