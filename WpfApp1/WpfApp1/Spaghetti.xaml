@@ -60,6 +60,6 @@
             <local:NavigationBar Margin="0,0,0,44" Grid.ColumnSpan="3"/>
             <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46"/>
         </Grid>
-        <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Loaded="textBlock_Loaded" FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
+        <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Text="Results for spaghetti..." FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
     </Grid>
 </Page>

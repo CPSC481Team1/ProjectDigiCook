@@ -12,7 +12,7 @@
             <Grid>
                 <Label Name="ChecklistNum" Margin="0,5.5,19,18.5" HorizontalAlignment="Right" Width="22.5">0</Label>
                 <Label x:Name="plus" Visibility="Hidden" Foreground="OrangeRed" Initialized="ChecklistNum_Initialized" Margin="0,-5.5,1,11" HorizontalAlignment="Right" Width="32.5" Content="+"/>
-                <Label Content="Checklist" VerticalContentAlignment="center" HorizontalAlignment="Left" Width="108"/>
+                <Label Content="Checklist" VerticalContentAlignment="center" HorizontalAlignment="Left" Width="108" Margin="0,2.076,0,-2.076"/>
                 <Image Stretch="Fill" Source=".\Images\Navigation\cart128.png" Margin="85.5,-4.5,-5,-7"/>
             </Grid>
 

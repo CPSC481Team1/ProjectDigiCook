@@ -57,7 +57,7 @@ namespace WpfApp1
                 new DropShadowEffect
                 {              
                     Color = new Color { A = 255, R = 0, G = 90, B = 255 },
-                    Direction = 240,
+                    Direction = 320,
                     ShadowDepth = 3,
                     Opacity = 0.20,
                     BlurRadius = 0.0
