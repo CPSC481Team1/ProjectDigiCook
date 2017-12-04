@@ -167,7 +167,7 @@
             <Grid x:Name="intermediateGrid" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Skill_Level\cook.jpg" Stretch="Fill"/>
                 <Image x:Name="intermediateImgGray" Source=".\Images\Skill_Level\GreyOverlay.jpg" Stretch="Fill"  Opacity="0"/>
-                <TextBlock x:Name="intermediateFlavour" FontSize="34" HorizontalAlignment="Center" Opacity="0" TextWrapping="Wrap" FontWeight="Bold" Text="For chefs that have learnt the basics of cooking and are ready for more advanced techniques" VerticalAlignment="Center" Foreground="#FFF9F9F9" Height="294" Margin="10" Width="294">
+                <TextBlock x:Name="intermediateFlavour" FontSize="34" HorizontalAlignment="Center" Opacity="0" TextWrapping="Wrap" FontWeight="Bold" Text="For chefs that have learnt the basics of cooking and are eager to tackle more advanced recipies" VerticalAlignment="Center" Foreground="#FFF9F9F9" Height="294" Margin="10" Width="294">
                 </TextBlock>
             </Grid>
         </Button>

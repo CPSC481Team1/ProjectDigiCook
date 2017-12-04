@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="67" d:DesignWidth="167">
     <Canvas>
-        <Button x:Name="View_Checklist" Initialized="ChecklistNum_Initialized" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="167" FontSize="24" Click="View_Checklist_Click">
+        <Button x:Name="View_Checklist" Cursor="Hand" ToolTip="View Checklist"  Initialized="ChecklistNum_Initialized" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="167" FontSize="24" Click="View_Checklist_Click">
             <Grid>
                 <Label Name="ChecklistNum" Margin="0,5.5,19,18.5" HorizontalAlignment="Right" Width="22.5">0</Label>
                 <Label x:Name="plus" Visibility="Hidden" Foreground="OrangeRed" Initialized="ChecklistNum_Initialized" Margin="0,-5.5,1,11" HorizontalAlignment="Right" Width="32.5" Content="+"/>
