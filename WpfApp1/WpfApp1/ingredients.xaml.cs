@@ -271,7 +271,7 @@ namespace WpfApp1
         private void fullscreenButton(object sender, MouseButtonEventArgs e)
         {
             Video.Height = 900;
-            Video.Width = 1600;
+            Video.Width = 1550;
             fullscreen_button.Visibility = Visibility.Hidden;
             fullscreen_button.IsEnabled = false;
             fullscreenclose_button.Visibility = Visibility.Visible;

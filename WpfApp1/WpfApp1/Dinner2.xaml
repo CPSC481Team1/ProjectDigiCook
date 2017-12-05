@@ -1,0 +1,67 @@
+﻿<Page
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" x:Class="WpfApp1.Dinner2"
+        mc:Ignorable="d"
+        Title="Dinner2" Height="900" Width="1600">
+    <Grid>
+        <Grid Background="#FFFFE5B4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="240*"/>
+                <RowDefinition Height="330*"/>
+                <RowDefinition Height="330*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="1360*"/>
+                <ColumnDefinition Width="120*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox HorizontalContentAlignment="Stretch" x:Name ="resultsList"  ScrollViewer.CanContentScroll="False" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="220,46.617,220,46.617" Grid.Row="1" Grid.RowSpan="2" Background="#FFF0F0F0" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+
+                <Border BorderThickness="1" BorderBrush="Black">
+                    <Grid x:Name="Recipe2" Width="Auto" Height="200" Margin="-3,0,0,0" MouseEnter="ItemHighlight2" MouseLeave="ItemUnhighlight2">
+                        <Image Width="300"  Stretch="UniformToFill" Source=".\Images\Search\Rav.jpg" HorizontalAlignment="Left"/>
+                        <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Ravioli"/>
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,174.17,0" Width="152"/>
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★★☆☆☆" Margin="0,143.446,10,0" Width="169.17"/>
+                        <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+                        <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 45 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
+                        <TextBlock Cursor="Hand"/>
+                        <Image Cursor="Hand" ToolTip ="Recommended" Visibility="Visible" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,10,30,82.298" Width="100" RenderTransformOrigin="0.291,0.404" />
+                </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="Black" >
+                    <Grid x:Name="Recipe3" Width="Auto" Height="200" Margin="-3,0,0,0" MouseEnter="ItemHighlight3" MouseLeave="ItemUnhighlight3">
+                        <Image Width="300"  Stretch="Fill" Source=".\Images\Search\Fett.jpg" HorizontalAlignment="Left"/>
+                        <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Fettuccine"/>
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,174.17,0" Width="152"/>
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★★★☆☆" Margin="0,143.446,10,0" Width="169.17"/>
+                        <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+                        <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 75 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
+                        <TextBlock Cursor="Hand" />
+                    </Grid>
+                </Border>
+
+                <Border  BorderThickness="1" BorderBrush="Black">
+                    <Grid  Width="auto"  Cursor="Hand" x:Name="Recipe1" MouseEnter="ItemHighlight" MouseLeave="ItemUnhighlight"  Height="200" MouseLeftButtonDown="recipe1_click" Margin="-3,0,0,0">
+                        <Image Width="300"  Stretch="Fill" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left"/>
+                        <TextBlock Width="200" HorizontalAlignment="Center" VerticalAlignment=" Top" FontWeight="Bold" FontSize="40" Text="Spaghetti"/>
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="0,143.446,174.17,0" Width="152"/>
+                        <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
+                        <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
+                        <TextBlock Cursor="Hand" />
+                        <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="0,143.446,10,0" Width="169.17"/>
+                    </Grid>
+                </Border>
+
+            </ListBox>
+            <local:NavigationBar Margin="0,0,0,44" Grid.ColumnSpan="3"/>
+            <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46"/>
+        </Grid>
+        <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Text="Results for dinner..." FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
+    </Grid>
+</Page>
