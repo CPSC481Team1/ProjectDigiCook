@@ -118,14 +118,20 @@
       <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
     <Compile Include="GlobalVars.cs" />
+    <Compile Include="Spaghetti3.xaml.cs">
+      <DependentUpon>Spaghetti3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Spaghetti2.xaml.cs">
+      <DependentUpon>Spaghetti2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ingredients.xaml.cs">
       <DependentUpon>Ingredients.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Spaghetti.xaml.cs">
-      <DependentUpon>Spaghetti.xaml</DependentUpon>
+    <Compile Include="Spaghetti1.xaml.cs">
+      <DependentUpon>Spaghetti1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Button_CheckList.xaml.cs">
       <DependentUpon>Button_CheckList.xaml</DependentUpon>
@@ -196,6 +202,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Spaghetti3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Spaghetti2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,7 +218,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Spaghetti.xaml">
+    <Page Include="Spaghetti1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -17,9 +17,9 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Spaghetti : Page
+    public partial class Spaghetti3 : Page
     {
-        public Spaghetti()
+        public Spaghetti3()
         {
             InitializeComponent();
    
