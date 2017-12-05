@@ -38,7 +38,7 @@ namespace WpfApp1
 
         private void ravioli_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("./Spaghetti" + GlobalVars.skillLevel.ToString() + ".xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("./Ravioli" + GlobalVars.skillLevel.ToString() + ".xaml", UriKind.Relative));
         }
 
       

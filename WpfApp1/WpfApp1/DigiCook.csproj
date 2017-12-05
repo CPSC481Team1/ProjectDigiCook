@@ -93,6 +93,24 @@
     <Compile Include="CustomMsgBoxWPF.xaml.cs">
       <DependentUpon>CustomMsgBoxWPF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lunch3.xaml.cs">
+      <DependentUpon>Lunch3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fettuccine1.xaml.cs">
+      <DependentUpon>Fettuccine1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fettuccine2.xaml.cs">
+      <DependentUpon>Fettuccine2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dinner3.xaml.cs">
+      <DependentUpon>Dinner3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lunch1.xaml.cs">
+      <DependentUpon>Lunch1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dinner2.xaml.cs">
+      <DependentUpon>Dinner2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
@@ -108,6 +126,18 @@
     <Compile Include="NoResultsExpert.xaml.cs">
       <DependentUpon>NoResultsExpert.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lunch2.xaml.cs">
+      <DependentUpon>Lunch2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fettuccine3.xaml.cs">
+      <DependentUpon>Fettuccine3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ravioli1.xaml.cs">
+      <DependentUpon>Ravioli1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ravioli3.xaml.cs">
+      <DependentUpon>Ravioli3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchBar.xaml.cs">
       <DependentUpon>SearchBar.xaml</DependentUpon>
     </Compile>
@@ -118,6 +148,12 @@
       <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
     <Compile Include="GlobalVars.cs" />
+    <Compile Include="Ravioli2.xaml.cs">
+      <DependentUpon>Ravioli2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dinner1.xaml.cs">
+      <DependentUpon>Dinner1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Spaghetti3.xaml.cs">
       <DependentUpon>Spaghetti3.xaml</DependentUpon>
     </Compile>
@@ -155,6 +191,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Lunch3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fettuccine1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fettuccine2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dinner3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lunch1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dinner2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="NavigationBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +234,22 @@
     <Page Include="NoResultsExpert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lunch2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fettuccine3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ravioli1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ravioli3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SearchBar.xaml">
       <SubType>Designer</SubType>
@@ -202,6 +278,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ravioli2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dinner1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Spaghetti3.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

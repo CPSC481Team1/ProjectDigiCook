@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
-        xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" x:Class="WpfApp1.Spaghetti2"
+        xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" x:Class="WpfApp1.Lunch1"
         mc:Ignorable="d"
-        Title="Spaghetti2" Height="900" Width="1600">
+        Title="Lunch1" Height="900" Width="1600">
     <Grid>
         <Grid Background="#FFFFE5B4">
             <Grid.RowDefinitions>
@@ -29,6 +29,7 @@
                         <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
                         <TextBlock/>
                         <TextBlock Foreground="Goldenrod" HorizontalAlignment="Right" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="0,143.446,10,0" Width="169.17"/>
+                        <Image Cursor="Hand" ToolTip ="Recommended" Visibility="Visible" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,10,30,82.298" Width="100" RenderTransformOrigin="0.291,0.404" />
                     </Grid>
                 </Border>
                 <Border BorderThickness="1" BorderBrush="Black">
@@ -40,7 +41,6 @@
                         <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="336.6,0,0,10.001" Height="50" VerticalAlignment="Bottom" />
                         <TextBlock Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment=" Top" FontSize="35" Text=" 45 min" Margin="391.6,143.446,384.43,0" Width="Auto"/>
                         <TextBlock Cursor="Hand"/>
-                        <Image Cursor="Hand" ToolTip ="Recommended" Visibility="Visible" Source=".\Images\Misc\recommended.png" HorizontalAlignment="Right" Margin="0,10,30,82.298" Width="100" RenderTransformOrigin="0.291,0.404" />
                     </Grid>
                 </Border>
 
@@ -60,6 +60,6 @@
             <local:NavigationBar Margin="0,0,0,44" Grid.ColumnSpan="3"/>
             <local:SearchBar x:Name="searchBar" HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="1360" Grid.Column="1" Margin="0,0,0,-46"/>
         </Grid>
-        <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Text="Results for spaghetti..." FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
+        <TextBlock x:Name="textBlock" Height="60" Margin="340,208,0,0" TextWrapping="Wrap"  Text="Results for lunch..." FontSize="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="841"/>
     </Grid>
 </Page>
