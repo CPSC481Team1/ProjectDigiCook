@@ -9,11 +9,11 @@
     <Canvas Background="#FFFFE5B4" Height="162" VerticalAlignment="Top">
 
         <Canvas x:Name="toolBar" Margin="0,0,0,0" Width="1600" Height="162">
-            <Button Cursor="Hand" Background="White" Command="{x:Static NavigationCommands.BrowseBack}" Width="77.493" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="77.493" Canvas.Top="29.987" Canvas.Left="42.801">
+            <Button Cursor="Hand" ToolTip ="back" Background="White" Command="{x:Static NavigationCommands.BrowseBack}" Width="77.493" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="77.493" Canvas.Top="29.987" Canvas.Left="42.801">
                 <Image Source=".\Images\Navigation\back_arrow.png" Stretch="Fill"/>
             </Button>
             <local:Button_CheckList Cursor="Hand" HorizontalAlignment="Left" Width="167.5" Canvas.Left="1391" Canvas.Top="40.52" Height="66.96"/>
-            <Button Cursor="Hand" Background="White" Command="{x:Static NavigationCommands.BrowseForward}" Width="77.493" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="77.493" Canvas.Top="29.987" Canvas.Left="141.207">
+            <Button Cursor="Hand" ToolTip ="Forward" Background="White" Command="{x:Static NavigationCommands.BrowseForward}" Width="77.493" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="77.493" Canvas.Top="29.987" Canvas.Left="141.207">
                 <Image Source=".\Images\Navigation\foward_arrow.png" Stretch="Fill"/>
             </Button>
 

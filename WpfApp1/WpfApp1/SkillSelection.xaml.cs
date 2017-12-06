@@ -48,6 +48,7 @@ namespace WpfApp1
             var window = getWindow();
             window.Title = "DigiCook - Beginner";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
+            GlobalVars.searchText = GlobalVars.defaultSearchText;
 
         }
         private void Intermediate_Button_Click(object sender, RoutedEventArgs e)
@@ -56,7 +57,8 @@ namespace WpfApp1
             var window = getWindow();
             window.Title = "DigiCook - Intermediate";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
-
+            GlobalVars.searchText = GlobalVars.defaultSearchText;
+     
         }
 
         private void Expert_Button_Click(object sender, RoutedEventArgs e)
@@ -66,7 +68,7 @@ namespace WpfApp1
             var window = getWindow();
             window.Title = "DigiCook - Expert";
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
-
+            GlobalVars.searchText = GlobalVars.defaultSearchText;
         }
 
         private void Skip_Button_MouseEnter(object sender, MouseEventArgs e)
@@ -78,6 +80,7 @@ namespace WpfApp1
             GlobalVars.skillLevel = 1; // Set to beginner if skip
             var window = getWindow();
             window.Title = "DigiCook - Beginner";
+            GlobalVars.searchText = GlobalVars.defaultSearchText;
         }
 
         #region Event Handling
@@ -123,6 +126,7 @@ namespace WpfApp1
             GlobalVars.skillLevel = 1;
             var window = getWindow();
             window.Title = "DigiCook - Beginner";
+            GlobalVars.searchText = GlobalVars.defaultSearchText;
             this.NavigationService.Navigate(new Uri("./FrontPage.xaml", UriKind.Relative));
         }
 

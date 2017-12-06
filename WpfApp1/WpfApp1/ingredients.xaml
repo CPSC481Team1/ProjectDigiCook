@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Ingredients" Height="900" Width="1600">
-    <Grid Background="#FFFFE5B4" MouseDown="Grid_MouseDown">
+    <Grid Background="#FFFFE5B4">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -29,7 +29,7 @@
                 </Grid>
             </Grid>
         </Popup>
-        
+
         <Grid Grid.Column="1" Background="White" HorizontalAlignment="Left" Height="220" Margin="1,120,0,0" VerticalAlignment="Top" Width="1352">
             <Border BorderThickness="1" BorderBrush="#FF834343" Background="#FFF0F0F0">
                 <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="240"  Margin="-1,-1,0,-1" />
@@ -82,21 +82,35 @@
         <Border x:Name="UtensilBorder" BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="1,409,0,0" VerticalAlignment="Top" Width="428"/>
         <Border x:Name="IngredientsBorder" BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="906,409,0,0" VerticalAlignment="Top" Width="447">
             <Canvas x:Name="IngredientsBox"  Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="447">
-                <ListBox x:Name="ingredientsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="448" SelectionChanged="ingredientslistBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Canvas.Left="-1">
-                    <Label x:Name="label1" Content="• 1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label2" Content="• 1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label3" Content="• 4 cloves garlic, Minced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label4" Content="• 1 Small Green Bell Pepper, Diced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label5" Content="• 1.75 lb Diced Tomatoes" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label6" Content="• 1 lb Tomato Sauce" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label7" Content="• 0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label8" Content="• 2 Teaspoons Dried Basil" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label10" Content="• 0.5 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
+                <ListBox x:Name="ingredientsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="448" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Canvas.Left="-1">
+                    <CheckBox x:Name="checkbox1" Content="1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox2" Content="1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox3" Content="4 cloves garlic, Minced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox4"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="checkboxLabel4" Content="1 Small Green Bell Pepper, Diced" Width="364"/>
+                            <Button x:Name="checkboxAlt4" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </CheckBox>
+                    <CheckBox x:Name="checkbox5" Content="1.75 lb Diced Tomatoes" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox6"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="checkboxLabel6" Content="1 lb Tomato Sauce" Width="364"/>
+                            <Button x:Name="checkboxAlt6" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </CheckBox>
+                    <CheckBox x:Name="checkbox7" Content="0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox8"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="checkboxLabel8" Content="2 Teaspoons Dried Basil" Width="364"/>
+                            <Button x:Name="checkboxAlt8" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </CheckBox>
+                    <CheckBox x:Name="checkbox9" Content="1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox10" Content="0.5 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
                 </ListBox>
-                <Button Cursor="Hand" x:Name="addButton" Content="Add Item" Height="53" Canvas.Top="368" Width="135" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
-                <Button Cursor="Hand" x:Name="altButton" Content="Alternative" Height="53" Canvas.Left="150" Canvas.Top="368" Width="148" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
-                <Button Cursor="Hand" x:Name="addAllButton" Content="Add All" Height="53" Canvas.Left="302" Canvas.Top="368" Width="135" FontSize="24" Click="addAllButton_Click"/>
+                <Button Cursor="Hand" x:Name="addButton" Content="Add Item(s)" Height="53" Canvas.Top="368" Width="209" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
+                <Button Cursor="Hand" x:Name="addAllButton" Content="Add All" Height="53" Canvas.Left="228" Canvas.Top="368" Width="209" FontSize="24" Click="addAllButton_Click"/>
             </Canvas>
         </Border>
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="906,772,0,0" VerticalAlignment="Top" Width="448"/>
