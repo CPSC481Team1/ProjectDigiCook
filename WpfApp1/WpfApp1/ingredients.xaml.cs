@@ -127,6 +127,7 @@ namespace WpfApp1
         private TimeSpan TotalTime;
         private DispatcherTimer timerVideoTime;
         private DispatcherTimer eventTimer;
+        bool videoLoaded = false;
         private void openVideo(object sender, RoutedEventArgs e)
         {
             var source = ((Button)sender).Tag;
@@ -143,10 +144,12 @@ namespace WpfApp1
             fullscreen_button.Visibility = Visibility.Visible;
             fullscreen_button.IsEnabled = true;
             paused = false;
+            
         }
 
         private void videoOpened(object sender, RoutedEventArgs e)
         {
+            videoLoaded = true;
             TotalTime = Video.NaturalDuration.TimeSpan;
             seekSlider.Maximum = TotalTime.TotalSeconds;
             // Create a timer that will update the counters and the time slider
@@ -220,11 +223,18 @@ namespace WpfApp1
         }
         private void videoPlayerClose(object sender, EventArgs e)
         {
-            seekSlider.Value = 0;
-            Video.Stop();
-            timerVideoTime.Stop();
-            Video.Height = 333;
-            Video.Width = 591;
+            if (videoLoaded)
+            {
+                seekSlider.Value = 0;
+                Video.Stop();
+                timerVideoTime.Stop();
+                Video.Height = 333;
+                Video.Width = 591;
+            }
+            else
+            {
+                seekSlider.Value = 0;
+            }
         }
 
         private void playButton(object sender, MouseButtonEventArgs e)
@@ -262,10 +272,6 @@ namespace WpfApp1
         private void exitButton(object sender, MouseButtonEventArgs e)
         {
             VideoPlayer.IsOpen = false;
-        }
-
-        private void volumeButton(object sender, MouseButtonEventArgs e)
-        {
         }
 
         private void fullscreenButton(object sender, MouseButtonEventArgs e)

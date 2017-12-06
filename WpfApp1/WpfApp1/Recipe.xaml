@@ -22,8 +22,7 @@
                 <Grid VerticalAlignment="Bottom" Height="Auto" Background="#FFBDBDBD" Margin="0,0,0,-3">
                     <Image x:Name="pause_button" HorizontalAlignment="Left" MouseLeftButtonUp="pauseButton" Source="./Images/Video/pause_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
                     <Image x:Name="play_button" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/play_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
-                    <Image x:Name="volume_button" HorizontalAlignment="Left" MouseLeftButtonUp="volumeButton" Source="./Images/Video/volume_button.png" Height="27" Margin="56,3,0,5" VerticalAlignment="Bottom" Width="30"/>
-                    <Image x:Name="fullscreen_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Width="48" Margin="0,3,0,5"/>
+                    <Image x:Name="fullscreen_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Width="48" Margin="0,3,5,5"/>
                     <Image x:Name="fullscreenclose_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButtonClose" Source="./Images/Video/fullscreenclose_button.png" Height="27" Width="48" Margin="0,3,8,5"/>
                 </Grid>
             </Grid>
@@ -104,7 +103,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Image x:Name="image2" Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Grid.Row="1" Grid.Column="1" Margin="0,10,10,10" Tag=".\Images\Video\How_to_Cook_Pasta_Al_Dente.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" VerticalAlignment="Center" Width="287"/>
+                        <Image x:Name="image2" Cursor="Hand" Source=".\Images\Video\How_to_Cook_Pasta_Al_Dente_Thumbnail.png" Grid.Row="1" Grid.Column="1" Margin="0,10,10,10" Tag=".\Images\Video\How_to_Cook_Pasta_Al_Dente.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" VerticalAlignment="Center" Width="287"/>
                         <RichTextBox x:Name="textBox2" IsHitTestVisible="False" IsReadOnly="True" HorizontalAlignment="Left" Grid.Column="0" Height="154" Margin="10,10,10,10" MinHeight="154" VerticalAlignment="Top" FontSize="18" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Place a large pot of water on to boil for spaghetti.</Paragraph>
@@ -122,7 +121,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Image x:Name="image3" Source=".\Images\Video\cooking_video_thumbnail.jpg" VerticalAlignment="Center" Grid.Row="1" Margin="0,10,10,10" Grid.Column="1" Tag=".\Images\Video\How_to_Make_Meatballs.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Width="287"/>
+                        <Image x:Name="image3" Source=".\Images\Video\How_to_Make_Meatballs_Thumbnail.png" VerticalAlignment="Center" Grid.Row="1" Margin="0,10,10,10" Grid.Column="1" Tag=".\Images\Video\How_to_Make_Meatballs.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" Width="287"/>
                         <RichTextBox x:Name="textBox3" IsHitTestVisible="False" IsReadOnly="True" HorizontalAlignment="Left" Grid.Column="0" Margin="10,10,10,10" MinHeight="154" VerticalAlignment="Top" FontSize="18" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Mix beef and Worcestershire, egg, bread crumbs, cheese, garlic, salt and pepper.</Paragraph>
@@ -141,7 +140,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Image x:Name="image4"  Cursor="Hand" Source=".\Images\Video\cooking_video_thumbnail.jpg" Grid.Row="1" Grid.Column="1" Margin="0,10,10,10" Tag=".\Images\Video\How_to_Make_Spaghetti_Sauce.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" VerticalAlignment="Center" Width="287"/>
+                        <Image x:Name="image4"  Cursor="Hand" Source=".\Images\Video\How_to_Make_Spaghetti_Sauce_Thumbnail.png" Grid.Row="1" Grid.Column="1" Margin="0,10,10,10" Tag=".\Images\Video\How_to_Make_Spaghetti_Sauce.mp4" MouseLeftButtonUp="openVideo" HorizontalAlignment="Left" Height="164" VerticalAlignment="Center" Width="287"/>
                         <RichTextBox x:Name="textBox4" IsHitTestVisible="False" IsReadOnly="True" HorizontalAlignment="Left" Grid.Column="0" Margin="10,10,10,10" MinHeight="154" VerticalAlignment="Top" FontSize="18" Block.LineHeight="16">
                             <FlowDocument>
                                 <Paragraph>Heat a deep skillet or medium pot over moderate heat.</Paragraph>
