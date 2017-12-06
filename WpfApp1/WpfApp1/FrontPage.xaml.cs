@@ -84,28 +84,6 @@ namespace WpfApp1
             searchBar.setText();
         }
 
-
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            CategoryResult();
-        }
-
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            CategoryResult();
-        }
-
-        private void button5_Click(object sender, RoutedEventArgs e)
-        {
-            CategoryResult();
-        }
-
-        private void button6_Click(object sender, RoutedEventArgs e)
-        {
-            CategoryResult();
-        }
-
         private void button_MouseEnter(object sender, MouseEventArgs e)
         {
             
@@ -166,6 +144,10 @@ namespace WpfApp1
         {
            
         }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Breakfast.xaml", UriKind.Relative));
+        }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
@@ -175,6 +157,20 @@ namespace WpfApp1
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Spaghetti.xaml", UriKind.Relative));
+        }
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Dessert.xaml", UriKind.Relative));
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Vegetarian.xaml", UriKind.Relative));
+        }
+
+        private void button6_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Vegan.xaml", UriKind.Relative));
         }
     }
 }
