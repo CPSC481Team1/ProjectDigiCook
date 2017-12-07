@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Ingredients" Height="900" Width="1600">
-    <Grid Background="#FFFFE5B4" MouseDown="Grid_MouseDown">
+    <Grid Background="#FFFFE5B4">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -14,19 +14,30 @@
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
         <local:NavigationBar Grid.ColumnSpan="3" Height="196" VerticalAlignment="Top"/>
-        <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" StaysOpen="False">
+        <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" Grid.ColumnSpan="3" StaysOpen="False">
             <Grid Background="#FFBDBDBD">
                 <Rectangle Height="Auto" Width="Auto"/>
-                <MediaElement x:Name="Video" HorizontalAlignment="Left" Source="./Images/Video/clip2.mp4" Height="333" VerticalAlignment="Top" Width="591" Stretch="Fill" LoadedBehavior="Manual" MediaOpened="videoOpened"  MediaEnded="videoEnded" MouseLeftButtonUp="pauseButton"/>
-                <Image x:Name="exit_button" Cursor="Hand" HorizontalAlignment="Right" MouseLeftButtonUp="exitButton" Height="30" VerticalAlignment="Top" Width="25" Source="Images/Video/exit.png" Margin="0,8,8,0"/>
-                <Grid VerticalAlignment="Bottom" Height="Auto" Background="#FFBDBDBD" Margin="0,0,0,-3">
-                    <Image x:Name="pause_button" Cursor="Hand"  HorizontalAlignment="Left" MouseLeftButtonUp="pauseButton" Source="./Images/Video/pause_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
-                    <Image x:Name="play_button" Cursor="Hand" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/play_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
-                    <Image x:Name="volume_button" Cursor="Hand" HorizontalAlignment="Left" MouseLeftButtonUp="volumeButton" Source="./Images/Video/volume_button.png" Height="27" Margin="56,3,0,5" VerticalAlignment="Bottom" Width="30"/>
-                    <Image x:Name="fullscreen_button" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Width="48" Margin="0,3,0,5"/>
-                    <Image x:Name="fullscreenclose_button" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButtonClose" Source="./Images/Video/fullscreenclose_button.png" Height="27" Width="48" Margin="0,3,8,5"/>
+                <MediaElement x:Name="Video" HorizontalAlignment="Left" Source="./Images/Video/clip2.mp4" Height="333" Margin="0,0,0,40" VerticalAlignment="Top" Width="591" Stretch="Fill" ScrubbingEnabled="True" LoadedBehavior="Manual" MediaOpened="videoOpened"  MediaEnded="videoEnded" MouseLeftButtonUp="pauseButton"/>
+                <Button x:Name="exit_button" HorizontalAlignment="Right" Click="exitButton" VerticalAlignment="Top" Margin="0,8,8,0" Background="Transparent" BorderThickness="0">
+                    <Image x:Name="exit_icon" Width="25" Source="Images/Video/exit.png"/>
+                </Button>
+                <Slider Name="seekSlider" Margin="10,0,10,40" VerticalAlignment="Bottom" Maximum="1" PreviewMouseLeftButtonUp="dragUnsurpressTicker" PreviewMouseLeftButtonDown ="dragSurpressTicker" ValueChanged="videoSeek" IsMoveToPointEnabled="True" Height="21"/>
+                <Grid VerticalAlignment="Bottom" Height="Auto" Background="#FFBDBDBD">
+                    <Button x:Name="pause_button" HorizontalAlignment="Left" Background="Transparent" Click="pauseButton" Margin="5,3,0,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="pause_icon" Source="./Images/Video/pause_button.png" Height="27"/>
+                    </Button>
+                    <Button x:Name="play_button" HorizontalAlignment="Left" Background="Transparent" Click="playButton" Margin="5,3,0,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="play_icon" Source="./Images/Video/play_button.png" Height="27"/>
+                    </Button>
+                    <Button x:Name="fullscreen_button" HorizontalAlignment="Right" Background="Transparent" Click="fullscreenButton" Margin="0,3,5,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="fullscreen_icon" Source="./Images/Video/fullscreen_button.png" Height="27"/>
+                    </Button>
+                    <Button x:Name="fullscreenclose_button" HorizontalAlignment="Right" Background="Transparent" Click="fullscreenButtonClose" Margin="0,3,8,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="fullscreenclose_icon" Source="./Images/Video/fullscreenclose_button.png" Height="27"/>
+                    </Button>
+                    <Image x:Name="volume_icon" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/volume_icon.png" Height="27" Margin="45,3,0,5" VerticalAlignment="Bottom" Width="35"/>
+                    <Slider x:Name="volumeSlider" HorizontalAlignment="Left" Margin="70,0,0,9" ValueChanged="volumeChanged" VerticalAlignment="Bottom" IsMoveToPointEnabled="True" Minimum="0" Maximum="1" Value="0.5" Width="70"/>
                 </Grid>
-                <Slider Name="seekSlider" Cursor="Hand" Margin="10,0,10,30" VerticalAlignment="Bottom" Maximum="1" ValueChanged="videoSeek" IsMoveToPointEnabled="True" Height="21"/>
             </Grid>
         </Popup>
         <Grid Grid.Column="1" Background="White" HorizontalAlignment="Left" Height="220" Margin="1,120,0,0" VerticalAlignment="Top" Width="1352">
@@ -48,32 +59,68 @@
         <TextBlock x:Name="IngredientsLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="50" Width="447" Margin="906,354,0,0" FontSize="36" TextAlignment="Center" Grid.Column="1" Foreground="DarkOrange" FontWeight="Bold"/>
         <Label x:Name="UtensilsBox" Background="#FFF0F0F0" Content="• Pasta Pot&#xA;• Wooden Fork&#xA;• Ladle&#xA;• Grater&#xA;• Knives&#xA;• Skillet/ Sauce Pot&#xA;• Spaghetti Spoon&#xA;" FontSize="24" Margin="0,409,931,60" Grid.Column="1"/>
 
-        <ListBox x:Name="skillsBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" SelectionChanged="skillsBox_SelectionChanged">
-            <Canvas Height="68" Width="422">
-                <Label x:Name="label" Content="• Process of Al Dente" Height="68" Width="369" FontSize="24" VerticalContentAlignment="Center"/>
-                <Image Cursor="Hand" ToolTip = "Play Video" x:Name="play" Height="68" Width="68" Canvas.Left="344" Tag="./Images/Video/clip1.mp4" MouseLeftButtonUp="openVideo" Source=".\Images\Recipes\button.png"/>
-            </Canvas>
+        <ListBox x:Name="skillsBox" Cursor="Hand" ToolTip = "Play Video" Background="#FFF0F0F0" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" Height="431" Margin="453,409,0,0" VerticalAlignment="Top" Width="424" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="0">
+            <Button x:Name="skill1" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Cook_Pasta_Al_Dente.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center" Padding="0">
+                <Grid Background="#FFDDDDDD">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0"> Cooking pasta al dente</TextBox>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play1" Source="/Images/Recipes/button.png" Height="70"/>
+                </Grid>
+            </Button>
+            <Button x:Name="skill2" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Make_Meatballs.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center" Padding="0">
+                <Grid Background="#FFDDDDDD">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Making meatballs</TextBox>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play2" Source="/Images/Recipes/button.png" Height="70"/>
+                </Grid>
+            </Button>
+            <Button x:Name="skill3" Cursor="Hand" ToolTip = "Play Video" HorizontalContentAlignment="Stretch" Tag="./Images/Video/How_to_Make_Spaghetti_Sauce.mp4" Click="openVideo" MinHeight="70" Grid.Column="0" FontSize="24" VerticalContentAlignment="Center" Padding="0">
+                <Grid Background="#FFDDDDDD">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0"> Preparing pasta sauce</TextBox>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play3" Source="/Images/Recipes/button.png" Height="70"/>
+                </Grid>
+            </Button>
         </ListBox>
-
-
 
         <Border x:Name="UtensilBorder" BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="1,409,0,0" VerticalAlignment="Top" Width="428"/>
         <Border x:Name="IngredientsBorder" BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="431" Margin="906,409,0,0" VerticalAlignment="Top" Width="447">
             <Canvas x:Name="IngredientsBox"  Background="#FFF0F0F0" HorizontalAlignment="Left" Height="431" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="447">
-                <ListBox x:Name="ingredientsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="448" SelectionChanged="ingredientslistBox_SelectionChanged" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Canvas.Left="-1">
-                    <Label x:Name="label1" Content="• 1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label2" Content="• 1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label3" Content="• 4 cloves garlic, Minced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label4" Content="• 1 Small Green Bell Pepper, Diced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label5" Content="• 1.75 lb Diced Tomatoes" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label6" Content="• 1 lb Tomato Sauce" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label7" Content="• 0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label8" Content="• 2 Teaspoons Dried Basil" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label9" Content="• 1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
-                    <Label x:Name="label10" Content="• 0.5 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center"/>
+                <ListBox x:Name="ingredientsBox" Background="#FFF0F0F0" HorizontalAlignment="Left" Height="363" VerticalAlignment="Top" Width="448" RenderTransformOrigin="0.56,0.503" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Canvas.Left="-1">
+                    <CheckBox x:Name="checkbox1" Content="1 lb Ground Beef" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox2" Content="1 Onion, Chopped" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox3" Content="4 cloves garlic, Minced" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox4"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="checkboxLabel4" Content="1 Small Green Bell Pepper, Diced" Width="364"/>
+                            <Button x:Name="checkboxAlt4" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </CheckBox>
+                    <CheckBox x:Name="checkbox5" Content="1.75 lb Diced Tomatoes" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox6"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="checkboxLabel6" Content="1 lb Tomato Sauce" Width="364"/>
+                            <Button x:Name="checkboxAlt6" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </CheckBox>
+                    <CheckBox x:Name="checkbox7" Content="0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox8"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="checkboxLabel8" Content="2 Teaspoons Dried Basil" Width="364"/>
+                            <Button x:Name="checkboxAlt8" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </CheckBox>
+                    <CheckBox x:Name="checkbox9" Content="1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
+                    <CheckBox x:Name="checkbox10" Content="0.5 Teaspoon Black Pepper" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
                 </ListBox>
-                <Button Cursor="Hand" x:Name="addButton" Content="Add to Checklist" Height="53" Canvas.Top="368" Width="206" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
-                <Button Cursor="Hand" x:Name="altButton" Content="See Alternatives" Height="53" Canvas.Left="229" Canvas.Top="368" Width="208" FontSize="24" IsEnabled="False" Click="altButton_Click"/>
+                <Button Cursor="Hand" x:Name="addButton" Content="Add Item(s)" Height="53" Canvas.Top="368" Width="209" FontSize="24" Canvas.Left="10" IsEnabled="False" Click="addButton_Click"/>
+                <Button Cursor="Hand" x:Name="addAllButton" Content="Add All" Height="53" Canvas.Left="228" Canvas.Top="368" Width="209" FontSize="24" Click="addAllButton_Click"/>
             </Canvas>
         </Border>
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="906,772,0,0" VerticalAlignment="Top" Width="448"/>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="WpfApp1.HelperPage4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HelperPage4"
+      Initialized="Page_Initial"
+      ShowsNavigationUI="False"
+      >
+
+    <Grid Background="Teal">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="225*"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock" Height="50" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment ="Center" TextWrapping="Wrap" Text="Results Not Found Page" FontSize="40" FontFamily="Segoe UI Black"  Foreground="DarkOrange"/>
+        <TextBlock x:Name="textBlock1" Width ="800" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text=" The recipe you are searching for does not exist in the application, perform another search or click on one of the suggestions. " FontFamily="Segoe UI Black" FontSize="22" Margin="0,76,0,0" Height="70" VerticalAlignment="Top" TextAlignment="Center"/>
+        <Border BorderBrush="DarkOrange" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="250" Width="600">
+            <Grid x:Name="skill" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Misc\4.png" Stretch="Fill"/>
+            </Grid>
+        </Border>
+        <Button Cursor="Hand" ToolTip ="back" Background="White" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Margin="28,166,0,0" d:LayoutOverrides="Width, Height" Click="back_search_Click"  >
+            <Image Source=".\Images\Navigation\back_arrow.png" Stretch="Fill"/>
+        </Button>
+        <Button Cursor="Hand" ToolTip ="Forward" Background="White" Width="50" HorizontalAlignment="Right" VerticalAlignment="Center" Height="50" Margin="0,166,28,0" d:LayoutOverrides="Width, Height" Click="to_recipe_page"  >
+            <Image Source=".\Images\Navigation\foward_arrow.png" Stretch="Fill"/>
+        </Button>
+
+
+    </Grid>
+</Page>

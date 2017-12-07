@@ -120,12 +120,17 @@ namespace WpfApp1
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
-            checklistBox.Items.Clear();
-            clearButton.IsEnabled = false;
-            printButton.IsEnabled = false;
-            GlobalVars.checklist.Clear();
-            showEmptyMessage();
-            checklistButton.updateNumber(GlobalVars.checklist.Count.ToString()); // Update cart number
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Clear checklist?", "DigiCook", "Accept", "Cancel");
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                checklistBox.Items.Clear();
+                clearButton.IsEnabled = false;
+                printButton.IsEnabled = false;
+                GlobalVars.checklist.Clear();
+                showEmptyMessage();
+                checklistButton.updateNumber(GlobalVars.checklist.Count.ToString()); // Update cart number
+            }       
         }
 
         private void invokePrint(object sender, RoutedEventArgs e)

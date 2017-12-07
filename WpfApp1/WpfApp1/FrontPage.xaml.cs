@@ -151,12 +151,12 @@ namespace WpfApp1
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("./Spaghetti.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("./Lunch" + GlobalVars.skillLevel.ToString() + ".xaml", UriKind.Relative));
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("./Spaghetti.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("./Dinner" + GlobalVars.skillLevel.ToString() + ".xaml", UriKind.Relative));
         }
         private void button4_Click(object sender, RoutedEventArgs e)
         {

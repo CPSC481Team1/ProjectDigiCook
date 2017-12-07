@@ -62,14 +62,14 @@ namespace WpfApp1
             GlobalVars.searchText = SearchBox.Text;
 
             Page pg = GetDependencyObjectFromVisualTree(this, typeof(Page)) as Page;
-            string navPage = "./" + SearchBox.Text + ".xaml";
+            string navPage = "./" + SearchBox.Text + GlobalVars.skillLevel.ToString() + ".xaml";
 
 
             string fileDir = System.IO.Path.GetFullPath(@"..\..\");
 
-             if (File.Exists(fileDir + SearchBox.Text + ".xaml"))
+             if (File.Exists(fileDir + navPage))
             {
-                pg.NavigationService.Navigate(new Uri(navPage, UriKind.Relative));
+                pg.NavigationService.Navigate(new Uri(navPage , UriKind.Relative));
             }
             else //Navigate to 404 page
             {

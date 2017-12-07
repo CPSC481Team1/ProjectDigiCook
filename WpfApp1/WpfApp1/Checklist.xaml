@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Checklist" Height="900" Width="1600">
     <Grid Background="#FFFFE5B4">
-        <ListBox x:Name="checklistBox" HorizontalAlignment="Left" Height="635" Margin="0,166,0,0" VerticalAlignment="Top" Width="1600" SelectionChanged="checklistBox_SelectionChanged" Background="White"/>
+        <ListBox x:Name="checklistBox" HorizontalAlignment="Left" Height="579" Margin="0,166,0,0" VerticalAlignment="Top" Width="1600" SelectionChanged="checklistBox_SelectionChanged" Background="White"/>
 
 
         <Button Cursor="Hand" x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Height="77" Margin="10,813,0,0" VerticalAlignment="Top" Width="288" Background="DarkOrange" Click="deleteButton_Click" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" IsEnabled="False"/>
         <Button Cursor="Hand" x:Name="clearButton" Content="Clear All" HorizontalAlignment="Left"  Height="77" Margin="314,813,0,0" VerticalAlignment="Top" Width="288" Background="#FFFF8E00" FontSize="70" FontFamily="Sakkal Majalla" Foreground="White" Click="clearButton_Click" IsEnabled="False"/>
         <Button Cursor="Hand" x:Name="printButton" Content="Print List" HorizontalAlignment="Left"  Height="77" Margin="1302,813,0,0" VerticalAlignment="Top" Width="288" Background="White" FontSize="70" FontFamily="Sakkal Majalla" Foreground="DarkOrange" Click="invokePrint"/>
         <local:NavigationBar Height="166" VerticalAlignment="Top"/>
-        <Label x:Name="EmptyMessage" Content="No Ingredients Added" HorizontalAlignment="Center" Margin="4,171,6,0" VerticalAlignment="Top" Height="65" Width="1590" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>
+        <Label x:Name="EmptyMessage" Content="Checklist is Empty" HorizontalAlignment="Center" Margin="4,171,6,0" VerticalAlignment="Top" Height="65" Width="1590" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>
         <local:Button_CheckList x:Name ="checklistButton" Height="Auto" Margin="0,40.52,208.874,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto"/>
     </Grid>
 </Page>

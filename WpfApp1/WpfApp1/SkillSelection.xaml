@@ -81,7 +81,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Storyboard x:Key="BegFadeAnimation" RepeatBehavior="1x">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="beginnerFlavour">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
@@ -173,18 +173,18 @@
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="86.653" Margin="1118,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Expert"/></TextBlock>
         <Button Cursor="Hand" x:Name="Expert_Button"  MouseDown="ExpertMouseDown" HorizontalAlignment="Left" Height="320" Margin="1118,321.532,0,0" VerticalAlignment="Top" Width="320" Click ="Expert_Button_Click" MouseEnter="Expert_MouseEnter" MouseLeave="Expert_MouseLeave">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseEnter">
+                    <ei:ControlStoryboardAction Storyboard="{StaticResource AdvFadeAnimation}"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeave">
+                    <ei:ControlStoryboardAction Storyboard="{StaticResource AdvFadeAnimationout}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
             <Grid x:Name="expertGrid" Height="Auto" Width="Auto">
                 <Image x:Name="advancedImg" Source=".\Images\Skill_Level\chef.png" Stretch="Fill" Opacity="1.0"/>
                 <Image x:Name="advancedImgGray" Source=".\Images\Skill_Level\GreyOverlay.jpg" Stretch="Fill"  Opacity="0"/>
                 <TextBlock x:Name="advancedFlavour" FontSize="34" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Text="For those who have mastered the art of cooking and are looking for interesting new challenges" VerticalAlignment="Center" Foreground="#FFF9F9F9" Height="294" Margin="10" Width="294" Opacity="0"/>
-                <i:Interaction.Triggers>
-					<i:EventTrigger EventName="MouseEnter">
-						<ei:ControlStoryboardAction Storyboard="{StaticResource AdvFadeAnimation}"/>
-					</i:EventTrigger>
-                    <i:EventTrigger EventName="MouseLeave">
-						<ei:ControlStoryboardAction Storyboard="{StaticResource AdvFadeAnimationout}"/>
-					</i:EventTrigger>
-				</i:Interaction.Triggers>
             </Grid>
         </Button>
         <Button Cursor="Hand" x:Name="Beginner_Button" HorizontalAlignment="Left" Height="320" Margin="160.357,321.532,0,0" VerticalAlignment="Top" Width="320" Click="Beginner_Button_Click" MouseEnter="Beginner_Button_MouseEnter" MouseLeave="Beginner_Button_MouseLeave">
@@ -207,6 +207,12 @@
         <TextBlock HorizontalAlignment="Left" Height="91.653" Margin="160.357,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Beginner"/></TextBlock>
         <Button Cursor="Hand" x:Name="SkipButton" Click="SkipButton_Click" Content="Skip" FontSize="55" Foreground="White" HorizontalAlignment="Left" Height="96" Margin="1395,777,0,0" VerticalAlignment="Top" Width="172" Background="DarkOrange" MouseEnter="Skip_Button_MouseEnter"  Style="{StaticResource MyButton}"/>
         <TextBlock HorizontalAlignment="Left" Height="89.653" Margin="160.357,140,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="1277.643"><Run FontSize="60" FontFamily="Segoe UI Black" Text="Please choose your culinary skill level..."/></TextBlock>
+        <Button x:Name="buttonhelp" HorizontalAlignment="Right" Height="90" Margin="0,25.653,33,0" VerticalAlignment="Top" Width="90" BorderBrush="#FFFFE5B4" Background="#FFFFE5B4" Click="helpClick">
+            <Grid x:Name="help" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Misc\helpbutton.png" Stretch="Fill"  HorizontalAlignment="Right" Height="86" VerticalAlignment="Top" Width="86"/>
+            </Grid>
+        </Button>
+       
 
     </Grid>
 </Page>

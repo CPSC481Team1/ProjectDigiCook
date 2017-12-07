@@ -25,83 +25,67 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void ingredientslistBox_SelectionChanged(object sender, EventArgs e)
-        {
-            Label[] ingredientWithAlts = new Label[] { label4, label6, label8 };
-
-            addButton.IsEnabled = true;
-            skillsBox.SelectedIndex = -1;
-
-            if (ingredientWithAlts.Contains(ingredientsBox.SelectedItem))   //instead of label6, we can make it select from a list (of labels?)
-            {
-                altButton.IsEnabled = true;
-            }
-            else
-            {
-                altButton.IsEnabled = false;
-            }
-        }
-  
-        private void skillsBox_SelectionChanged(object sender, EventArgs e)
-        {
-            ingredientsBox.SelectedIndex = -1;
-            addButton.IsEnabled = false;
-            altButton.IsEnabled = false;
-        }
-        
         private void start_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Recipe.xaml", UriKind.Relative));
         }
 
-        private void Grid_MouseDown(object sender, EventArgs e)
-        {
-            if (ingredientsBox.IsMouseOver)
-            {
-                ingredientslistBox_SelectionChanged(sender, e);
-            }
-            else if (skillsBox.IsMouseOver)
-            {
-                skillsBox_SelectionChanged(sender, e);
-            }
-            else
-            {
-                skillsBox.SelectedIndex = -1;
-                ingredientsBox.SelectedIndex = -1;
-                addButton.IsEnabled = false;
-                altButton.IsEnabled = false;
-            }
-        }
-
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Added item to checklist", "DigiCook", "Accept", "Cancel");
-            //bool result = CustomMsgBoxWPF.Show("Added item to checklist", "Accept", "Cancel");
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Add selected items to checklist?", "DigiCook", "Accept", "Cancel");
 
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                Label selection = (Label)ingredientsBox.SelectedItem;
-                string selectionStr = selection.Content.ToString();
-                GlobalVars.checklist.Add(selectionStr);
-                addToChecklist(GlobalVars.checklist);
+                CheckBox[] withAlts = { checkbox4, checkbox6, checkbox8 };
+                string[] withAltsContents = { checkboxLabel4.Content.ToString(), checkboxLabel6.Content.ToString(), checkboxLabel8.Content.ToString() };
+
+                foreach (CheckBox current in ingredientsBox.Items)
+                {
+                    if (current.IsChecked.GetValueOrDefault() == true)
+                    {
+                        if (!withAlts.Contains(current))
+                        {
+                            string selectionStr = "• " + current.Content.ToString();
+                            GlobalVars.checklist.Add(selectionStr);
+                            addToChecklist(GlobalVars.checklist);
+                        }
+                        else
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+                                if (current == withAlts[j])
+                                {
+                                    string selectionStr = "• " + withAltsContents[j];
+                                    GlobalVars.checklist.Add(selectionStr);
+                                    addToChecklist(GlobalVars.checklist);
+                                }
+                            }
+                        }
+                        current.IsChecked = false;
+                    }
+                }
             }
 
+            addButton.IsEnabled = false;
         }
 
         private void altButton_Click(object sender, RoutedEventArgs e)
         {
-            List<Label> ingredientWithAlts = new List<Label> { label4, label6, label8 };
+            string[] orig = new string[] { "1 Small Green Bell Pepper, Diced", "1 lb Tomato Sauce", "2 Teaspoons Dried Basil" };
             string[] alts = new string[] { "2 Small Banana Pepper", "1 Bottle Ketchup", "1 Teaspoon Oregano" };
+            Button[] altsButtons = {checkboxAlt4, checkboxAlt6, checkboxAlt8 };
+            Label[] altLabels = { checkboxLabel4, checkboxLabel6, checkboxLabel8 };
 
-            int idx = ingredientWithAlts.IndexOf((Label)ingredientsBox.SelectedItem);
-
-            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Alternative Ingredient:\n• " + alts[idx], "DigiCook", "Add Alternative", "Close");
-            //bool result = CustomMsgBoxWPF.Show("Alternative Ingredient:\n• " + alts[idx], "Add Alternative", "Close");
-
-            if (result == System.Windows.Forms.DialogResult.Yes)
+            for (int i = 0; i < 3; i++)
             {
-                GlobalVars.checklist.Add("• " + alts[idx]);
-                addToChecklist(GlobalVars.checklist);
+                if ((sender == altsButtons[i])&&(altLabels[i].Content.Equals(orig[i])))
+                {
+                    altLabels[i].Content = alts[i];
+                }
+                else if ((sender == altsButtons[i]) && (altLabels[i].Content.Equals(alts[i])))
+                {
+                    altLabels[i].Content = orig[i];
+                }
             }
         }
 
@@ -142,9 +126,11 @@ namespace WpfApp1
 
         private TimeSpan TotalTime;
         private DispatcherTimer timerVideoTime;
-        private void openVideo(object sender, MouseButtonEventArgs e)
+        private DispatcherTimer eventTimer;
+        bool videoLoaded = false;
+        private void openVideo(object sender, RoutedEventArgs e)
         {
-            var source = ((Image)sender).Tag;
+            var source = ((Button)sender).Tag;
             var original = Video.Source;
             Video.Source = new Uri(source.ToString(), UriKind.Relative);
             VideoPlayer.IsOpen = true;
@@ -158,9 +144,12 @@ namespace WpfApp1
             fullscreen_button.Visibility = Visibility.Visible;
             fullscreen_button.IsEnabled = true;
             paused = false;
+            
         }
+
         private void videoOpened(object sender, RoutedEventArgs e)
         {
+            videoLoaded = true;
             TotalTime = Video.NaturalDuration.TimeSpan;
             seekSlider.Maximum = TotalTime.TotalSeconds;
             // Create a timer that will update the counters and the time slider
@@ -170,6 +159,9 @@ namespace WpfApp1
             timerVideoTime.Start();
         }
         bool suppressValueChanged = false;
+        bool supressSliderDrag = false;
+        bool surpressTicker = false;
+        bool surpressDragTicker = false;
         bool paused = false;
         void timerTick(object sender, EventArgs e)
         {
@@ -183,34 +175,69 @@ namespace WpfApp1
                 if (TotalTime.TotalSeconds > 0)
                 {
                     // Updating time slider
-                    suppressValueChanged = true;
-                    seekSlider.Value = Video.Position.TotalSeconds;
+                    if (!surpressTicker && !surpressDragTicker)
+                    {
+                        suppressValueChanged = true;
+                        supressSliderDrag = false;
+                        seekSlider.Value = Video.Position.TotalSeconds;
+                    }
                 }
             }
         }
 
         private void videoSeek(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (suppressValueChanged)
+            if (!supressSliderDrag)
             {
-                suppressValueChanged = false;
+                if (suppressValueChanged)
+                {
+                    suppressValueChanged = false;
+                }
+                else
+                {
+                    surpressTicker = true;
+                    supressSliderDrag = true;
+                    eventTimer = new DispatcherTimer();
+                    eventTimer.Interval = TimeSpan.FromMilliseconds(200);
+                    eventTimer.Tick += new EventHandler(stopSurpress);
+                    eventTimer.Start();
+                    Video.Position = TimeSpan.FromSeconds(seekSlider.Value);
+                }
+            }
+        }
+        private void dragSurpressTicker(object sender, MouseButtonEventArgs e)
+        {
+            supressSliderDrag = true;
+            surpressDragTicker = true;
+        }
+        private void dragUnsurpressTicker(object sender, MouseButtonEventArgs e)
+        {
+            Video.Position = TimeSpan.FromSeconds(seekSlider.Value);
+            supressSliderDrag = false;
+            surpressDragTicker = false;
+        }
+        void stopSurpress(object sender, EventArgs e)
+        {
+            eventTimer.Stop();
+            surpressTicker = false;
+        }
+        private void videoPlayerClose(object sender, EventArgs e)
+        {
+            if (videoLoaded)
+            {
+                timerVideoTime.Stop();
+                seekSlider.Value = 0;
+                Video.Stop();
+                Video.Height = 333;
+                Video.Width = 591;
             }
             else
             {
-                Video.Position = TimeSpan.FromSeconds(seekSlider.Value);
+                seekSlider.Value = 0;
             }
         }
 
-        private void videoPlayerClose(object sender, EventArgs e)
-        {
-            seekSlider.Value = 0;
-            Video.Stop();
-            timerVideoTime.Stop();
-            Video.Height = 333;
-            Video.Width = 591;
-        }
-
-        private void playButton(object sender, MouseButtonEventArgs e)
+        private void playButton(object sender, RoutedEventArgs e)
         {
             Video.Play();
             Video.MouseLeftButtonUp += pauseButton;
@@ -221,7 +248,7 @@ namespace WpfApp1
             pause_button.IsEnabled = true;
         }
 
-        private void pauseButton(object sender, MouseButtonEventArgs e)
+        private void pauseButton(object sender, RoutedEventArgs e)
         {
             paused = false;
             Video.Pause();
@@ -233,6 +260,14 @@ namespace WpfApp1
             play_button.IsEnabled = true;
         }
 
+        private void volumeChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (videoLoaded)
+            {
+                Video.Volume = (double)volumeSlider.Value;
+            }
+        }
+
         private void videoEnded(object sender, RoutedEventArgs e)
         {
             Video.Stop();
@@ -241,27 +276,21 @@ namespace WpfApp1
             play_button.Visibility = Visibility.Visible;
             play_button.IsEnabled = true;
         }
-
-        private void exitButton(object sender, MouseButtonEventArgs e)
+        private void exitButton(object sender, RoutedEventArgs e)
         {
             VideoPlayer.IsOpen = false;
         }
-
-        private void volumeButton(object sender, MouseButtonEventArgs e)
-        {
-        }
-
-        private void fullscreenButton(object sender, MouseButtonEventArgs e)
+        private void fullscreenButton(object sender, RoutedEventArgs e)
         {
             Video.Height = 900;
-            Video.Width = 1600;
+            Video.Width = 1595;
             fullscreen_button.Visibility = Visibility.Hidden;
             fullscreen_button.IsEnabled = false;
             fullscreenclose_button.Visibility = Visibility.Visible;
             fullscreenclose_button.IsEnabled = true;
         }
 
-        private void fullscreenButtonClose(object sender, MouseButtonEventArgs e)
+        private void fullscreenButtonClose(object sender, RoutedEventArgs e)
         {
             Video.Height = 333;
             Video.Width = 591;
@@ -269,6 +298,48 @@ namespace WpfApp1
             fullscreenclose_button.IsEnabled = false;
             fullscreen_button.Visibility = Visibility.Visible;
             fullscreen_button.IsEnabled = true;
+        }
+
+        private void addAllButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.DialogResult result = CustomMsgBox.Show("Add all items to checklist?", "DigiCook", "Accept", "Cancel");
+            //bool result = CustomMsgBoxWPF.Show("Added item to checklist", "Accept", "Cancel");
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                string[] contents = { checkbox1.Content.ToString(), checkbox2.Content.ToString(), checkbox3.Content.ToString(), checkboxLabel4.Content.ToString(),
+                    checkbox5.Content.ToString(), checkboxLabel6.Content.ToString(), checkbox7.Content.ToString(), checkboxLabel8.Content.ToString(),
+                    checkbox9.Content.ToString(), checkbox10.Content.ToString() };
+
+                for (int i = 0; i < ingredientsBox.Items.Count; i++)
+                {
+                    string selectionStr = "• " + contents[i];
+                    GlobalVars.checklist.Add(selectionStr);
+                    addToChecklist(GlobalVars.checklist);
+                }
+            }
+        }
+
+        private void checkbox_Click(object sender, EventArgs e)
+        {
+            bool somethingSelected = false;
+
+            foreach (CheckBox item in ingredientsBox.Items)
+            {
+                if (item.IsChecked.GetValueOrDefault() == true)
+                {
+                    somethingSelected = true;
+                }
+            }
+
+            if (somethingSelected)
+            {
+                addButton.IsEnabled = true;
+            }
+            else
+            {
+                addButton.IsEnabled = false;
+            }
         }
     }
 }
