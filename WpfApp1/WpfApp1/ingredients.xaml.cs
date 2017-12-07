@@ -282,8 +282,8 @@ namespace WpfApp1
         }
         private void fullscreenButton(object sender, RoutedEventArgs e)
         {
-            Video.Height = 900;
-            Video.Width = 1595;
+            Video.Height = 862;
+            Video.Width = 1598;
             fullscreen_button.Visibility = Visibility.Hidden;
             fullscreen_button.IsEnabled = false;
             fullscreenclose_button.Visibility = Visibility.Visible;
