@@ -13,6 +13,7 @@
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
         <local:NavigationBar Grid.ColumnSpan="3" Height="196" VerticalAlignment="Top"/>
+        <!---->
         <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" Grid.ColumnSpan="3" StaysOpen="False">
             <Grid Background="#FFBDBDBD">
                 <Rectangle Height="Auto" Width="Auto"/>
@@ -44,8 +45,8 @@
             <Border BorderThickness="1" BorderBrush="#FF834343" Background="#FFF0F0F0" d:LayoutOverrides="HorizontalAlignment">
                 <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="240"  Margin="-1,-1,0,-1" />
             </Border>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="240,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="627" FontSize="20"  Text="Great simple pasta dish. If you love tomatoes and pasta, this recipe is for you. It's quick, easy and very tasty. This creates a great, chunky, and very meaty spaghetti sauce. Serve with crusty Italian bread, if desired."/>
             <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,0,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="240,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="627" FontSize="20"  Text="Great simple pasta dish. If you love tomatoes and pasta, this recipe is for you. It's quick, easy and very tasty. This creates a great, chunky, and very meaty spaghetti sauce. Serve with crusty Italian bread, if desired."/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="220"/>
             <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="240,0,0,10" Height="50" VerticalAlignment="Bottom" />
             <TextBlock Foreground="Black" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="290,160,0,0" HorizontalAlignment="Left" Width="114.5"/>
@@ -183,7 +184,7 @@
             <ScrollViewer HorizontalAlignment="Right" Height="Auto" VerticalAlignment="Top" Width="17"/>
         </Grid>
         <Button Cursor="Hand" x:Name="button2" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="937,742,0,0" VerticalAlignment="Top" Width="423" Click="FinishClick" Height="65" FontSize="48"/>
-        <local:Button_CheckList x:Name ="checklistButton" Grid.Column="1" Height="Auto" Margin="0,40.52,89.001,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto"/>
+        <local:Button_CheckList x:Name ="checklistButton" Grid.Column="1" Height="Auto" Margin="0,40.52,89.001,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto"/><!---->
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="143" Margin="927,671,0,0" VerticalAlignment="Top" Width="447" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

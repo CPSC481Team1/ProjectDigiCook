@@ -14,6 +14,7 @@
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
         <local:NavigationBar Grid.ColumnSpan="3" Height="196" VerticalAlignment="Top"/>
+        <!-- -->
         <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" Grid.ColumnSpan="3" StaysOpen="False">
             <Grid Background="#FFBDBDBD">
                 <Rectangle Height="Auto" Width="Auto"/>
@@ -44,14 +45,14 @@
             <Border BorderThickness="1" BorderBrush="#FF834343" Background="#FFF0F0F0">
                 <Image x:Name="image" Source=".\Images\Recipes\Spaghetti-Chicken-Meatballs.png" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="240"  Margin="-1,-1,0,-1" />
             </Border>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="156" Margin="225,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="793" FontSize="20"  Text="Great simple pasta dish. If you love tomatoes and pasta, this recipe is for you. It's quick, easy and very tasty. This creates a great, chunky, and very meaty spaghetti sauce. Serve with crusty Italian bread, if desired."/>
-            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,0,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
             <Button Cursor="Hand" ToolTip="Start the Recipe" x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="77" Margin="1048,123,0,0" VerticalAlignment="Top" Width="280" RenderTransformOrigin="0.482,-0.033" FontSize="48" Click="start_Click" Background="DarkOrange"/>
+            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="271,0,0,0" TextWrapping="Wrap" Text="Spaghetti" VerticalAlignment="Top" Height="64" Width="634" FontSize="36" TextAlignment="Center"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="170" Margin="240,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="627" FontSize="20"  Text="Great simple pasta dish. If you love tomatoes and pasta, this recipe is for you. It's quick, easy and very tasty. This creates a great, chunky, and very meaty spaghetti sauce. Serve with crusty Italian bread, if desired."/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="220"/>
-            <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="245,0,0,20" Height="50" VerticalAlignment="Bottom" />
-            <TextBlock Foreground="Black" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="310,153,0,0" HorizontalAlignment="Left" Width="115"/>
-            <TextBlock HorizontalAlignment="Left" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="518,153,0,0" Width="152" RenderTransformOrigin="0.429,1.473"/>
-            <TextBlock Foreground="Goldenrod" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="670,153,513,0"/>
+            <Image Source=".\Images\Misc\clockwise-rotation.png" HorizontalAlignment="Left" Margin="240,0,0,10" Height="50" VerticalAlignment="Bottom" />
+            <TextBlock Foreground="Black" VerticalAlignment=" Top" FontSize="35" Text=" 60 min" Margin="290,160,0,0" HorizontalAlignment="Left" Width="114.5"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment=" Top" FontSize="35" Text="Difficulty:   " Margin="541.83,160,0,0" Width="152" RenderTransformOrigin="0.429,1.473"/>
+            <TextBlock Foreground="Goldenrod" VerticalAlignment=" Top" FontSize="35" Text=" ★☆☆☆☆" Margin="698.83,160,10,0"/>
 
         </Grid>
         <TextBlock x:Name="UtensilsLabel"  HorizontalAlignment="Left" TextWrapping="Wrap" Width="428" Margin="1,354,0,460" FontSize="36" TextAlignment="Center" Foreground="DarkOrange" Grid.Column="1"><Run FontWeight="Bold" Text="Utensils"/></TextBlock>
@@ -65,7 +66,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0"> Cooking pasta al dente</TextBox>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Cooking pasta al dente</TextBox>
                     <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play1" Source="/Images/Recipes/button.png" Height="70"/>
                 </Grid>
             </Button>
@@ -83,7 +84,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0"> Preparing pasta sauce</TextBox>
+                    <TextBox Grid.Column="0" HorizontalAlignment="Left" IsHitTestVisible="False" Grid.Row="0" IsReadOnly="True" VerticalAlignment="Center" Background="#FFDDDDDD" BorderThickness="0">Preparing pasta sauce</TextBox>
                     <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0" x:Name="play3" Source="/Images/Recipes/button.png" Height="70"/>
                 </Grid>
             </Button>
@@ -125,6 +126,7 @@
         </Border>
         <Border BorderBrush="#FFABADB3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="906,772,0,0" VerticalAlignment="Top" Width="448"/>
         <local:Button_CheckList x:Name ="checklistButton" Grid.Column="1" Height="Auto" Margin="0,40.52,89.001,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto"/>
+        <!---->
     </Grid>
 
 </Page>
