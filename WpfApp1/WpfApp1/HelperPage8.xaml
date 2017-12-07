@@ -1,0 +1,33 @@
+﻿<Page x:Class="WpfApp1.HelperPage8"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HelperPage7"
+      Initialized="Page_Initial"
+      ShowsNavigationUI="False"
+      >
+
+    <Grid Background="Teal">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="225*"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock" Height="50" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment ="Center" TextWrapping="Wrap" Text="Video Player" FontSize="40" FontFamily="Segoe UI Black"  Foreground="DarkOrange"/>
+        <TextBlock x:Name="textBlock1" Width ="800" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="The video player can be enlarged or sized down by clicking the window resize icon in the top left corner. Volume can be adjusted using the button visually marked with a speaker." FontFamily="Segoe UI Black" FontSize="22" Margin="0,76,0,0" Height="84.62" VerticalAlignment="Top" TextAlignment="Center"/>
+        <Border BorderBrush="DarkOrange" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="250" Width="600">
+            <Grid x:Name="skill" Height="Auto" Width="Auto">
+                <Image Source=".\Images\Misc\8.png" Stretch="Fill"/>
+            </Grid>
+        </Border>
+        <Button Cursor="Hand" ToolTip ="back" Background="White" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Margin="28,166,0,0" d:LayoutOverrides="Width, Height" Click="back_instruction_Click"  >
+            <Image Source=".\Images\Navigation\back_arrow.png" Stretch="Fill"/>
+        </Button>
+
+
+    </Grid>
+</Page>

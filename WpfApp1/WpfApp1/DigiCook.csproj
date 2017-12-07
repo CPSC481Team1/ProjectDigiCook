@@ -93,6 +93,33 @@
     <Compile Include="CustomMsgBoxWPF.xaml.cs">
       <DependentUpon>CustomMsgBoxWPF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HelperPage4.xaml.cs">
+      <DependentUpon>HelperPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage.xaml.cs">
+      <DependentUpon>HelperPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage2.xaml.cs">
+      <DependentUpon>HelperPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage3.xaml.cs">
+      <DependentUpon>HelperPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage5.xaml.cs">
+      <DependentUpon>HelperPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage6.xaml.cs">
+      <DependentUpon>HelperPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage7.xaml.cs">
+      <DependentUpon>HelperPage7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperPage8.xaml.cs">
+      <DependentUpon>HelperPage8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="helpWindow.xaml.cs">
+      <DependentUpon>helpWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Lunch3.xaml.cs">
       <DependentUpon>Lunch3.xaml</DependentUpon>
     </Compile>
@@ -188,6 +215,42 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomMsgBoxWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelperPage8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="helpWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -369,6 +432,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Images\Misc\helpbutton.png" />
+    <Resource Include="Images\Misc\1.PNG" />
+    <Resource Include="Images\Misc\2.PNG" />
+    <Resource Include="Images\Misc\3.PNG" />
+    <Resource Include="Images\Misc\4.PNG" />
+    <Resource Include="Images\Misc\5.PNG" />
+    <Resource Include="Images\Misc\6.PNG" />
+    <Resource Include="Images\Misc\7.PNG" />
+    <Resource Include="Images\Misc\8.png" />
     <Content Include="Images\Video\How_to_Cook_Pasta_Al_Dente.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

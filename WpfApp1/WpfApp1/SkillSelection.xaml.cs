@@ -140,6 +140,12 @@ namespace WpfApp1
         private void Page_Initialized(object sender, EventArgs e)
         {
         }
+
+        private void helpClick(object sender, RoutedEventArgs e)
+        {
+            helpWindow help = new helpWindow();
+            help.ShowDialog();
+        }
     }
     #endregion
 }
