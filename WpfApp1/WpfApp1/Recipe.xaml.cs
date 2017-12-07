@@ -157,6 +157,7 @@ namespace WpfApp1
 
         private void playButton(object sender, RoutedEventArgs e)
         {
+            paused = false;
             Video.Play();
             Video.MouseLeftButtonUp += pauseButton;
             Video.MouseLeftButtonUp -= playButton;
@@ -168,8 +169,9 @@ namespace WpfApp1
 
         private void pauseButton(object sender, RoutedEventArgs e)
         {
-            paused = false;
+            paused = true;
             Video.Pause();
+            suppressValueChanged = false;
             Video.MouseLeftButtonUp += playButton;
             Video.MouseLeftButtonUp -= pauseButton;
             pause_button.Visibility = Visibility.Hidden;
