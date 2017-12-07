@@ -444,12 +444,16 @@
     <Content Include="Images\Video\How_to_Cook_Pasta_Al_Dente.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Video\volume_icon.png" />
+    <Resource Include="Images\Video\How_to_Cook_Pasta_Al_Dente_Thumbnail.PNG" />
     <Content Include="Images\Video\How_to_Make_Meatballs.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Video\How_to_Make_Meatballs_Thumbnail.PNG" />
     <Content Include="Images\Video\How_to_Make_Spaghetti_Sauce.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Video\How_to_Make_Spaghetti_Sauce_Thumbnail.PNG" />
     <Resource Include="Images\Navigation\ShoppingCart.png" />
     <Resource Include="Images\Navigation\cart64.png" />
     <Resource Include="Images\Navigation\cart128.png" />
@@ -465,12 +469,6 @@
     <Resource Include="Images\Categories\lunch.jpg" />
     <Resource Include="Images\Skill_Level\beginer.jpg" />
     <Resource Include="Images\Skill_Level\sauce.jpg" />
-    <Content Include="Images\Video\clip1.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\Video\clip2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Images\Video\fullscreenclose_button.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -489,14 +487,13 @@
     <Resource Include="Images\Navigation\foward_arrow.png" />
     <Resource Include="Images\Navigation\back_arrow.png" />
     <Resource Include="Images\Navigation\arrow_left.png" />
-    <Resource Include="Images\Video\cooking_video.jpg" />
     <Resource Include="Images\Video\cooking_video_thumbnail.jpg" />
-    <Resource Include="Images\Video\fullscreen_button.png" />
+    <Resource Include="Images\Video\fullscreen_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Video\play_button.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Video\TopChefPhoto4.jpg" />
-    <Resource Include="Images\Video\volume_button.png" />
     <Resource Include="Images\Recipes\bask.png" />
     <Resource Include="Images\Misc\searchbutton.png" />
     <Resource Include="Images\Recipes\button.png" />
