@@ -64,21 +64,21 @@
                 <CheckBox x:Name="checkbox4"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label x:Name="checkboxLabel4" Content="1 Small Green Bell Pepper, Diced" Width="375"/>
-                        <Button x:Name="checkboxAlt4" Content="Alt" Click="altButton_Click" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                        <Button x:Name="checkboxAlt4"  Cursor="Hand" ToolTip="Switch to Alternative Ingredient" Content="Alt" Click="altButton_Click" VerticalAlignment="Center" HorizontalAlignment="Right"/>
                     </StackPanel>
                 </CheckBox>
                 <CheckBox x:Name="checkbox5" Content="1.75 lb Diced Tomatoes" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
                 <CheckBox x:Name="checkbox6"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label x:Name="checkboxLabel6" Content="1 lb Tomato Sauce" Width="375"/>
-                        <Button x:Name="checkboxAlt6" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Button x:Name="checkboxAlt6"  Cursor="Hand" ToolTip="Switch to Alternative Ingredient" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                     </StackPanel>
                 </CheckBox>
                 <CheckBox x:Name="checkbox7" Content="0.375 lb Tomato Paste" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
                 <CheckBox x:Name="checkbox8"  Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click">
                     <StackPanel Orientation="Horizontal">
                         <Label x:Name="checkboxLabel8" Content="2 Teaspoons Dried Basil" Width="375"/>
-                        <Button x:Name="checkboxAlt8" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Button x:Name="checkboxAlt8"  Cursor="Hand" ToolTip="Switch to Alternative Ingredient" Content="Alt" Click="altButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                     </StackPanel>
                 </CheckBox>
                 <CheckBox x:Name="checkbox9" Content="1 Teaspoon Salt" Height="42" Width="430" FontSize="24" VerticalContentAlignment="center" Click="checkbox_Click"/>
