@@ -81,6 +81,9 @@
     <Compile Include="arrowControl.xaml.cs">
       <DependentUpon>arrowControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Breakfast.xaml.cs">
+      <DependentUpon>Breakfast.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Checklist.xaml.cs">
       <DependentUpon>Checklist.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,9 @@
     </Compile>
     <Compile Include="CustomMsgBoxWPF.xaml.cs">
       <DependentUpon>CustomMsgBoxWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dessert.xaml.cs">
+      <DependentUpon>Dessert.xaml</DependentUpon>
     </Compile>
     <Compile Include="HelperPage4.xaml.cs">
       <DependentUpon>HelperPage4.xaml</DependentUpon>
@@ -199,6 +205,12 @@
     <Compile Include="Button_CheckList.xaml.cs">
       <DependentUpon>Button_CheckList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vegan.xaml.cs">
+      <DependentUpon>Vegan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vegetarian.xaml.cs">
+      <DependentUpon>Vegetarian.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VideoPlayer.xaml.cs">
       <DependentUpon>VideoPlayer.xaml</DependentUpon>
     </Compile>
@@ -210,6 +222,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Breakfast.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Checklist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +233,10 @@
     <Page Include="CustomMsgBoxWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dessert.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="HelperPage4.xaml">
       <SubType>Designer</SubType>
@@ -373,6 +393,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Vegan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vegetarian.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="VideoPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -441,6 +469,18 @@
     <Resource Include="Images\Misc\6.PNG" />
     <Resource Include="Images\Misc\7.PNG" />
     <Resource Include="Images\Misc\8.png" />
+    <Resource Include="Images\mightLike\cereal.jpg" />
+    <Resource Include="Images\mightLike\chocolateCake.jpg" />
+    <Resource Include="Images\mightLike\crepe.jpg" />
+    <Resource Include="Images\mightLike\eggsausage.jpg" />
+    <Resource Include="Images\mightLike\noods.jpg" />
+    <Resource Include="Images\mightLike\pancakes.jpg" />
+    <Resource Include="Images\mightLike\peppers.jpg" />
+    <Resource Include="Images\mightLike\pie.jpg" />
+    <Resource Include="Images\mightLike\potatoe.jpg" />
+    <Resource Include="Images\mightLike\salad.jpg" />
+    <Resource Include="Images\mightLike\vegetables.jpg" />
+    <Resource Include="Images\mightLike\wrap.jpg" />
     <Content Include="Images\Video\How_to_Cook_Pasta_Al_Dente.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

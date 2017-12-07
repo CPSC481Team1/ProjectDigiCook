@@ -93,17 +93,17 @@ namespace WpfApp1
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            CategoryResult();
+            this.NavigationService.Navigate(new Uri("./Dessert.xaml", UriKind.Relative));
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
         {
-            CategoryResult();
+            this.NavigationService.Navigate(new Uri("./Vegetarian.xaml", UriKind.Relative));
         }
 
         private void button6_Click(object sender, RoutedEventArgs e)
         {
-            CategoryResult();
+            this.NavigationService.Navigate(new Uri("./Vegan.xaml", UriKind.Relative));
         }
 
         private void button_MouseEnter(object sender, MouseEventArgs e)
@@ -175,6 +175,11 @@ namespace WpfApp1
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("./Dinner" + GlobalVars.skillLevel.ToString() + ".xaml", UriKind.Relative));
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./Breakfast.xaml", UriKind.Relative));
         }
     }
 }
