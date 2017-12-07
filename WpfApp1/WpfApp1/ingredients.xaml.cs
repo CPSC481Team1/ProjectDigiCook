@@ -225,9 +225,9 @@ namespace WpfApp1
         {
             if (videoLoaded)
             {
+                timerVideoTime.Stop();
                 seekSlider.Value = 0;
                 Video.Stop();
-                timerVideoTime.Stop();
                 Video.Height = 333;
                 Video.Width = 591;
             }
@@ -237,7 +237,7 @@ namespace WpfApp1
             }
         }
 
-        private void playButton(object sender, MouseButtonEventArgs e)
+        private void playButton(object sender, RoutedEventArgs e)
         {
             Video.Play();
             Video.MouseLeftButtonUp += pauseButton;
@@ -248,7 +248,7 @@ namespace WpfApp1
             pause_button.IsEnabled = true;
         }
 
-        private void pauseButton(object sender, MouseButtonEventArgs e)
+        private void pauseButton(object sender, RoutedEventArgs e)
         {
             paused = false;
             Video.Pause();
@@ -260,6 +260,14 @@ namespace WpfApp1
             play_button.IsEnabled = true;
         }
 
+        private void volumeChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (videoLoaded)
+            {
+                Video.Volume = (double)volumeSlider.Value;
+            }
+        }
+
         private void videoEnded(object sender, RoutedEventArgs e)
         {
             Video.Stop();
@@ -268,13 +276,11 @@ namespace WpfApp1
             play_button.Visibility = Visibility.Visible;
             play_button.IsEnabled = true;
         }
-
-        private void exitButton(object sender, MouseButtonEventArgs e)
+        private void exitButton(object sender, RoutedEventArgs e)
         {
             VideoPlayer.IsOpen = false;
         }
-
-        private void fullscreenButton(object sender, MouseButtonEventArgs e)
+        private void fullscreenButton(object sender, RoutedEventArgs e)
         {
             Video.Height = 900;
             Video.Width = 1595;
@@ -284,7 +290,7 @@ namespace WpfApp1
             fullscreenclose_button.IsEnabled = true;
         }
 
-        private void fullscreenButtonClose(object sender, MouseButtonEventArgs e)
+        private void fullscreenButtonClose(object sender, RoutedEventArgs e)
         {
             Video.Height = 333;
             Video.Width = 591;

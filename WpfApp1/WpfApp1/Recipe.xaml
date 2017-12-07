@@ -16,14 +16,26 @@
         <Popup Name="VideoPlayer" Closed="videoPlayerClose" IsOpen="False" Placement="Center" Grid.ColumnSpan="3" StaysOpen="False">
             <Grid Background="#FFBDBDBD">
                 <Rectangle Height="Auto" Width="Auto"/>
-                <MediaElement x:Name="Video" HorizontalAlignment="Left" Source="./Images/Video/clip2.mp4" Height="333" VerticalAlignment="Top" Width="591" Stretch="Fill" ScrubbingEnabled="True" LoadedBehavior="Manual" MediaOpened="videoOpened"  MediaEnded="videoEnded" MouseLeftButtonUp="pauseButton"/>
-                <Image x:Name="exit_button" HorizontalAlignment="Right" MouseLeftButtonUp="exitButton" Height="30" VerticalAlignment="Top" Width="25" Source="Images/Video/exit.png" Margin="0,8,8,0"/>
-                <Slider Name="seekSlider" Margin="10,0,10,30" VerticalAlignment="Bottom" Maximum="1" PreviewMouseLeftButtonUp="dragUnsurpressTicker" PreviewMouseLeftButtonDown ="dragSurpressTicker" ValueChanged="videoSeek" IsMoveToPointEnabled="True" Height="21"/>
-                <Grid VerticalAlignment="Bottom" Height="Auto" Background="#FFBDBDBD" Margin="0,0,0,-3">
-                    <Image x:Name="pause_button" HorizontalAlignment="Left" MouseLeftButtonUp="pauseButton" Source="./Images/Video/pause_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
-                    <Image x:Name="play_button" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/play_button.png" Height="27" Margin="5,3,0,5" VerticalAlignment="Bottom" Width="35"/>
-                    <Image x:Name="fullscreen_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButton" Source="./Images/Video/fullscreen_button.png" Height="27" Width="48" Margin="0,3,5,5"/>
-                    <Image x:Name="fullscreenclose_button" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonUp="fullscreenButtonClose" Source="./Images/Video/fullscreenclose_button.png" Height="27" Width="48" Margin="0,3,8,5"/>
+                <MediaElement x:Name="Video" HorizontalAlignment="Left" Source="./Images/Video/clip2.mp4" Height="333" Margin="0,0,0,40" VerticalAlignment="Top" Width="591" Stretch="Fill" ScrubbingEnabled="True" LoadedBehavior="Manual" MediaOpened="videoOpened"  MediaEnded="videoEnded" MouseLeftButtonUp="pauseButton"/>
+                <Button x:Name="exit_button" HorizontalAlignment="Right" Click="exitButton" VerticalAlignment="Top" Margin="0,8,8,0" Background="Transparent" BorderThickness="0">
+                    <Image x:Name="exit_icon" Width="25" Source="Images/Video/exit.png"/>
+                </Button>
+                <Slider Name="seekSlider" Margin="10,0,10,40" VerticalAlignment="Bottom" Maximum="1" PreviewMouseLeftButtonUp="dragUnsurpressTicker" PreviewMouseLeftButtonDown ="dragSurpressTicker" ValueChanged="videoSeek" IsMoveToPointEnabled="True" Height="21"/>
+                <Grid VerticalAlignment="Bottom" Height="Auto" Background="#FFBDBDBD">
+                    <Button x:Name="pause_button" HorizontalAlignment="Left" Background="Transparent" Click="pauseButton" Margin="5,3,0,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="pause_icon" Source="./Images/Video/pause_button.png" Height="27"/>
+                    </Button>
+                    <Button x:Name="play_button" HorizontalAlignment="Left" Background="Transparent" Click="playButton" Margin="5,3,0,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="play_icon" Source="./Images/Video/play_button.png" Height="27"/>
+                    </Button>
+                    <Button x:Name="fullscreen_button" HorizontalAlignment="Right" Background="Transparent" Click="fullscreenButton" Margin="0,3,5,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="fullscreen_icon" Source="./Images/Video/fullscreen_button.png" Height="27"/>
+                    </Button>
+                    <Button x:Name="fullscreenclose_button" HorizontalAlignment="Right" Background="Transparent" Click="fullscreenButtonClose" Margin="0,3,8,5" VerticalAlignment="Bottom" BorderThickness="0">
+                        <Image x:Name="fullscreenclose_icon" Source="./Images/Video/fullscreenclose_button.png" Height="27"/>
+                    </Button>
+                    <Image x:Name="volume_icon" HorizontalAlignment="Left" MouseLeftButtonUp="playButton" Source="./Images/Video/volume_icon.png" Height="27" Margin="45,3,0,5" VerticalAlignment="Bottom" Width="35"/>
+                    <Slider x:Name="volumeSlider" HorizontalAlignment="Left" Margin="70,0,0,9" ValueChanged="volumeChanged" VerticalAlignment="Bottom" IsMoveToPointEnabled="True" Minimum="0" Maximum="1" Value="0.5" Width="70"/>
                 </Grid>
             </Grid>
         </Popup>

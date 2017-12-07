@@ -372,6 +372,7 @@
     <Content Include="Images\Video\How_to_Cook_Pasta_Al_Dente.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Video\volume_icon.png" />
     <Resource Include="Images\Video\How_to_Cook_Pasta_Al_Dente_Thumbnail.PNG" />
     <Content Include="Images\Video\How_to_Make_Meatballs.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -421,7 +422,6 @@
     <Resource Include="Images\Video\play_button.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Video\volume_button.png" />
     <Resource Include="Images\Recipes\bask.png" />
     <Resource Include="Images\Misc\searchbutton.png" />
     <Resource Include="Images\Recipes\button.png" />
