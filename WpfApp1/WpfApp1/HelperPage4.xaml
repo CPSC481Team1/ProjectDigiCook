@@ -11,14 +11,14 @@
       ShowsNavigationUI="False"
       >
 
-    <Grid Background="Teal">
+    <Grid Background="#FFEAD8B7">
         <Grid.RowDefinitions>
             <RowDefinition Height="225*"/>
 
         </Grid.RowDefinitions>
 
         <TextBlock x:Name="textBlock" Height="50" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment ="Center" TextWrapping="Wrap" Text="Results Not Found Page" FontSize="40" FontFamily="Segoe UI Black"  Foreground="DarkOrange"/>
-        <TextBlock x:Name="textBlock1" Width ="800" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text=" The recipe you are searching for does not exist in the application, perform another search or click on one of the suggestions. " FontFamily="Segoe UI Black" FontSize="22" Margin="0,76,0,0" Height="70" VerticalAlignment="Top" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlock1" Width ="800" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="  You will see this page if the recipe you are searching for does not exist. Try performing another search or click on one of the suggestions. " FontFamily="Segoe UI Black" FontSize="22" Margin="0,76,0,0" Height="70" VerticalAlignment="Top" TextAlignment="Center"/>
         <Border BorderBrush="DarkOrange" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="250" Width="600">
             <Grid x:Name="skill" Height="Auto" Width="Auto">
                 <Image Source=".\Images\Misc\4.png" Stretch="Fill"/>

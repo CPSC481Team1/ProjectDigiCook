@@ -11,7 +11,7 @@
       ShowsNavigationUI="False"
       >
 
-    <Grid Background="Teal">
+    <Grid Background="#FFEAD8B7">
         <Grid.RowDefinitions>
             <RowDefinition Height="225*"/>
 
@@ -28,6 +28,7 @@
             <Image Source=".\Images\Navigation\back_arrow.png" Stretch="Fill"/>
         </Button>
 
-
+        <Button Background="DarkOrange" Name="CloseButton" Width ="59" Content="Finish" Click="CloseButton_Click" Height="50" Margin="711,0,0,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="Hand" ToolTip="Finish Tutorial" />
     </Grid>
+
 </Page>

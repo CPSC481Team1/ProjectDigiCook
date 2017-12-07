@@ -207,12 +207,19 @@
         <TextBlock HorizontalAlignment="Left" Height="91.653" Margin="160.357,641.532,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"><Run FontSize="55" FontFamily="Segoe UI Black" Text="Beginner"/></TextBlock>
         <Button Cursor="Hand" x:Name="SkipButton" Click="SkipButton_Click" Content="Skip" FontSize="55" Foreground="White" HorizontalAlignment="Left" Height="96" Margin="1395,777,0,0" VerticalAlignment="Top" Width="172" Background="DarkOrange" MouseEnter="Skip_Button_MouseEnter"  Style="{StaticResource MyButton}"/>
         <TextBlock HorizontalAlignment="Left" Height="89.653" Margin="160.357,140,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="1277.643"><Run FontSize="60" FontFamily="Segoe UI Black" Text="Please choose your culinary skill level..."/></TextBlock>
-        <Button x:Name="buttonhelp" HorizontalAlignment="Right" Height="90" Margin="0,25.653,33,0" VerticalAlignment="Top" Width="90" BorderBrush="#FFFFE5B4" Background="#FFFFE5B4" Click="helpClick">
-            <Grid x:Name="help" Height="Auto" Width="Auto">
-                <Image Source=".\Images\Misc\helpbutton.png" Stretch="Fill"  HorizontalAlignment="Right" Height="86" VerticalAlignment="Top" Width="86"/>
-            </Grid>
-        </Button>
-       
+
+        <Image x:Name="buttonhelp"  MouseUp="helpClick" Source=".\Images\Misc\helpbutton.png" Stretch="Fill"  HorizontalAlignment="Right" Height="50" VerticalAlignment="Top" Width="50" ToolTip="Tutorial" Cursor="Hand" Margin="0,38.653,33,0"/>
+
+        <Canvas x:Name="toolBar" Margin="0,0,0,0" Height="162" VerticalAlignment="Top">
+            <Button Cursor="Hand" ToolTip ="back" Background="White" Command="{x:Static NavigationCommands.BrowseBack}" Width="77.493" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="77.493" Canvas.Top="29.987" Canvas.Left="42.801">
+                <Image Source="Images/Navigation/back_arrow.png" Stretch="Fill"/>
+            </Button>
+            <Button Cursor="Hand" ToolTip ="Forward" Background="White" Command="{x:Static NavigationCommands.BrowseForward}" Width="77.493" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="77.493" Canvas.Top="29.987" Canvas.Left="141.207">
+                <Image Source="Images/Navigation/foward_arrow.png" Stretch="Fill"/>
+            </Button>
+
+        </Canvas>
+
 
     </Grid>
 </Page>

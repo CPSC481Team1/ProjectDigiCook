@@ -11,7 +11,7 @@
       ShowsNavigationUI="False"
       >
 
-    <Grid Background="Teal">
+    <Grid Background="#FFEAD8B7">
         <Grid.RowDefinitions>
             <RowDefinition Height="225*"/>
 
